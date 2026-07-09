@@ -109,7 +109,8 @@ header p{font-size:13px;color:#64748B;margin-top:3px;}
 
 /* ── Shapes page ────────────────────────────────────────────────── */
 #page-shapes{display:none;}
-#page-blueprints{display:block;}
+#page-shapes.active{display:block;}
+#page-blueprints.active{display:block;}
 
 .shapes-sort-bar{display:flex;align-items:center;gap:10px;margin-bottom:20px;flex-wrap:wrap;}
 .sort-label{font-size:12px;font-weight:600;color:#64748B;}
@@ -546,23 +547,14 @@ document.getElementById('stats').textContent=BLUEPRINTS.length+' blueprints';
 var shapesPageBuilt = false;
 
 function switchPage(page) {
-  var bp  = document.getElementById('page-blueprints');
-  var sp  = document.getElementById('page-shapes');
-  var tBp = document.getElementById('tab-blueprints');
-  var tSp = document.getElementById('tab-shapes');
-  if (page === 'shapes') {
-    bp.style.display = 'none';
-    sp.style.display = 'block';
-    tBp.classList.remove('active');
-    tSp.classList.add('active');
-    if (!shapesPageBuilt) { buildShapesPage(); shapesPageBuilt = true; }
-  } else {
-    sp.style.display = 'none';
-    bp.style.display = 'block';
-    tSp.classList.remove('active');
-    tBp.classList.add('active');
+  document.getElementById('page-blueprints').classList.toggle('active', page==='blueprints');
+  document.getElementById('page-shapes').classList.toggle('active', page==='shapes');
+  document.getElementById('tab-blueprints').classList.toggle('active', page==='blueprints');
+  document.getElementById('tab-shapes').classList.toggle('active', page==='shapes');
+  if (page === 'shapes' && !shapesPageBuilt) {
+    buildShapesPage();
+    shapesPageBuilt = true;
   }
-  window.scrollTo(0, 0);
 }
 
 // ── Shapes page ───────────────────────────────────────────────────────────────
