@@ -1,0 +1,167 @@
+{
+    "version": "2.0",
+	"brandName": "ADN",
+	"brandId": "31",
+	"sectionName": "Regio",
+	"sectionId": "255",
+    "genreId": "lees",
+    "shapeTypeName": "third",
+    "shapeTypeId": "3",
+    "geometricBounds": {
+        "x": 1459.843,
+        "y": 872.85,
+        "width": 141.732,
+        "height": 269.512
+    },
+    "foldLine": null,
+    "textComponents": [
+        {
+            "type": "PLAATS",
+            "words": 3,
+            "characters": 18,
+            "firstParagraphStyle": "PLAA_0008 Plaats boven bericht",
+            "oversetLines": 0,
+            "visibleArea": 1619.519,
+            "requiredVisibleArea": 1619.519,
+            "frames": [
+                {
+                    "id": 297690,
+                    "geometricBounds": {
+                        "x": 0,
+                        "y": 0,
+                        "width": 141.732,
+                        "height": 11.427
+                    },
+                    "columns": 1,
+                    "words": 3,
+                    "characters": 18,
+                    "textWrapMode": "none",
+                    "zIndex": 222,
+                    "locked": false,
+                    "text": "PlaatsLut fur, non"
+                }
+            ]
+        },
+        {
+            "type": "KOP",
+            "words": 10,
+            "characters": 50,
+            "firstParagraphStyle": "KOPP_0117 Haas Light 15",
+            "oversetLines": 0,
+            "visibleArea": 7795.276,
+            "requiredVisibleArea": 7795.276,
+            "frames": [
+                {
+                    "id": 297714,
+                    "geometricBounds": {
+                        "x": 0,
+                        "y": 22,
+                        "width": 141.732,
+                        "height": 55
+                    },
+                    "columns": 1,
+                    "words": 10,
+                    "characters": 50,
+                    "textWrapMode": "none",
+                    "zIndex": 223,
+                    "locked": false,
+                    "text": "Lees 1 kol Ur, et vene nonest, quibus.\rpost (6001)"
+                }
+            ]
+        },
+        {
+            "type": "INTRO",
+            "words": 4,
+            "characters": 30,
+            "firstParagraphStyle": "INTR_0004 Tekst Lead",
+            "oversetLines": 0,
+            "visibleArea": 0,
+            "requiredVisibleArea": 0,
+            "frames": [
+                {
+                    "id": 297665,
+                    "geometricBounds": {
+                        "x": 0,
+                        "y": 77,
+                        "width": 141.732,
+                        "height": 22
+                    },
+                    "columns": 1,
+                    "words": 4,
+                    "characters": 30,
+                    "textWrapMode": "bounding_box",
+                    "zIndex": 221,
+                    "locked": false,
+                    "text": "INTR_0004 Tekst Lead Cursief  ",
+                    "textWrapOffset": {
+                        "top": 0,
+                        "left": 0,
+                        "bottom": 0,
+                        "right": 0
+                    }
+                }
+            ]
+        },
+        {
+            "type": "TEKST",
+            "words": 71,
+			"characters": 600,
+            "firstParagraphStyle": "TKSX_0003a Tekst RR Niet inspringen",
+            "oversetLines": -1,
+            "visibleArea": 22608.029,
+            "requiredVisibleArea": 20267.717,
+            "frames": [
+                {
+                    "id": 297641,
+                    "geometricBounds": {
+                        "x": 0,
+                        "y": 77,
+                        "width": 141.732,
+                        "height": 192.512
+                    },
+                    "columns": 1,
+                    "words": 71,
+                    "characters": 428,
+                    "textWrapMode": "none",
+                    "zIndex": 219,
+                    "locked": false,
+                    "text": "TKSX_0003a v c cuve\rTKST_0002 Tekst v c cuve\rANTW_0002 Tekst antw v c cuve\rTKSTHet Algemeen Dagblad of AD is een Nederlands landelijk dagblad en met een oplage in 2013 van ruim 409 duizend exemplaren de op √©√©n na grootste betaalde krant van Nederland. De krant verschijnt op tabloidformaat. De hoofdredactie zetelt in Rotterdam. De redactie maakt sinds 2016 het mondiale en landelijke deel voor ADR Nieuwsmedia. Daar vallen 57"
+                }
+            ]
+        },
+        {
+            "type": "AUTEUR",
+            "words": 3,
+            "characters": 25,
+            "firstParagraphStyle": "AUTE_0007 Auteur Onder",
+            "oversetLines": 0,
+            "visibleArea": 1.618,
+            "requiredVisibleArea": 1.618,
+            "frames": [
+                {
+                    "id": 297616,
+                    "geometricBounds": {
+                        "x": 0,
+                        "y": 253,
+                        "width": 141.732,
+                        "height": 11
+                    },
+                    "columns": 1,
+                    "words": 3,
+                    "characters": 25,
+                    "textWrapMode": "bounding_box",
+                    "zIndex": 220,
+                    "locked": false,
+                    "text": "AUTE_0007 Auteur onderNam",
+                    "textWrapOffset": {
+                        "top": 0,
+                        "left": 0,
+                        "bottom": 0,
+                        "right": 0
+                    }
+                }
+            ]
+        }
+    ],
+    "imageComponents": []
+}

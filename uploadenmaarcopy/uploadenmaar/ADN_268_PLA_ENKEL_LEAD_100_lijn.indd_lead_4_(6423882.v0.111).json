@@ -1,0 +1,334 @@
+{
+    "version": "2.0",
+	"brandName": "ADN",
+	"brandId": "31",
+	"sectionName": "Algemeen",
+	"sectionId": "268",
+    "genreId": "info",
+    "shapeTypeName": "lead",
+    "shapeTypeId": "1",
+    "geometricBounds": {
+        "x": 28.346,
+        "y": 80.85,
+        "width": 754.016,
+        "height": 761.843
+    },
+    "foldLine": null,
+    "textComponents": [
+        {
+            "type": "SPECIAL",
+            "words": 1,
+            "characters": 5,
+            "firstParagraphStyle": "BKOP_0153 Label Trefwoord",
+            "oversetLines": 0,
+            "visibleArea": 0,
+            "requiredVisibleArea": 0,
+            "frames": [
+                {
+                    "id": 319615,
+                    "geometricBounds": {
+                        "x": 0,
+                        "y": 22,
+                        "width": 56.958,
+                        "height": 15.821
+                    },
+                    "columns": 1,
+                    "words": 1,
+                    "characters": 5,
+                    "textWrapMode": "bounding_box",
+                    "zIndex": 338,
+                    "locked": false,
+                    "text": "Genre",
+                    "textWrapOffset": {
+                        "top": 0,
+                        "left": 0,
+                        "bottom": 0,
+                        "right": 4.252
+                    }
+                }
+            ]
+        },
+        {
+            "type": "BOVENKOP",
+            "words": 1,
+            "characters": 8,
+            "firstParagraphStyle": "BKOP_0154 Label Onderwerp",
+            "oversetLines": 0,
+            "visibleArea": 10956.916,
+            "requiredVisibleArea": 10956.916,
+            "frames": [
+                {
+                    "id": 319641,
+                    "geometricBounds": {
+                        "x": 0,
+                        "y": 22,
+                        "width": 754.016,
+                        "height": 15.821
+                    },
+                    "columns": 1,
+                    "words": 1,
+                    "characters": 8,
+                    "textWrapMode": "none",
+                    "zIndex": 337,
+                    "locked": false,
+                    "text": "Bovenkop"
+                }
+            ]
+        },
+        {
+            "type": "KOP",
+            "words": 4,
+            "characters": 17,
+            "firstParagraphStyle": "KOPP_0108 Tiempos Semibold 63",
+            "oversetLines": 0,
+            "visibleArea": 41470.866,
+            "requiredVisibleArea": 41470.866,
+            "frames": [
+                {
+                    "id": 319665,
+                    "geometricBounds": {
+                        "x": 0,
+                        "y": 55,
+                        "width": 754.016,
+                        "height": 55
+                    },
+                    "columns": 1,
+                    "words": 4,
+                    "characters": 17,
+                    "textWrapMode": "none",
+                    "zIndex": 336,
+                    "locked": false,
+                    "text": "Info 5 kol (3500)"
+                }
+            ]
+        },
+        {
+            "type": "PLAATS",
+            "words": 2,
+            "characters": 16,
+            "firstParagraphStyle": "PLAA_0006 Plaats",
+            "oversetLines": 0,
+            "visibleArea": 0.904,
+            "requiredVisibleArea": 0.904,
+            "frames": [
+                {
+                    "id": 336257,
+                    "geometricBounds": {
+                        "x": 0.165,
+                        "y": 327.029,
+                        "width": 152.501,
+                        "height": 27.904
+                    },
+                    "columns": 1,
+                    "words": 2,
+                    "characters": 16,
+                    "textWrapMode": "bounding_box",
+                    "zIndex": 339,
+                    "locked": false,
+                    "text": "PLAA_0006 Plaats",
+                    "textWrapOffset": {
+                        "top": 0,
+                        "left": 0,
+                        "bottom": 2.835,
+                        "right": 0
+                    }
+                }
+            ]
+        },
+        {
+            "type": "AUTEUR",
+            "words": 2,
+            "characters": 18,
+            "firstParagraphStyle": "AUTE_0005 Auteur",
+            "oversetLines": 0,
+            "visibleArea": 2.858,
+            "requiredVisibleArea": 2.858,
+            "frames": [
+                {
+                    "id": 336283,
+                    "geometricBounds": {
+                        "x": 0,
+                        "y": 308.029,
+                        "width": 152.666,
+                        "height": 40.208
+                    },
+                    "columns": 1,
+                    "words": 2,
+                    "characters": 18,
+                    "textWrapMode": "bounding_box",
+                    "zIndex": 340,
+                    "locked": false,
+                    "text": "AUTE_0005 Auteur  ",
+                    "textWrapOffset": {
+                        "top": 0,
+                        "left": 0,
+                        "bottom": 0,
+                        "right": 0
+                    }
+                }
+            ]
+        },
+        {
+            "type": "INTRO",
+            "words": 40,
+            "characters": 228,
+            "firstParagraphStyle": "INTR_0201 Midden",
+            "oversetLines": 0,
+            "visibleArea": 738.996,
+            "requiredVisibleArea": 738.996,
+            "frames": [
+                {
+                    "id": 336309,
+                    "geometricBounds": {
+                        "x": 0,
+                        "y": 121,
+                        "width": 152.666,
+                        "height": 194.725
+                    },
+                    "columns": 1,
+                    "words": 40,
+                    "characters": 228,
+                    "textWrapMode": "bounding_box",
+                    "zIndex": 341,
+                    "locked": false,
+                    "text": "Intr_0201 midden, vet, cursief Groei Het Algemeen Dagblad of AD is een Nederlands landelijk dagblad en met een oplage in 2013 van ruim 409 duizend exemplaren de op √©√©n na grootste betaalde krant van Nederland. Krant verschijnt",
+                    "textWrapOffset": {
+                        "top": 0,
+                        "left": 0,
+                        "bottom": 11.339,
+                        "right": 0
+                    }
+                }
+            ]
+        },
+        {
+            "type": "TEKST",
+            "words": 537,
+			"characters": 3500,
+            "firstParagraphStyle": "TKSX_0003a Tekst RR Niet inspringen",
+            "oversetLines": 3,
+            "visibleArea": 139277.094,
+            "requiredVisibleArea": 143881.053,
+            "frames": [
+                {
+                    "id": 319585,
+                    "geometricBounds": {
+                        "x": 0,
+                        "y": 330,
+                        "width": 480.675,
+                        "height": 431.843
+                    },
+                    "columns": 3,
+                    "words": 423,
+                    "characters": 2576,
+                    "textWrapMode": "none",
+                    "zIndex": 327,
+                    "locked": false,
+                    "text": "TKSX_0003a vet cursief vetcursief\rTKST_0002vet cursief vetcursief\rTKOP_0032 RR\rVRAA_0001 Tekst vraag v c cuve\rANTW_0002 Tekst antw v c cuve\rTKST Het Algemeen Dagblad profileert zich sinds zijn oprichting als een neutrale krant zonder politieke of religieuze binding. Volgens het redactiestatuut dient de krant een populair, betrouwbaar, onafhankelijk landelijk ochtendblad te zijn. Sinds de overname door De Persgroep is de signatuur gelijk aan die van zijn Belgische evenknie Het Laatste Nieuws die links progressief liberaal is. Hoewel het Algemeen Dagblad als landelijke krant overal verkrijgbaar is, wordt de krant het meest gelezen in het zuidwesten van Nederland. Een kwart van de abonnees woont in de drie grote steden in het westen van het land.\rDe krant werd in 1946 als zusje van de Nieuwe Rotterdamsche Courant opgericht door W. Pluygers en J. Versnel. Pluygers werd de uitgever, Jan Schraver de eerste hoofdredacteur. Het eerste nummer verscheen op 29 april 1946. In 1964 werd de krant, die tot dan toe was uitgegeven door de Nieuwe Rotterdamsche Courant NV, overgenomen door de Nederlandse Dagblad Unie (NDU), ontstaan uit het samengaan van de NRC met het Algemeen Handelsblad. In 1979 fuseerde de NDU met uitgeverij Elsevier, die de dagbladpoot in 1995 afstootte naar PCM Uitgevers, waar Het Parool, Trouw en de Volkskrant al werden uitgegeven. PCM verwierf niet alleen het Algemeen Dagblad, maar ook de fusiekrant NRC Handelsblad. Het nieuwe AD is ondergebracht in [300] een joint venture waarin de uitgevers PCM en Wegener participeren. Lange tijd was het Algemeen Dagblad, na De Telegraaf, de tweede krant van Nederland. \rVanaf eind jaren tachtig verloor de krant lezers. Dat proces werd vanaf 1993 versterkt door de abrupte koerswijziging van toenmalig hoofdredacteur Peter van Dijk, die de krant een volledig nieuw uiterlijk gaf en van het dagblad een kwaliteitskrant wilde maken. Veel lezers waren daar niet van gediend. De overname van NDU door PCM frustreerde Van Dijks plannen enigszins, omdat het niet in het belang van het bedrijf was dat het Algemeen Dagblad zou concurreren met de Volkskrant, die toen erg succesvol was. Na een kort hoofdredacteurschap van Oscar Garschagen, die de titel op de voorpagina voorzag van Nederlands populairste kwaliteitskrant, werd ombudsman Willem Ammerlaan  in een periode van grote onrust op de redactie gevraagd de nieuwe hoofdredacteur te worden. Ammerlaan herstelde de rust, maar hield vast aan de afspraak met de raad van bestuur dat hij niet langer dan maximaal twee jaar als hoofdredacteur wilde aanblijven en "
+                },
+                {
+                    "id": 319611,
+                    "geometricBounds": {
+                        "x": 601.35,
+                        "y": 528,
+                        "width": 152.666,
+                        "height": 233.843
+                    },
+                    "columns": 1,
+                    "words": 114,
+                    "characters": 715,
+                    "textWrapMode": "none",
+                    "zIndex": 333,
+                    "locked": false,
+                    "text": "na veertig journalistieke dienstjaren met pensioen zou gaan. Ammerlaans opvolger Jan Bonjer gooide daarna het roer om. Inmiddels was de Volkskrant het Algemeen Dagblad voorbijgestreefd als tweede krant van Nederland. Bonjer schrapte het predicaat kwaliteitskrant in 2004 en richtte zich weer nadrukkelijk op de concurrentie met De Telegraaf.\rVanaf 2004 verscheen het sportkatern als ingestoken bijlage Sportwereld op tabloidformaat. Sinds de fusie met zeven regionale kranten op 1 september 2005, wordt de hele krant op tabloidformaat gedrukt. Wegener voelde het meest voor een geheel nieuwe naam. PCM wilde (op aandringen van het AD) de titel Algemeen Dagblad handhaven omdat dit een sterke merknaam zou zijn. Uit "
+                }
+            ]
+        },
+        {
+            "type": "BIJSCHRIFT",
+            "words": 4,
+            "characters": 39,
+            "firstParagraphStyle": "BIJS_0302 Bijschrift BOVEN",
+            "oversetLines": -5,
+            "visibleArea": 1633.563,
+            "requiredVisibleArea": -3756.352,
+            "frames": [
+                {
+                    "id": 319742,
+                    "geometricBounds": {
+                        "x": 492.014,
+                        "y": 528,
+                        "width": 97.998,
+                        "height": 77
+                    },
+                    "columns": 1,
+                    "words": 4,
+                    "characters": 39,
+                    "textWrapMode": "bounding_box",
+                    "zIndex": 332,
+                    "locked": false,
+                    "text": "BijschriftOximorus simplin tame teatis.",
+                    "textWrapOffset": {
+                        "top": 0,
+                        "left": 0,
+                        "bottom": -5.669,
+                        "right": 0
+                    }
+                }
+            ]
+        },
+        {
+            "type": "QUOTE",
+            "words": 6,
+            "characters": 34,
+            "firstParagraphStyle": "SPEC_0401 Aanhalingsteken",
+            "oversetLines": 0,
+            "visibleArea": 0,
+            "requiredVisibleArea": 0,
+            "frames": [
+                {
+                    "id": 319716,
+                    "geometricBounds": {
+                        "x": 492.014,
+                        "y": 653.975,
+                        "width": 97.998,
+                        "height": 107.867
+                    },
+                    "columns": 1,
+                    "words": 6,
+                    "characters": 34,
+                    "textWrapMode": "bounding_box",
+                    "zIndex": 334,
+                    "locked": false,
+                    "text": " \rQuote \nxx\nxx\nxx\rNaamBatil hent. ",
+                    "textWrapOffset": {
+                        "top": 2.835,
+                        "left": 0,
+                        "bottom": 5.669,
+                        "right": 0
+                    }
+                }
+            ]
+        }
+    ],
+    "imageComponents": [
+        {
+            "id": 319714,
+            "geometricBounds": {
+                "x": 163.994,
+                "y": 125.134,
+                "width": 590.022,
+                "height": 396.866
+            },
+            "textWrapMode": "bounding_box",
+            "zIndex": 335,
+            "locked": false,
+            "textWrapOffset": {
+                "top": 0,
+                "left": 0,
+                "bottom": 5.669,
+                "right": 0
+            }
+        }
+    ]
+}

@@ -1,0 +1,140 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1145.512" height="803.425" viewBox="476.063 60.849999999999994 1145.512 803.425">
+<style>
+    .page { fill: #fff; stroke: #ccc; }
+    .margin { fill: none; stroke: #aaa; stroke-dasharray: 4 2; }
+    .column { fill: none; stroke: #ddd; }
+    .grid { stroke: #eee; stroke-width: 0.5; }
+
+    .text-frame { fill: rgba(0,0,255,0.08); stroke: #00f; }
+    .image-frame { fill: rgba(255,165,0,0.15); stroke: #f90; }
+
+    .frame-id { 
+        font-size: 7px; 
+        fill: #666;
+    }
+    
+    .thread {
+        fill: none;
+        stroke: #888;
+        stroke-dasharray: 3 3;
+        stroke-width: 1;
+    }
+
+    .label {
+        font-size: 9px;
+        font-family: monospace;
+    }
+
+    .snippet {
+        font-size: 12px;
+        font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+        fill: #111;
+    }
+
+    .label-bg {
+        fill: #000;
+        opacity: 0.75;
+    }
+
+    .label-inv {
+        fill: #fff;
+        text-anchor: end;
+    }
+
+    .z-index { 
+        font-size: 7px; 
+        fill: #333;
+        text-anchor: end;
+        paint-order: stroke fill;
+        stroke: white;
+        stroke-width: 2;
+        stroke-linejoin: round;
+    }
+
+    .distance {
+        stroke: red;
+        stroke-width: 2.5;
+        fill: none;
+    }
+
+    .edge-ghost {
+        stroke: rgba(200, 0, 0, 0.4);
+        stroke-width: 1.5;
+        stroke-dasharray: 6 3;
+        fill: none;
+    }
+
+    .arrowhead {
+        fill: red;
+    }
+    
+    .fender-zone {
+        fill: url(#fender-hatch);
+        stroke: none;
+    }
+
+    .fender-edge {
+        stroke: #0891b2;
+        stroke-width: 2;
+        fill: none;
+    }
+</style>
+<defs>
+    <pattern id="baseline-grid" patternUnits="userSpaceOnUse" width="100%" height="11">
+        <line x1="0" y1="0" x2="100%" y2="0" class="grid" />
+    </pattern>
+    <pattern id="checkerboard" patternUnits="userSpaceOnUse" width="20" height="20">
+        <rect width="20" height="20" fill="#e8e8e8" stroke="none"/>
+        <rect width="10" height="10" fill="#ffffff" stroke="none"/>
+        <rect x="10" y="10" width="10" height="10" fill="#ffffff" stroke="none"/>
+    </pattern>
+    <pattern id="fender-hatch" patternUnits="userSpaceOnUse" width="8" height="8" patternTransform="rotate(45)">
+        <line x1="0" y1="0" x2="0" y2="8" stroke="#0891b2" stroke-width="1.2" stroke-opacity="0.5" />
+    </pattern>
+</defs>
+
+
+<g id="article">
+<line class="thread" x1="790.866" y1="844.275" x2="847.559" y2="201.85" />
+<rect class="text-frame" x="496.063" y="135.85" width="1105.512" height="55" />
+<rect class="label-bg" x="1575.5749999999998" y="176.85" width="26" height="14" />
+<text class="z-index" x="1571.5749999999998" y="186.85" text-anchor="end">z:292</text>
+<text class="label label-inv" x="1597.5749999999998" y="186.85">KOP</text>
+<rect class="text-frame" x="496.063" y="102.85" width="1105.512" height="22" />
+<rect class="label-bg" x="1545.5749999999998" y="110.85" width="56" height="14" />
+<text class="z-index" x="1541.5749999999998" y="120.85" text-anchor="end">z:293</text>
+<text class="label label-inv" x="1597.5749999999998" y="120.85">BOVENKOP</text>
+<rect class="text-frame" x="496.063" y="311.85" width="294.803" height="532.425" />
+<rect class="label-bg" x="752.866" y="830.275" width="38" height="14" />
+<text class="z-index" x="748.866" y="840.275" text-anchor="end">z:294</text>
+<text class="label label-inv" x="786.866" y="840.275">TEKST</text>
+<rect class="text-frame" x="847.559" y="201.85" width="754.016" height="642.425" />
+<rect class="label-bg" x="1563.5749999999998" y="830.275" width="38" height="14" />
+<text class="z-index" x="1559.5749999999998" y="840.275" text-anchor="end">z:295</text>
+<text class="label label-inv" x="1597.5749999999998" y="840.275">TEKST</text>
+<rect class="text-frame" x="649.134" y="509.85" width="141.732" height="99" />
+<rect class="label-bg" x="752.866" y="594.85" width="38" height="14" />
+<text class="z-index" x="748.866" y="604.85" text-anchor="end">z:301</text>
+<text class="label label-inv" x="786.866" y="604.85">QUOTE</text>
+<rect class="text-frame" x="1306.772" y="696.85" width="141.732" height="47.669" />
+<rect class="label-bg" x="1380.504" y="730.519" width="68" height="14" />
+<text class="z-index" x="1376.504" y="740.519" text-anchor="end">z:302</text>
+<text class="label label-inv" x="1444.504" y="740.519">BIJSCHRIFT</text>
+<rect class="image-frame" x="847.559" y="206.85" width="754.016" height="484.614" />
+<rect class="label-bg" x="1563.5749999999998" y="677.4639999999999" width="38" height="14" />
+<text class="z-index" x="1559.5749999999998" y="687.4639999999999" text-anchor="end">z:303</text>
+<text class="label label-inv" x="1597.5749999999998" y="687.4639999999999">image</text>
+<rect class="text-frame" x="496.216" y="297.85" width="141.579" height="49.933" />
+<rect class="label-bg" x="593.7950000000001" y="333.783" width="44" height="14" />
+<text class="z-index" x="589.7950000000001" y="343.783" text-anchor="end">z:304</text>
+<text class="label label-inv" x="633.7950000000001" y="343.783">PLAATS</text>
+<rect class="text-frame" x="496.063" y="278.85" width="141.732" height="62.237" />
+<rect class="label-bg" x="593.795" y="327.08700000000005" width="44" height="14" />
+<text class="z-index" x="589.795" y="337.08700000000005" text-anchor="end">z:305</text>
+<text class="label label-inv" x="633.795" y="337.08700000000005">AUTEUR</text>
+<rect class="text-frame" x="496.063" y="201.85" width="294.65" height="104.725" />
+<rect class="label-bg" x="752.713" y="292.575" width="38" height="14" />
+<text class="z-index" x="748.713" y="302.575" text-anchor="end">z:306</text>
+<text class="label label-inv" x="786.713" y="302.575">INTRO</text>
+</g>
+</svg>

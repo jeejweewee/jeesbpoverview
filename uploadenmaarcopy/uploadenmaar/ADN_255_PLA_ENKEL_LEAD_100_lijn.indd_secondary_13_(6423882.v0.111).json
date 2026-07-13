@@ -1,0 +1,258 @@
+{
+    "version": "2.0",
+	"brandName": "ADN",
+	"brandId": "31",
+	"sectionName": "Regio",
+	"sectionId": "255",
+    "genreId": "info",
+    "shapeTypeName": "secondary",
+    "shapeTypeId": "2",
+    "geometricBounds": {
+        "x": -476.22,
+        "y": 80.85,
+        "width": 447.907,
+        "height": 792.3
+    },
+    "foldLine": null,
+    "textComponents": [
+        {
+            "type": "BIJSCHRIFT",
+            "words": 1,
+            "characters": 10,
+            "firstParagraphStyle": "BIJS_0302 Bijschrift BOVEN",
+            "oversetLines": 0,
+            "visibleArea": 0,
+            "requiredVisibleArea": 0,
+            "frames": [
+                {
+                    "id": 333476,
+                    "geometricBounds": {
+                        "x": 11.338,
+                        "y": 341,
+                        "width": 436.535,
+                        "height": 11
+                    },
+                    "columns": 1,
+                    "words": 1,
+                    "characters": 10,
+                    "textWrapMode": "bounding_box",
+                    "zIndex": 58,
+                    "locked": false,
+                    "text": "Bijschrift",
+                    "textWrapOffset": {
+                        "top": 0,
+                        "left": 0,
+                        "bottom": 5.669,
+                        "right": 0
+                    }
+                }
+            ]
+        },
+        {
+            "type": "KOP",
+            "words": 5,
+            "characters": 24,
+            "firstParagraphStyle": "KOPP_0109Tiempos Semibold 51",
+            "oversetLines": 0,
+            "visibleArea": 3.668,
+            "requiredVisibleArea": 3.668,
+            "frames": [
+                {
+                    "id": 333452,
+                    "geometricBounds": {
+                        "x": 11.371,
+                        "y": 363,
+                        "width": 436.535,
+                        "height": 110
+                    },
+                    "columns": 1,
+                    "words": 5,
+                    "characters": 24,
+                    "textWrapMode": "none",
+                    "zIndex": 57,
+                    "locked": false,
+                    "text": "Info 3 kol tekens\n(1650)"
+                }
+            ]
+        },
+        {
+            "type": "PLAATS",
+            "words": 2,
+            "characters": 16,
+            "firstParagraphStyle": "PLAA_0006 Plaats",
+            "oversetLines": 0,
+            "visibleArea": 0,
+            "requiredVisibleArea": 0,
+            "frames": [
+                {
+                    "id": 338824,
+                    "geometricBounds": {
+                        "x": 11.487,
+                        "y": 569,
+                        "width": 137.804,
+                        "height": 16.933
+                    },
+                    "columns": 1,
+                    "words": 2,
+                    "characters": 16,
+                    "textWrapMode": "bounding_box",
+                    "zIndex": 61,
+                    "locked": false,
+                    "text": "PLAA_0006 Plaats",
+                    "textWrapOffset": {
+                        "top": 0,
+                        "left": 0,
+                        "bottom": 2.835,
+                        "right": 0
+                    }
+                }
+            ]
+        },
+        {
+            "type": "AUTEUR",
+            "words": 2,
+            "characters": 18,
+            "firstParagraphStyle": "AUTE_0005 Auteur",
+            "oversetLines": 0,
+            "visibleArea": 0,
+            "requiredVisibleArea": 0,
+            "frames": [
+                {
+                    "id": 338850,
+                    "geometricBounds": {
+                        "x": 11.338,
+                        "y": 550,
+                        "width": 137.953,
+                        "height": 29.237
+                    },
+                    "columns": 1,
+                    "words": 2,
+                    "characters": 18,
+                    "textWrapMode": "bounding_box",
+                    "zIndex": 62,
+                    "locked": false,
+                    "text": "AUTE_0005 Auteur  ",
+                    "textWrapOffset": {
+                        "top": 0,
+                        "left": 0,
+                        "bottom": 0,
+                        "right": 0
+                    }
+                }
+            ]
+        },
+        {
+            "type": "INTRO",
+            "words": 33,
+            "characters": 196,
+            "firstParagraphStyle": "INTR_0004 Tekst Lead",
+            "oversetLines": 0,
+            "visibleArea": 0,
+            "requiredVisibleArea": 0,
+            "frames": [
+                {
+                    "id": 338875,
+                    "geometricBounds": {
+                        "x": 11.338,
+                        "y": 473,
+                        "width": 137.878,
+                        "height": 77
+                    },
+                    "columns": 1,
+                    "words": 33,
+                    "characters": 196,
+                    "textWrapMode": "bounding_box",
+                    "zIndex": 63,
+                    "locked": false,
+                    "text": "Intr_0004 klein, vet, cursief Groei Het Algemeen Dagblad of AD is een Nederlands landelijk dagblad en met een oplage in 2013 van ruim 409 duizend exemplaren de op √©√©n na grootste betaalde krant ",
+                    "textWrapOffset": {
+                        "top": 0,
+                        "left": 0,
+                        "bottom": 11.339,
+                        "right": 0
+                    }
+                }
+            ]
+        },
+        {
+            "type": "QUOTE",
+            "words": 6,
+            "characters": 34,
+            "firstParagraphStyle": "SPEC_0401 Aanhalingsteken",
+            "oversetLines": 0,
+            "visibleArea": 0,
+            "requiredVisibleArea": 0,
+            "frames": [
+                {
+                    "id": 333503,
+                    "geometricBounds": {
+                        "x": 160.458,
+                        "y": 638,
+                        "width": 138.124,
+                        "height": 121
+                    },
+                    "columns": 1,
+                    "words": 6,
+                    "characters": 34,
+                    "textWrapMode": "bounding_box",
+                    "zIndex": 60,
+                    "locked": false,
+                    "text": " \rQuote \nxx\nxx\nxx\rNaam\nOrganisatie",
+                    "textWrapOffset": {
+                        "top": 8.504,
+                        "left": 0,
+                        "bottom": 5.669,
+                        "right": 0
+                    }
+                }
+            ]
+        },
+        {
+            "type": "TEKST",
+            "words": 253,
+			"characters": 1650,
+            "firstParagraphStyle": "TKSX_0003a Tekst RR Niet inspringen",
+            "oversetLines": 1,
+            "visibleArea": 55.921,
+            "requiredVisibleArea": 905.305,
+            "frames": [
+                {
+                    "id": 333425,
+                    "geometricBounds": {
+                        "x": 11.338,
+                        "y": 473,
+                        "width": 436.535,
+                        "height": 288.843
+                    },
+                    "columns": 3,
+                    "words": 253,
+                    "characters": 1576,
+                    "textWrapMode": "none",
+                    "zIndex": 56,
+                    "locked": false,
+                    "text": "TKSX_0003a vet cursief vetcurs\rTKST_0002 vet cursief vetcurs\rTKOP_0032 RR\rVRAA_0001 Tekst v c cuve\rANTW_0002 Tekst v c cuve\rTKSTlorib usapicae quatium reri aut volore niet officiur? Bisqui ut reEpeditatest, quiduci liquas plit quoditius simped que ex endi optatio odionsectat everio. Berfera temost, nulla sit dolupicia ditior maio il eum re rem vent landandessin rerferiorum unt re volupta quam qui dolesciustem reste ped quibus, que ipiet delicii siminve rnatur sunda as sit, sequi cuptaqui dolupta nis nus.\rObisten estrum restio. Nist escienim eatur, nihitis quoditas eum quiae omnimus dem et ped modio blam, natia conse perume nonecte possin coreper ovitatibus.\rEd ma vernatur? Obit ipsaecea doluptia anda quam, id earumquo ius di repta et alitem et dollab imaionsed evel ilignimus aute diore voloribus magnis etus earchillabor magnimagni as ella vellacero vendunt excepta conseque inistrum que viducia ecusam aut ad quia doloreic tem. To ipsam, teceptibus.\rLandit, sa sandaes tiandae qui commolupta sectas doloreperunt aut eic tor sint et most, que sit hillam volorem voloriatur, in eati culpa quo que volluptur?\rAm quibea doluptium voluptas quidita dolum quiasi te laborepe laborent assit eatquatur sed moluptur? Qui doles dessum ipsa se vent etum rehenet voluptas inum veliatur? Quis si nim expelessi rae susapienis et aut porest delit laborporrum doluptur?\rTem reium enis as dolorias dolorenda nonsequidio vollamenient moleste nientio cone recereraecab ium disin erferum aci consendunt eos utemo elit facietur sum qui qui volupta quis maion rem debis sam ipsa intions "
+                }
+            ]
+        }
+    ],
+    "imageComponents": [
+        {
+            "id": 333501,
+            "geometricBounds": {
+                "x": 11.338,
+                "y": 22,
+                "width": 436.535,
+                "height": 312.426
+            },
+            "textWrapMode": "bounding_box",
+            "zIndex": 59,
+            "locked": false,
+            "textWrapOffset": {
+                "top": 0,
+                "left": 0,
+                "bottom": 5.669,
+                "right": 0
+            }
+        }
+    ]
+}

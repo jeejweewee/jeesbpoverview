@@ -1,0 +1,159 @@
+{
+    "version": "2.0",
+	"brandName": "ADN",
+	"brandId": "31",
+	"sectionName": "Algemeen",
+	"sectionId": "268",
+    "genreId": "nieuws",
+    "shapeTypeName": "third",
+    "shapeTypeId": "3",
+    "geometricBounds": {
+        "x": 1153.701,
+        "y": 872.85,
+        "width": 447.874,
+        "height": 264.012
+    },
+    "foldLine": null,
+    "textComponents": [
+        {
+            "type": "KOP",
+            "words": 4,
+            "characters": 30,
+            "firstParagraphStyle": "KOPP_0116 Haas Light 24",
+            "oversetLines": 0,
+            "visibleArea": 0,
+            "requiredVisibleArea": 0,
+            "frames": [
+                {
+                    "id": 299273,
+                    "geometricBounds": {
+                        "x": 11.338,
+                        "y": 0.012,
+                        "width": 436.535,
+                        "height": 33
+                    },
+                    "columns": 1,
+                    "words": 4,
+                    "characters": 30,
+                    "textWrapMode": "none",
+                    "zIndex": 10,
+                    "locked": false,
+                    "text": "Onderwerp fototekst 550 tekens"
+                }
+            ]
+        },
+        {
+            "type": "PLAATS",
+            "words": 1,
+            "characters": 6,
+            "firstParagraphStyle": "PLAA_0307 Label Plaats",
+            "oversetLines": 0,
+            "visibleArea": 0,
+            "requiredVisibleArea": 0,
+            "frames": [
+                {
+                    "id": 299222,
+                    "geometricBounds": {
+                        "x": 11.338,
+                        "y": 29.161,
+                        "width": 33.823,
+                        "height": 14.851
+                    },
+                    "columns": 1,
+                    "words": 1,
+                    "characters": 6,
+                    "textWrapMode": "bounding_box",
+                    "zIndex": 7,
+                    "locked": false,
+                    "text": "PLAAts",
+                    "textWrapOffset": {
+                        "top": 0,
+                        "left": 0,
+                        "bottom": 0,
+                        "right": 4.252
+                    }
+                }
+            ]
+        },
+        {
+            "type": "TEKST",
+            "words": 78,
+			"characters": 600,
+            "firstParagraphStyle": "TKSX_0306a_Bijschrift Bericht ",
+            "oversetLines": 0,
+            "visibleArea": 0,
+            "requiredVisibleArea": 0,
+            "frames": [
+                {
+                    "id": 299297,
+                    "geometricBounds": {
+                        "x": 11.338,
+                        "y": 66.012,
+                        "width": 138.144,
+                        "height": 198
+                    },
+                    "columns": 1,
+                    "words": 78,
+                    "characters": 533,
+                    "textWrapMode": "contour",
+                    "zIndex": 11,
+                    "locked": false,
+                    "text": "a BIJS_Bijschrift Cursief\rBIJS_Bijschrift Cursief\rHet Algemeen Dagblad profileert zich sinds zijn oprichting als een neutrale krant zonder politieke of religieuze binding. Volgens het redactiestatuut dient de krant ‚Äòeen populair, betrouwbaar, onafhankelijk landelijk ochtendblad‚Äô te zijn. Sinds de overname door De Persgroep is de signatuur gelijk aan die van zijn Belgische evenknie Het Laatste Nieuws die links progressief liberaal is. Hoewel het Algemeen Dagblad als landelijke krant overal verkrijgbaar t meest gelezen in het",
+                    "textWrapOffset": {
+                        "top": 0,
+                        "left": 0,
+                        "bottom": 0,
+                        "right": 0
+                    }
+                }
+            ]
+        },
+        {
+            "type": "SPECIAL",
+            "words": 2,
+            "characters": 16,
+            "firstParagraphStyle": "AUTE_0308 Label Credit",
+            "oversetLines": 0,
+            "visibleArea": 0,
+            "requiredVisibleArea": 0,
+            "frames": [
+                {
+                    "id": 299247,
+                    "geometricBounds": {
+                        "x": 11.338,
+                        "y": 39.862,
+                        "width": 138.144,
+                        "height": 15.15
+                    },
+                    "columns": 1,
+                    "words": 2,
+                    "characters": 16,
+                    "textWrapMode": "none",
+                    "zIndex": 8,
+                    "locked": false,
+                    "text": "Credit fotograaf"
+                }
+            ]
+        }
+    ],
+    "imageComponents": [
+        {
+            "id": 299271,
+            "geometricBounds": {
+                "x": 160.534,
+                "y": 33.012,
+                "width": 287.34,
+                "height": 231
+            },
+            "textWrapMode": "bounding_box",
+            "zIndex": 9,
+            "locked": false,
+            "textWrapOffset": {
+                "top": 0,
+                "left": 0,
+                "bottom": 0,
+                "right": 0
+            }
+        }
+    ]
+}

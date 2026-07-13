@@ -1,0 +1,225 @@
+{
+    "version": "2.0",
+	"brandName": "ADN",
+	"brandId": "31",
+	"sectionName": "Regio",
+	"sectionId": "255",
+    "genreId": "lees",
+    "shapeTypeName": "secondary",
+    "shapeTypeId": "2",
+    "geometricBounds": {
+        "x": 847.559,
+        "y": 80.85,
+        "width": 294.878,
+        "height": 496.228
+    },
+    "foldLine": null,
+    "textComponents": [
+        {
+            "type": "BIJSCHRIFT",
+            "words": 1,
+            "characters": 11,
+            "firstParagraphStyle": "BIJS_0302 Bijschrift BOVEN",
+            "oversetLines": 1,
+            "visibleArea": 93.355,
+            "requiredVisibleArea": 93.355,
+            "frames": [
+                {
+                    "id": 278291,
+                    "geometricBounds": {
+                        "x": 0,
+                        "y": 209,
+                        "width": 294.878,
+                        "height": 11
+                    },
+                    "columns": 1,
+                    "words": 1,
+                    "characters": 11,
+                    "textWrapMode": "bounding_box",
+                    "zIndex": 360,
+                    "locked": false,
+                    "text": "Bijschrift.",
+                    "textWrapOffset": {
+                        "top": 0,
+                        "left": 0,
+                        "bottom": 5.669,
+                        "right": 0
+                    }
+                }
+            ]
+        },
+        {
+            "type": "KOP",
+            "words": 4,
+            "characters": 22,
+            "firstParagraphStyle": "KOPP_0116 Haas Light 24",
+            "oversetLines": 1,
+            "visibleArea": 465.619,
+            "requiredVisibleArea": -2995.671,
+            "frames": [
+                {
+                    "id": 278318,
+                    "geometricBounds": {
+                        "x": 0,
+                        "y": 231.044,
+                        "width": 294.803,
+                        "height": 54.901
+                    },
+                    "columns": 1,
+                    "words": 4,
+                    "characters": 22,
+                    "textWrapMode": "none",
+                    "zIndex": 362,
+                    "locked": false,
+                    "text": "Lees 2kol \r100 tekens\n"
+                }
+            ]
+        },
+        {
+            "type": "PLAATS",
+            "words": 2,
+            "characters": 16,
+            "firstParagraphStyle": "PLAA_0006 Plaats",
+            "oversetLines": 0,
+            "visibleArea": 948.014,
+            "requiredVisibleArea": 948.014,
+            "frames": [
+                {
+                    "id": 290730,
+                    "geometricBounds": {
+                        "x": 0.303,
+                        "y": 371,
+                        "width": 141.579,
+                        "height": 6.696
+                    },
+                    "columns": 1,
+                    "words": 2,
+                    "characters": 16,
+                    "textWrapMode": "bounding_box",
+                    "zIndex": 364,
+                    "locked": false,
+                    "text": "PLAA_0006 Plaats",
+                    "textWrapOffset": {
+                        "top": 0,
+                        "left": 0,
+                        "bottom": 2.835,
+                        "right": 0
+                    }
+                }
+            ]
+        },
+        {
+            "type": "AUTEUR",
+            "words": 2,
+            "characters": 18,
+            "firstParagraphStyle": "AUTE_0005 Auteur",
+            "oversetLines": 0,
+            "visibleArea": 2536.75,
+            "requiredVisibleArea": 2536.75,
+            "frames": [
+                {
+                    "id": 290756,
+                    "geometricBounds": {
+                        "x": 0.15,
+                        "y": 352,
+                        "width": 141.732,
+                        "height": 18.237
+                    },
+                    "columns": 1,
+                    "words": 2,
+                    "characters": 18,
+                    "textWrapMode": "bounding_box",
+                    "zIndex": 365,
+                    "locked": false,
+                    "text": "AUTE_0005 Auteur  ",
+                    "textWrapOffset": {
+                        "top": 0,
+                        "left": 0,
+                        "bottom": 0,
+                        "right": 0
+                    }
+                }
+            ]
+        },
+        {
+            "type": "INTRO",
+            "words": 27,
+            "characters": 157,
+            "firstParagraphStyle": "INTR_0004 Tekst Lead",
+            "oversetLines": 0,
+            "visibleArea": 5417.019,
+            "requiredVisibleArea": 5417.019,
+            "frames": [
+                {
+                    "id": 290781,
+                    "geometricBounds": {
+                        "x": 0.15,
+                        "y": 285.945,
+                        "width": 141.656,
+                        "height": 55.056
+                    },
+                    "columns": 1,
+                    "words": 27,
+                    "characters": 157,
+                    "textWrapMode": "bounding_box",
+                    "zIndex": 366,
+                    "locked": false,
+                    "text": "Intr_0202 klein, vet, cursief Het Algemeen Dagblad of AD is een Nederlands landelijk dagblad en met een oplage in 2013 van ruim 409 duizend exemplaren de op ",
+                    "textWrapOffset": {
+                        "top": 0,
+                        "left": 0,
+                        "bottom": 11.339,
+                        "right": 0
+                    }
+                }
+            ]
+        },
+        {
+            "type": "TEKST",
+            "words": 135,
+			"characters": 1000,
+            "firstParagraphStyle": "TKSX_0003a Tekst RR Niet inspringen",
+            "oversetLines": 0,
+            "visibleArea": 18529.485,
+            "requiredVisibleArea": 18529.485,
+            "frames": [
+                {
+                    "id": 278265,
+                    "geometricBounds": {
+                        "x": 0,
+                        "y": 286,
+                        "width": 294.803,
+                        "height": 210.228
+                    },
+                    "columns": 2,
+                    "words": 135,
+                    "characters": 834,
+                    "textWrapMode": "none",
+                    "zIndex": 359,
+                    "locked": false,
+                    "text": "TKSX_0003a vet cursief vetcurs\rTKST_0002 vet cursief vetcurs\rTKOP_0032 RR\rVRAA_0001 Tekst v c cuve\rANTW_0002 Tekst v c cuve\rTKSTHet Algemeen Dagblad profileert zich sinds zijn oprichting als een neutrale krant zonder politieke of religieuze binding. Volgens het redactiestatuut dient de krant ‚Äòeen populair, betrouwbaar, onafhankelijk landelijk ochtendblad‚Äô te zijn. Sinds de overname door De Persgroep is de signatuur gelijk aan die van zijn Belgische evenknie Het Laatste Nieuws die links progressief liberaal is. Hoewel het Algemeen Dagblad als landelijke krant overal verkrijgbaar is, wordt de krant het meest gelezen in het zuidwesten van Nederland. Een kwart van de abonnees woont in de drie grote steden in het westen van het land.\rDe krant werd in 1946 als zusjeNonsed maxim est explam quodis dendicto doles es atemquid et"
+                }
+            ]
+        }
+    ],
+    "imageComponents": [
+        {
+            "id": 278316,
+            "geometricBounds": {
+                "x": 0,
+                "y": 21.978,
+                "width": 294.803,
+                "height": 181.487
+            },
+            "textWrapMode": "bounding_box",
+            "zIndex": 361,
+            "locked": false,
+            "textWrapOffset": {
+                "top": 0,
+                "left": 0,
+                "bottom": 5.5,
+                "right": 0
+            }
+        }
+    ]
+}

@@ -1,0 +1,318 @@
+{
+    "version": "2.0",
+	"brandName": "ADN",
+	"brandId": "31",
+	"sectionName": "Regio",
+	"sectionId": "255",
+    "genreId": "info",
+    "shapeTypeName": "lead",
+    "shapeTypeId": "1",
+    "geometricBounds": {
+        "x": 334.488,
+        "y": 80.85,
+        "width": 447.874,
+        "height": 791.85
+    },
+    "foldLine": null,
+    "textComponents": [
+        {
+            "type": "SPECIAL",
+            "words": 1,
+            "characters": 5,
+            "firstParagraphStyle": "BKOP_0153 Label Trefwoord",
+            "oversetLines": 0,
+            "visibleArea": 0,
+            "requiredVisibleArea": 0,
+            "frames": [
+                {
+                    "id": 333233,
+                    "geometricBounds": {
+                        "x": 11.339,
+                        "y": 22,
+                        "width": 56.934,
+                        "height": 15.821
+                    },
+                    "columns": 1,
+                    "words": 1,
+                    "characters": 5,
+                    "textWrapMode": "bounding_box",
+                    "zIndex": 45,
+                    "locked": false,
+                    "text": "Genre",
+                    "textWrapOffset": {
+                        "top": 0,
+                        "left": 0,
+                        "bottom": 0,
+                        "right": 4.252
+                    }
+                }
+            ]
+        },
+        {
+            "type": "BOVENKOP",
+            "words": 1,
+            "characters": 8,
+            "firstParagraphStyle": "BKOP_0154 Label Onderwerp",
+            "oversetLines": 0,
+            "visibleArea": 0,
+            "requiredVisibleArea": 0,
+            "frames": [
+                {
+                    "id": 333209,
+                    "geometricBounds": {
+                        "x": 11.339,
+                        "y": 22,
+                        "width": 436.535,
+                        "height": 15.821
+                    },
+                    "columns": 1,
+                    "words": 1,
+                    "characters": 8,
+                    "textWrapMode": "none",
+                    "zIndex": 44,
+                    "locked": false,
+                    "text": "Bovenkop"
+                }
+            ]
+        },
+        {
+            "type": "BIJSCHRIFT",
+            "words": 1,
+            "characters": 10,
+            "firstParagraphStyle": "BIJS_0302 Bijschrift BOVEN",
+            "oversetLines": 1,
+            "visibleArea": 0,
+            "requiredVisibleArea": 0,
+            "frames": [
+                {
+                    "id": 333258,
+                    "geometricBounds": {
+                        "x": 11.339,
+                        "y": 341,
+                        "width": 436.535,
+                        "height": 11
+                    },
+                    "columns": 1,
+                    "words": 1,
+                    "characters": 10,
+                    "textWrapMode": "bounding_box",
+                    "zIndex": 46,
+                    "locked": false,
+                    "text": "Bijschrift",
+                    "textWrapOffset": {
+                        "top": 0,
+                        "left": 0,
+                        "bottom": 5.669,
+                        "right": 0
+                    }
+                }
+            ]
+        },
+        {
+            "type": "KOP",
+            "words": 5,
+            "characters": 24,
+            "firstParagraphStyle": "KOPP_0109Tiempos Semibold 51",
+            "oversetLines": 0,
+            "visibleArea": 0,
+            "requiredVisibleArea": 0,
+            "frames": [
+                {
+                    "id": 333184,
+                    "geometricBounds": {
+                        "x": 11.339,
+                        "y": 363,
+                        "width": 436.535,
+                        "height": 110
+                    },
+                    "columns": 1,
+                    "words": 5,
+                    "characters": 24,
+                    "textWrapMode": "none",
+                    "zIndex": 43,
+                    "locked": false,
+                    "text": "Info 3 kol tekens (1650)"
+                }
+            ]
+        },
+        {
+            "type": "PLAATS",
+            "words": 2,
+            "characters": 16,
+            "firstParagraphStyle": "PLAA_0006 Plaats",
+            "oversetLines": 0,
+            "visibleArea": 0,
+            "requiredVisibleArea": 0,
+            "frames": [
+                {
+                    "id": 338732,
+                    "geometricBounds": {
+                        "x": 11.488,
+                        "y": 569,
+                        "width": 137.804,
+                        "height": 16.933
+                    },
+                    "columns": 1,
+                    "words": 2,
+                    "characters": 16,
+                    "textWrapMode": "bounding_box",
+                    "zIndex": 52,
+                    "locked": false,
+                    "text": "PLAA_0006 Plaats",
+                    "textWrapOffset": {
+                        "top": 0,
+                        "left": 0,
+                        "bottom": 2.835,
+                        "right": 0
+                    }
+                }
+            ]
+        },
+        {
+            "type": "AUTEUR",
+            "words": 2,
+            "characters": 18,
+            "firstParagraphStyle": "AUTE_0005 Auteur",
+            "oversetLines": 0,
+            "visibleArea": 0,
+            "requiredVisibleArea": 0,
+            "frames": [
+                {
+                    "id": 338758,
+                    "geometricBounds": {
+                        "x": 11.339,
+                        "y": 550,
+                        "width": 137.953,
+                        "height": 29.237
+                    },
+                    "columns": 1,
+                    "words": 2,
+                    "characters": 18,
+                    "textWrapMode": "bounding_box",
+                    "zIndex": 53,
+                    "locked": false,
+                    "text": "AUTE_0005 Auteur  ",
+                    "textWrapOffset": {
+                        "top": 0,
+                        "left": 0,
+                        "bottom": 0,
+                        "right": 0
+                    }
+                }
+            ]
+        },
+        {
+            "type": "INTRO",
+            "words": 33,
+            "characters": 196,
+            "firstParagraphStyle": "INTR_0004 Tekst Lead",
+            "oversetLines": 0,
+            "visibleArea": 0,
+            "requiredVisibleArea": 0,
+            "frames": [
+                {
+                    "id": 338783,
+                    "geometricBounds": {
+                        "x": 11.339,
+                        "y": 473,
+                        "width": 137.878,
+                        "height": 77
+                    },
+                    "columns": 1,
+                    "words": 33,
+                    "characters": 196,
+                    "textWrapMode": "bounding_box",
+                    "zIndex": 54,
+                    "locked": false,
+                    "text": "Intr_0004 klein, vet, cursief Groei Het Algemeen Dagblad of AD is een Nederlands landelijk dagblad en met een oplage in 2013 van ruim 409 duizend exemplaren de op √©√©n na grootste betaalde krant ",
+                    "textWrapOffset": {
+                        "top": 0,
+                        "left": 0,
+                        "bottom": 11.339,
+                        "right": 0
+                    }
+                }
+            ]
+        },
+        {
+            "type": "TEKST",
+            "words": 253,
+			"characters": 1650,
+            "firstParagraphStyle": "TKSX_0003a Tekst RR Niet inspringen",
+            "oversetLines": 3,
+            "visibleArea": 456.499,
+            "requiredVisibleArea": 6354.815,
+            "frames": [
+                {
+                    "id": 333157,
+                    "geometricBounds": {
+                        "x": 11.339,
+                        "y": 473,
+                        "width": 436.535,
+                        "height": 288.843
+                    },
+                    "columns": 3,
+                    "words": 253,
+                    "characters": 1576,
+                    "textWrapMode": "none",
+                    "zIndex": 41,
+                    "locked": false,
+                    "text": "TKSX_0003a vet cursief vetcurs\rTKST_0002 vet cursief vetcurs\rTKOP_0032 RR\rVRAA_0001 Tekst v c cuve\rANTW_0002 Tekst v c cuve\rTKSTlorib usapicae quatium reri aut volore niet officiur? Bisqui ut reEpeditatest, quiduci liquas plit quoditius simped que ex endi optatio odionsectat everio. Berfera temost, nulla sit dolupicia ditior maio il eum re rem vent landandessin rerferiorum unt re volupta quam qui dolesciustem reste ped quibus, que ipiet delicii siminve rnatur sunda as sit, sequi cuptaqui dolupta nis nus.\rObisten estrum restio. Nist escienim eatur, nihitis quoditas eum quiae omnimus dem et ped modio blam, natia conse perume nonecte possin coreper ovitatibus.\rEd ma vernatur? Obit ipsaecea doluptia anda quam, id earumquo ius di repta et alitem et dollab imaionsed evel ilignimus aute diore voloribus magnis etus earchillabor magnimagni as ella vellacero vendunt excepta conseque inistrum que viducia ecusam aut ad quia doloreic tem. To ipsam, teceptibus.\rLandit, sa sandaes tiandae qui commolupta sectas doloreperunt aut eic tor sint et most, que sit hillam volorem voloriatur, in eati culpa quo que volluptur?\rAm quibea doluptium voluptas quidita dolum quiasi te laborepe laborent assit eatquatur sed moluptur? Qui doles dessum ipsa se vent etum rehenet voluptas inum veliatur? Quis si nim expelessi rae susapienis et aut porest delit laborporrum doluptur?\rTem reium enis as dolorias dolorenda nonsequidio vollamenient moleste nientio cone recereraecab ium disin erferum aci consendunt eos utemo elit facietur sum qui qui volupta quis maion rem debis sam ipsa intions "
+                }
+            ]
+        },
+        {
+            "type": "QUOTE",
+            "words": 6,
+            "characters": 34,
+            "firstParagraphStyle": "SPEC_0401 Aanhalingsteken",
+            "oversetLines": 0,
+            "visibleArea": 0,
+            "requiredVisibleArea": 0,
+            "frames": [
+                {
+                    "id": 333285,
+                    "geometricBounds": {
+                        "x": 160.459,
+                        "y": 642.365,
+                        "width": 138.157,
+                        "height": 119.478
+                    },
+                    "columns": 1,
+                    "words": 6,
+                    "characters": 34,
+                    "textWrapMode": "bounding_box",
+                    "zIndex": 48,
+                    "locked": false,
+                    "text": " \rQuote \nxx\nxx\nxx\rNaam\nOrganisatie",
+                    "textWrapOffset": {
+                        "top": 8.504,
+                        "left": 0,
+                        "bottom": 5.669,
+                        "right": 0
+                    }
+                }
+            ]
+        }
+    ],
+    "imageComponents": [
+        {
+            "id": 333283,
+            "geometricBounds": {
+                "x": 11.339,
+                "y": 54,
+                "width": 436.535,
+                "height": 282
+            },
+            "textWrapMode": "bounding_box",
+            "zIndex": 47,
+            "locked": false,
+            "textWrapOffset": {
+                "top": 0,
+                "left": 0,
+                "bottom": 5.669,
+                "right": 0
+            }
+        }
+    ]
+}

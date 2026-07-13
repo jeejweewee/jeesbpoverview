@@ -1,0 +1,285 @@
+{
+    "version": "2.0",
+	"brandName": "ADN",
+	"brandId": "31",
+	"sectionName": "Regio",
+	"sectionId": "255",
+    "genreId": "info",
+    "shapeTypeName": "lead",
+    "shapeTypeId": "1",
+    "geometricBounds": {
+        "x": 342.992,
+        "y": 80.85,
+        "width": 447.874,
+        "height": 498.268
+    },
+    "foldLine": null,
+    "textComponents": [
+        {
+            "type": "SPECIAL",
+            "words": 1,
+            "characters": 5,
+            "firstParagraphStyle": "BKOP_0153 Label Trefwoord",
+            "oversetLines": 0,
+            "visibleArea": 900.75,
+            "requiredVisibleArea": 900.75,
+            "frames": [
+                {
+                    "id": 279863,
+                    "geometricBounds": {
+                        "x": 11.339,
+                        "y": 22,
+                        "width": 56.934,
+                        "height": 15.821
+                    },
+                    "columns": 1,
+                    "words": 1,
+                    "characters": 5,
+                    "textWrapMode": "bounding_box",
+                    "zIndex": 29,
+                    "locked": false,
+                    "text": "Genre",
+                    "textWrapOffset": {
+                        "top": 0,
+                        "left": 0,
+                        "bottom": 0,
+                        "right": 4.252
+                    }
+                }
+            ]
+        },
+        {
+            "type": "BOVENKOP",
+            "words": 1,
+            "characters": 8,
+            "firstParagraphStyle": "BKOP_0154 Label Onderwerp",
+            "oversetLines": 0,
+            "visibleArea": 5938.417,
+            "requiredVisibleArea": 5938.417,
+            "frames": [
+                {
+                    "id": 279838,
+                    "geometricBounds": {
+                        "x": 11.339,
+                        "y": 22,
+                        "width": 436.535,
+                        "height": 15.821
+                    },
+                    "columns": 1,
+                    "words": 1,
+                    "characters": 8,
+                    "textWrapMode": "none",
+                    "zIndex": 27,
+                    "locked": false,
+                    "text": "Bovenkop"
+                }
+            ]
+        },
+        {
+            "type": "KOP",
+            "words": 5,
+            "characters": 22,
+            "firstParagraphStyle": "KOPP_0109Tiempos Semibold 45",
+            "oversetLines": -1,
+            "visibleArea": 8157.061,
+            "requiredVisibleArea": -17995.776,
+            "frames": [
+                {
+                    "id": 279761,
+                    "geometricBounds": {
+                        "x": 11.339,
+                        "y": 55,
+                        "width": 436.535,
+                        "height": 93.5
+                    },
+                    "columns": 1,
+                    "words": 5,
+                    "characters": 22,
+                    "textWrapMode": "none",
+                    "zIndex": 23,
+                    "locked": false,
+                    "text": "Info 3 kol 1650 tekens"
+                }
+            ]
+        },
+        {
+            "type": "INTRO",
+            "words": 26,
+            "characters": 189,
+            "firstParagraphStyle": "INTR_0202 Klein",
+            "oversetLines": 0,
+            "visibleArea": 0,
+            "requiredVisibleArea": 0,
+            "frames": [
+                {
+                    "id": 279785,
+                    "geometricBounds": {
+                        "x": 11.339,
+                        "y": 154,
+                        "width": 138.161,
+                        "height": 93.5
+                    },
+                    "columns": 1,
+                    "words": 26,
+                    "characters": 189,
+                    "textWrapMode": "bounding_box",
+                    "zIndex": 24,
+                    "locked": false,
+                    "text": "Intr_0201 Klein, vet, cursief  Het Algemeen Dagblad profileert zich sinds zijn oprichting als een neutrale krant zonder politieke of religieuze binding. Volgens het redactiestatuut dient de",
+                    "textWrapOffset": {
+                        "top": 0,
+                        "left": 0,
+                        "bottom": 5.669,
+                        "right": 0
+                    }
+                }
+            ]
+        },
+        {
+            "type": "AUTEUR",
+            "words": 2,
+            "characters": 18,
+            "firstParagraphStyle": "AUTE_0005 Auteur",
+            "oversetLines": 0,
+            "visibleArea": 0,
+            "requiredVisibleArea": 0,
+            "frames": [
+                {
+                    "id": 279891,
+                    "geometricBounds": {
+                        "x": 11.339,
+                        "y": 253,
+                        "width": 138.144,
+                        "height": 14.74
+                    },
+                    "columns": 1,
+                    "words": 2,
+                    "characters": 18,
+                    "textWrapMode": "bounding_box",
+                    "zIndex": 32,
+                    "locked": false,
+                    "text": "AUTE_0005 Auteur  ",
+                    "textWrapOffset": {
+                        "top": 0,
+                        "left": 0,
+                        "bottom": 0,
+                        "right": 0
+                    }
+                }
+            ]
+        },
+        {
+            "type": "PLAATS",
+            "words": 2,
+            "characters": 16,
+            "firstParagraphStyle": "PLAA_0006 Plaats",
+            "oversetLines": 0,
+            "visibleArea": 0,
+            "requiredVisibleArea": 0,
+            "frames": [
+                {
+                    "id": 279916,
+                    "geometricBounds": {
+                        "x": 11.339,
+                        "y": 271.237,
+                        "width": 138.144,
+                        "height": 6.696
+                    },
+                    "columns": 1,
+                    "words": 2,
+                    "characters": 16,
+                    "textWrapMode": "bounding_box",
+                    "zIndex": 33,
+                    "locked": false,
+                    "text": "PLAA_0006 Plaats",
+                    "textWrapOffset": {
+                        "top": 0,
+                        "left": 0,
+                        "bottom": 2.835,
+                        "right": 0
+                    }
+                }
+            ]
+        },
+        {
+            "type": "TEKST",
+            "words": 233,
+			"characters": 1650,
+            "firstParagraphStyle": "TKSX_0003a Tekst RR Niet inspringen",
+            "oversetLines": 0,
+            "visibleArea": 29427.367,
+            "requiredVisibleArea": 29427.367,
+            "frames": [
+                {
+                    "id": 279734,
+                    "geometricBounds": {
+                        "x": 11.339,
+                        "y": 253,
+                        "width": 436.535,
+                        "height": 245.268
+                    },
+                    "columns": 3,
+                    "words": 233,
+                    "characters": 1418,
+                    "textWrapMode": "none",
+                    "zIndex": 21,
+                    "locked": false,
+                    "text": "TKSX_0003a vet cursief vetcurs\rTKST_0002 vet cursief vetcurs\rTKOP_0032 RR\rVRAA_0001 Tekst v c cuve\rANTW_0002 Tekst v c cuve\rTKST Het Algemeen Dagblad profileert zich sinds zijn oprichting als een neutrale krant zonder politieke of religieuze binding. Volgens het redactiestatuut dient de krant ‚Äòeen populair, betrouwbaar, onafhankelijk landelijk ochtendblad‚Äô te zijn. Sinds de overname door De Persgroep is de signatuur gelijk aan die van zijn Belgische evenknie Het Laatste Nieuws die links progressief liberaal is. Hoewel het Algemeen Dagblad als landelijke krant overal verkrijgbaar is, wordt de krant het meest gelezen in het zuidwesten van Nederland. Een kwart van de abonnees woont in de drie grote steden in het westen van het land.\rDe krant werd in 1946 als zusje van de Nieuwe Rotterdamsche Courant opgericht door W. Pluygers en J. Versnel. Pluygers werd de uitgever, Jan Schraver de eerste hoofdredacteur. Het eerste nummer verscheen op 29 april 1946. In 1964 werd de krant, die tot dan toe was uitgegeven door de Nieuwe Rotterdamsche Courant NV, overgenomen door de Nederlandse Dagblad Unie (NDU), ontstaan uit het samengaan van de NRC met het Algemeen Handelsblad. In 1979 fuseerde de NDU met uitgeverij Elsevier, die de dagbladpoot in 1995 afstootte naar PCM Uitgevers, waar Het Parool, Trouw en de Volkskrant al werden uitgegeven. PCM verwierf niet alleen het Algemeen Dagblad, maar ook de fusiekrant"
+                }
+            ]
+        },
+        {
+            "type": "BIJSCHRIFT",
+            "words": 1,
+            "characters": 11,
+            "firstParagraphStyle": "BIJS_0305 Bijschrift LINKS",
+            "oversetLines": -13,
+            "visibleArea": 6.549,
+            "requiredVisibleArea": -8287.624,
+            "frames": [
+                {
+                    "id": 279810,
+                    "geometricBounds": {
+                        "x": 382.677,
+                        "y": 156.788,
+                        "width": 65.197,
+                        "height": 162.213
+                    },
+                    "columns": 1,
+                    "words": 1,
+                    "characters": 11,
+                    "textWrapMode": "bounding_box",
+                    "zIndex": 25,
+                    "locked": false,
+                    "text": "Bijschrift.",
+                    "textWrapOffset": {
+                        "top": 0,
+                        "left": 0,
+                        "bottom": 5.669,
+                        "right": 0
+                    }
+                }
+            ]
+        }
+    ],
+    "imageComponents": [
+        {
+            "id": 279836,
+            "geometricBounds": {
+                "x": 160.59,
+                "y": 156.693,
+                "width": 222.087,
+                "height": 162.307
+            },
+            "textWrapMode": "bounding_box",
+            "zIndex": 26,
+            "locked": false,
+            "textWrapOffset": {
+                "top": 0,
+                "left": 0,
+                "bottom": 5.5,
+                "right": 0
+            }
+        }
+    ]
+}

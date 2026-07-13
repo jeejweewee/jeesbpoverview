@@ -1,0 +1,252 @@
+{
+    "version": "2.0",
+	"brandName": "ADN",
+	"brandId": "31",
+	"sectionName": "Regio",
+	"sectionId": "255",
+    "genreId": "lees",
+    "shapeTypeName": "secondary",
+    "shapeTypeId": "2",
+    "geometricBounds": {
+        "x": 847.559,
+        "y": 80.85,
+        "width": 754.016,
+        "height": 496.291
+    },
+    "foldLine": null,
+    "textComponents": [
+        {
+            "type": "BOVENKOP",
+            "words": 1,
+            "characters": 8,
+            "firstParagraphStyle": "BKOP_0151 Bovenkop Lijn Grijs",
+            "oversetLines": 0,
+            "visibleArea": 10102.677,
+            "requiredVisibleArea": 10102.677,
+            "frames": [
+                {
+                    "id": 275079,
+                    "geometricBounds": {
+                        "x": 0,
+                        "y": 22,
+                        "width": 754.016,
+                        "height": 22
+                    },
+                    "columns": 1,
+                    "words": 1,
+                    "characters": 8,
+                    "textWrapMode": "none",
+                    "zIndex": 328,
+                    "locked": false,
+                    "text": "Bovenkop"
+                }
+            ]
+        },
+        {
+            "type": "KOP",
+            "words": 5,
+            "characters": 22,
+            "firstParagraphStyle": "KOPP_0106 Tiempos Light 51",
+            "oversetLines": 0,
+            "visibleArea": 3865.341,
+            "requiredVisibleArea": 3865.341,
+            "frames": [
+                {
+                    "id": 275103,
+                    "geometricBounds": {
+                        "x": 0,
+                        "y": 55,
+                        "width": 447.874,
+                        "height": 110
+                    },
+                    "columns": 1,
+                    "words": 5,
+                    "characters": 22,
+                    "textWrapMode": "none",
+                    "zIndex": 329,
+                    "locked": false,
+                    "text": "Lees 5 kol 3500 tekens"
+                }
+            ]
+        },
+        {
+            "type": "PLAATS",
+            "words": 2,
+            "characters": 16,
+            "firstParagraphStyle": "PLAA_0006 Plaats",
+            "oversetLines": 0,
+            "visibleArea": 0,
+            "requiredVisibleArea": 0,
+            "frames": [
+                {
+                    "id": 291465,
+                    "geometricBounds": {
+                        "x": 0.153,
+                        "y": 263.817,
+                        "width": 141.579,
+                        "height": 25.116
+                    },
+                    "columns": 1,
+                    "words": 2,
+                    "characters": 16,
+                    "textWrapMode": "bounding_box",
+                    "zIndex": 337,
+                    "locked": false,
+                    "text": "PLAA_0006 Plaats",
+                    "textWrapOffset": {
+                        "top": 0,
+                        "left": 0,
+                        "bottom": 2.835,
+                        "right": 0
+                    }
+                }
+            ]
+        },
+        {
+            "type": "AUTEUR",
+            "words": 2,
+            "characters": 18,
+            "firstParagraphStyle": "AUTE_0005 Auteur",
+            "oversetLines": 0,
+            "visibleArea": 0,
+            "requiredVisibleArea": 0,
+            "frames": [
+                {
+                    "id": 291490,
+                    "geometricBounds": {
+                        "x": 0,
+                        "y": 244.817,
+                        "width": 141.732,
+                        "height": 37.42
+                    },
+                    "columns": 1,
+                    "words": 2,
+                    "characters": 18,
+                    "textWrapMode": "bounding_box",
+                    "zIndex": 338,
+                    "locked": false,
+                    "text": "AUTE_0005 Auteur  ",
+                    "textWrapOffset": {
+                        "top": 0,
+                        "left": 0,
+                        "bottom": 0,
+                        "right": 0
+                    }
+                }
+            ]
+        },
+        {
+            "type": "INTRO",
+            "words": 31,
+            "characters": 184,
+            "firstParagraphStyle": "INTR_0201 Midden",
+            "oversetLines": 0,
+            "visibleArea": 222.479,
+            "requiredVisibleArea": 222.479,
+            "frames": [
+                {
+                    "id": 291516,
+                    "geometricBounds": {
+                        "x": 0,
+                        "y": 165,
+                        "width": 294.803,
+                        "height": 86.725
+                    },
+                    "columns": 1,
+                    "words": 31,
+                    "characters": 184,
+                    "textWrapMode": "bounding_box",
+                    "zIndex": 339,
+                    "locked": false,
+                    "text": "Intr_0201 midden, vet, cursief Het Algemeen Dagblad of AD is een Nederlands landelijk dagblad en met een oplage in 2013 van ruim 409 duizend exemplaren de op √©√©n na grootste betaalde",
+                    "textWrapOffset": {
+                        "top": 0,
+                        "left": 0,
+                        "bottom": 11.339,
+                        "right": 0
+                    }
+                }
+            ]
+        },
+        {
+            "type": "TEKST",
+            "words": 545,
+			"characters": 3500,
+            "firstParagraphStyle": "TKSX_0003a Tekst RR Niet inspringen",
+            "oversetLines": 0,
+            "visibleArea": 58912.119,
+            "requiredVisibleArea": 58912.119,
+            "frames": [
+                {
+                    "id": 275127,
+                    "geometricBounds": {
+                        "x": 0,
+                        "y": 165,
+                        "width": 754.016,
+                        "height": 331.291
+                    },
+                    "columns": 5,
+                    "words": 545,
+                    "characters": 3355,
+                    "textWrapMode": "none",
+                    "zIndex": 330,
+                    "locked": false,
+                    "text": "TKSX_0003a vet cursief vetcurs\rTKST_0002 vet cursief vetcurs\rTKOP_0032 RR\rVRAA_0001 Tekst v c cuve\rANTW_0002 Tekst v c cuve\rTKSTHet Algemeen Dagblad profileert zich sinds zijn oprichting als een neutrale krant zonder politieke of religieuze binding. Volgens het redactiestatuut dient de krant ‚Äòeen populair, betrouwbaar, onafhankelijk landelijk ochtendblad‚Äô te zijn. Sinds de overname door De Persgroep is de signatuur gelijk aan die van zijn Belgische evenknie Het Laatste Nieuws die links progressief liberaal is. Hoewel het Algemeen Dagblad als landelijke krant overal verkrijgbaar is, wordt de krant het meest gelezen in het zuidwesten van Nederland. Een kwart van de abonnees woont in de drie grote steden in het westen van het land.\rDe krant werd in 1946 als zusje van de Nieuwe Rotterdamsche Courant opgericht door W. Pluygers en J. Versnel. Pluygers werd de uitgever, Jan Schraver de eerste hoofdredacteur. Het eerste nummer verscheen op 29 april 1946. In 1964 werd de krant, die tot dan toe was uitgegeven door de Nieuwe Rotterdamsche Courant NV, overgenomen door de Nederlandse Dagblad Unie (NDU), ontstaan uit het samengaan van de NRC met het Algemeen Handelsblad. In 1979 fuseerde de NDU met uitgeverij Elsevier, die de dagbladpoot in 1995 afstootte naar PCM Uitgevers, waar Het Parool, Trouw en de Volkskrant al werden uitgegeven. PCM verwierf niet alleen het Algemeen Dagblad, maar ook de fusiekrant NRC Handelsblad. Het nieuwe AD is ondergebracht in [300] een joint venture waarin de uitgevers PCM en Wegener participeren. Lange tijd was het Algemeen Dagblad, na De Telegraaf, de tweede krant van Nederland. \rVanaf eind jaren tachtig verloor de krant lezers. Dat proces werd vanaf 1993 versterkt door de abrupte koerswijziging van toenmalig hoofdredacteur Peter van Dijk, die de krant een volledig nieuw uiterlijk gaf en van het dagblad een kwaliteitskrant wilde maken. Veel lezers waren daar niet van gediend. De overname van NDU door PCM frustreerde Van Dijks plannen enigszins, omdat het niet in het belang van het bedrijf was dat het Algemeen Dagblad zou concurreren met de Volkskrant, die toen erg succesvol was. Na een kort hoofdredacteurschap van Oscar Garschagen, die de titel op de voorpagina voorzag van ‚ÄòNederlands populairste kwaliteitskrant‚Äô, werd ombudsman Willem Ammerlaan  in een periode van grote onrust op de redactie gevraagd de nieuwe hoofdredacteur te worden. Ammerlaan herstelde de rust, maar hield vast aan de afspraak met de raad van bestuur dat hij niet langer dan maximaal twee jaar als hoofdredacteur wilde aanblijven en na veertig journalistieke dienstjaren met pensioen zou gaan. Ammerlaans opvolger Jan Bonjer gooide daarna het roer om. Inmiddels was de Volkskrant het Algemeen Dagblad voorbijgestreefd als tweede krant van Nederland. Bonjer schrapte het predicaat ‚Äòkwaliteitskrant‚Äô in 2004 en richtte zich weer nadrukkelijk op de concurrentie met De Telegraaf.\rVanaf 2004 verscheen het sportkatern als ingestoken bijlage Sportwereld op tabloidformaat. Sinds de fusie met zeven regionale kranten op 1 september 2005, wordt de hele krant op tabloidformaat gedrukt. Wegener voelde het meest voor een geheel nieuwe naam. PCM wilde (op aandringen van het AD) de titel Algemeen Dagblad handhaven omdat dit een sterke merknaam zou zijn. Uit een door de redactieraad van het AD afgedwongen lezersonderzoek"
+                }
+            ]
+        },
+        {
+            "type": "BIJSCHRIFT",
+            "words": 1,
+            "characters": 10,
+            "firstParagraphStyle": "BIJS_0302 Bijschrift BOVEN",
+            "oversetLines": 0,
+            "visibleArea": 0,
+            "requiredVisibleArea": 0,
+            "frames": [
+                {
+                    "id": 275161,
+                    "geometricBounds": {
+                        "x": 459.391,
+                        "y": 253,
+                        "width": 294.625,
+                        "height": 11
+                    },
+                    "columns": 1,
+                    "words": 1,
+                    "characters": 10,
+                    "textWrapMode": "bounding_box",
+                    "zIndex": 336,
+                    "locked": false,
+                    "text": "Bijschrift",
+                    "textWrapOffset": {
+                        "top": 0,
+                        "left": 0,
+                        "bottom": 11.339,
+                        "right": 0
+                    }
+                }
+            ]
+        }
+    ],
+    "imageComponents": [
+        {
+            "id": 275159,
+            "geometricBounds": {
+                "x": 459.213,
+                "y": 55,
+                "width": 294.803,
+                "height": 192.402
+            },
+            "textWrapMode": "bounding_box",
+            "zIndex": 335,
+            "locked": false,
+            "textWrapOffset": {
+                "top": 0,
+                "left": 0,
+                "bottom": 5.5,
+                "right": 0
+            }
+        }
+    ]
+}
