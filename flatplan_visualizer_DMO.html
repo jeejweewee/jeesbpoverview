@@ -204,6 +204,11 @@ header p{font-size:13px;color:#64748B;margin-top:3px;}
   <button class="filter-btn active" data-type="all" onclick="setBpType('all')">All</button>
   <button class="filter-btn" data-type="page" onclick="setBpType('page')">Pages only</button>
   <button class="filter-btn" data-type="spread" onclick="setBpType('spread')">Spreads only</button>
+  <div class="sp-size-bar" style="margin-bottom:0;">
+    <label for="bp-size-slider">Diagram size</label>
+    <input type="range" id="bp-size-slider" min="0.2" max="1.5" step="0.1" value="1" oninput="resizeBlueprintDiagrams(this.value)">
+    <span class="sp-val" id="bp-size-val">100%</span>
+  </div>
   <span class="stats" id="stats"></span>
 </div>
 
@@ -396,14 +401,17 @@ function parse(str) {
 }
 
 // \u2500\u2500 SVG renderer \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500
-function renderSVG(bp) {
+function renderSVG(bp, scale) {
+  scale = scale || 1;
   var boxes = parse(bp.definition);
   // Blocks are only square by coincidence: a block's real proportions come
   // from the page's physical column-width / module-height (BLOCK_ASPECT).
   // We pick CELLW/CELLH so their ratio matches BLOCK_ASPECT while keeping
   // roughly the same on-screen cell area as the old fixed 28x28 square, so
   // diagrams stay legible regardless of how many blocks a page grid has.
-  var CELL_AREA = 28*28;
+  // `scale` lets the caller grow/shrink the whole diagram (see the
+  // Blueprint Overview size slider) without distorting block proportions.
+  var CELL_AREA = 28*28*scale*scale;
   var CELLH = Math.sqrt(CELL_AREA / BLOCK_ASPECT);
   var CELLW = CELL_AREA / CELLH;
   var PAD=6, GAP=2;
@@ -535,8 +543,10 @@ function closePanel() {
 }
 
 // \u2500\u2500 Blueprint card \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500
+var bpDiagramScale = 1;
+
 function renderCard(bp,idx) {
-  var svg=renderSVG(bp);
+  var svg=renderSVG(bp, bpDiagramScale);
   var boxes=parse(bp.definition);
   var tableRows=boxes.map(function(box,i){
     var lp=[];
@@ -566,6 +576,21 @@ function renderCard(bp,idx) {
 }
 
 function escHtml(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
+
+// Rescales every diagram on the Blueprint Overview grid in place, without
+// rebuilding the cards (box table, name, etc. are left untouched).
+function resizeBlueprintDiagrams(val) {
+  bpDiagramScale = +val;
+  document.getElementById('bp-size-val').textContent = Math.round(bpDiagramScale*100)+'%';
+  document.querySelectorAll('#cards .card').forEach(function(c){
+    var idx = c.dataset.idx;
+    if (idx===undefined) return; // error cards have no diagram to rescale
+    var bp = BLUEPRINTS[+idx];
+    var diagram = c.querySelector('.diagram');
+    if (!bp || !diagram) return;
+    try { diagram.innerHTML = renderSVG(bp, bpDiagramScale); } catch(e) { /* leave as-is on parse error */ }
+  });
+}
 
 var activeBpType = 'all';
 var activeBpSection = 'all';
