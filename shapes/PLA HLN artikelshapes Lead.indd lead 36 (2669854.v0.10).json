@@ -1,0 +1,317 @@
+{
+    "version": "3.0",
+    "brandName": "Het Laatste Nieuws",
+    "brandId": "9",
+    "sectionName": "Regio",
+    "sectionId": "132",
+    "genreId": "actua",
+    "shapeTypeName": "lead",
+    "shapeTypeId": "1",
+    "geometricBounds": {
+        "x": 0,
+        "y": 30.6,
+        "width": 754.101,
+        "height": 540.6
+    },
+    "foldLine": null,
+    "textComponents": [
+        {
+            "type": "BOVENKOP",
+            "words": 1,
+            "characters": 8,
+            "firstParagraphStyle": "BKOP_Actua klein 16pt gecentreerd",
+            "oversetLines": 0,
+            "visibleArea": 23075.484,
+            "requiredVisibleArea": 23075.484,
+            "frames": [
+                {
+                    "id": 424229,
+                    "geometricBounds": {
+                        "x": 0,
+                        "y": 0,
+                        "width": 754.101,
+                        "height": 30.6
+                    },
+                    "columns": 1,
+                    "words": 1,
+                    "characters": 8,
+                    "textWrapMode": "none",
+                    "zIndex": 90,
+                    "locked": false,
+                    "text": "BIJTITEL"
+                }
+            ]
+        },
+        {
+            "type": "KOP",
+            "words": 5,
+            "characters": 26,
+            "firstParagraphStyle": "KOPP_Actua 34pt ",
+            "oversetLines": 0,
+            "visibleArea": 43801.4,
+            "requiredVisibleArea": 43801.4,
+            "frames": [
+                {
+                    "id": 424130,
+                    "geometricBounds": {
+                        "x": 0,
+                        "y": 40.8,
+                        "width": 754.016,
+                        "height": 61.2
+                    },
+                    "columns": 1,
+                    "words": 5,
+                    "characters": 26,
+                    "textWrapMode": "none",
+                    "zIndex": 86,
+                    "locked": false,
+                    "text": "Kopstuk  4.000\rAD ( 5x172)"
+                }
+            ]
+        },
+        {
+            "type": "INTRO",
+            "words": 6,
+            "characters": 20,
+            "firstParagraphStyle": "INTR_Actua",
+            "oversetLines": 0,
+            "visibleArea": 0,
+            "requiredVisibleArea": 0,
+            "frames": [
+                {
+                    "id": 424283,
+                    "geometricBounds": {
+                        "x": 0,
+                        "y": 132.6,
+                        "width": 177.834,
+                        "height": 90.976
+                    },
+                    "columns": 1,
+                    "words": 6,
+                    "characters": 20,
+                    "textWrapMode": "bounding_box",
+                    "zIndex": 94,
+                    "locked": false,
+                    "text": "Inleiding \r1\r2\r3\r4\r5",
+                    "textWrapOffset": {
+                        "top": 0,
+                        "left": 0,
+                        "bottom": 9.921,
+                        "right": 0
+                    }
+                }
+            ]
+        },
+        {
+            "type": "AUTEUR",
+            "words": 2,
+            "characters": 15,
+            "firstParagraphStyle": "AUTE_Auteur",
+            "oversetLines": 0,
+            "visibleArea": 0,
+            "requiredVisibleArea": 0,
+            "frames": [
+                {
+                    "id": 424179,
+                    "geometricBounds": {
+                        "x": 0,
+                        "y": 153,
+                        "width": 177.834,
+                        "height": 87.247
+                    },
+                    "columns": 1,
+                    "words": 2,
+                    "characters": 15,
+                    "textWrapMode": "bounding_box",
+                    "zIndex": 88,
+                    "locked": false,
+                    "text": "AUTE_203 auteur",
+                    "textWrapOffset": {
+                        "top": 0,
+                        "left": 0,
+                        "bottom": 8.504,
+                        "right": 0
+                    }
+                }
+            ]
+        },
+        {
+            "type": "PLAATS",
+            "words": 1,
+            "characters": 6,
+            "firstParagraphStyle": "PLAA_plaatsnaam",
+            "oversetLines": 0,
+            "visibleArea": 805.765,
+            "requiredVisibleArea": 805.765,
+            "frames": [
+                {
+                    "id": 424154,
+                    "geometricBounds": {
+                        "x": 0,
+                        "y": 112.2,
+                        "width": 177.834,
+                        "height": 17.272
+                    },
+                    "columns": 1,
+                    "words": 1,
+                    "characters": 6,
+                    "textWrapMode": "none",
+                    "zIndex": 87,
+                    "locked": false,
+                    "text": "Plaats"
+                }
+            ]
+        },
+        {
+            "type": "TEKST",
+            "words": 638,
+            "characters": 4089,
+            "firstParagraphStyle": "TKST_Broodtekst",
+            "oversetLines": 0,
+            "visibleArea": 0,
+            "requiredVisibleArea": 0,
+            "frames": [
+                {
+                    "id": 424121,
+                    "geometricBounds": {
+                        "x": 0,
+                        "y": 152.025,
+                        "width": 177.834,
+                        "height": 388.575
+                    },
+                    "columns": 1,
+                    "words": 140,
+                    "characters": 925,
+                    "textWrapMode": "none",
+                    "zIndex": 84,
+                    "locked": false,
+                    "text": "TKST_301 TEK mager vet cursief vet cursief\rTKSX_301 TEK mager vet cursief vet cursief\r\rVRAA_306 TEK vragen\rANTW_313 TEK mager vet cursief vet cursief\rTKOP_401 tussenkop\r\rAUTE_620 kenletters\r\rTKSTAd ut acerum enet officim harumqu iassit laccullor autatintios niendan denducidest, am, idem et aliquod et et rest, officitias conecae la dolorporem eliquis simolores eosaepel erferibus doluptatiis soluptatus ad quam sit que volest aut lautem rem sinverchit et estrum vollore volorerferis dundae evel mos nobis vendandene doloraes earum qui non raeperita id qui dolupm eliquis simolores eosaepel erferibus doluptatiis soluptatus ad quam sit que volest aut lautem rem sinverchit et estrum vollore volorerferis dundae evel mos nobis vendandene doloraes earum qui non raeperita id qui doluptm eliquis simolores eosaepel erferibus doluptatiis soluptatus ad quam sit que volest aut lautem rem sinverchit et estrum vollore volorerferis "
+                },
+                {
+                    "id": 424126,
+                    "geometricBounds": {
+                        "x": 192.061,
+                        "y": 331.368,
+                        "width": 177.834,
+                        "height": 209.232
+                    },
+                    "columns": 1,
+                    "words": 132,
+                    "characters": 884,
+                    "textWrapMode": "none",
+                    "zIndex": 85,
+                    "locked": false,
+                    "text": "dundae evel mos nobis vendandene doloraes earum qui non raeperita id qui doluptm eliquis simolores eosaepel erferibus doluptatiis soluptatus ad quam sit que volest aut lautem rem sinverchit et estrum vollore volorerferis dundae evel mos nobis vendandene doloraes earum qui non raeperita id qui doluptm eliquis simolores eosaepel erferibus doluptatiis soluptatus ad quam sit que volest aut lautem rem sinverchit et estrum vollore volorerferis dundae evel mos nobis vendandene doloraes earum qui non raeperita id qui doluptm eliquis simolores eosaepel erferibus doluptatiis soluptatus ad quam sit que volest aut lautem rem sinverchit et estrum vollore volorerferis dundae evel mos nobis vendandene doloraes earum qui non raeperita id qui doluptm eliquis simolores eosaepel erferibus doluptatiis soluptatus ad quam sit que volest aut lautem rem sinverchit et estrum vollore volorerferis "
+                },
+                {
+                    "id": 424096,
+                    "geometricBounds": {
+                        "x": 384.121,
+                        "y": 351.294,
+                        "width": 177.834,
+                        "height": 189.306
+                    },
+                    "columns": 1,
+                    "words": 80,
+                    "characters": 514,
+                    "textWrapMode": "none",
+                    "zIndex": 83,
+                    "locked": false,
+                    "text": "dundae evel mos nobis vendandene doloraes earum qui non raeperita id qui doluptm eliquis simolores eosaepel erferibus doluptatiis soluptatus ad quam sit que volest aut lautem rem sinverchit et estrum vollore volorerferis dundae evel mos nobis vendandene doloraes earum qui non raeperita id qui dolupttate por alitaturAd ut aut rae ommo torum facculp aruptat re, ulpa pelitat molorer chitati ut veliquas explabor asped maximin pra doleseq uiaspis cilignatem ratus, omnienectus estia dolutem quo minumque im sam qui "
+                },
+                {
+                    "id": 424253,
+                    "geometricBounds": {
+                        "x": 576.182,
+                        "y": 110.979,
+                        "width": 177.834,
+                        "height": 429.621
+                    },
+                    "columns": 1,
+                    "words": 286,
+                    "characters": 1766,
+                    "textWrapMode": "none",
+                    "zIndex": 91,
+                    "locked": false,
+                    "text": "que abor alitatemod ello dolupturem consero vit ent rem volupta ese voloria vellabo rporestio. Tem erum ut min reped qui alitis ad quam velectat alisquibus aut alibus et, ipsantium consequunt reictotaest, sam, a sin con consene erum cullorum simagniatus dunt aut ea ducimi, optis et officiae proressin estiatur, optatum iliquae. Aximill uptata ex excea sum que odicaero omnia etur alibus.\rIbus ea dolor autaecererae enturitaqui si recuptatia nobitat eaquatem corempor res doloris inienis eate labo. Niet entoratione debitae. Il invelibusda none volent dolupta speraecus aut quis doluptatis quae. Lestionseque vendiam laccus, con rerae sit eum quam dolum vid quo maximodi sequi dolorpo repediatur am aut prae. Ut voluptur sa vid maxim quos et ullectis mosam earit vollatur re volupta turibearcid quo temque voluptaspel ipiet vello de ea cus etur? Em quame vellabo. Ihitio tet dolore exerit, quam es eliciiscim que comnienim eum re, natiis que voluptatur?Harchilita volupta tempore nobis quat que landandic to qui demquam sinis dollab ipic tetus sam cullor simusda que remporectiae consequidus, to mi, quo tem. Nequi omnis dita natemqui quid qui aut voluptatur aut quatent otasimporum et vero cor sam verciam vendis ab iumque voloruptis excesed mo et laborum nam hicitia velestorum veruptasit, sincteste aut fugia que nectium eosam quodi temporum acerum ium ea consed volor autendis dolo blaccusciis sam num fugitionse nobis autem inci deliquidi ipsusa doluptae vollorat.plia que nobis volut explabo. Itam velenis illorectur sequas de re ni nos voluptur audi denia nossit id ut et reratur si dolesciaspe laut dessit optae magnate ntiberum idus essi comnitemodi corporero qui con porum et fugiam debis endem. Ovit aut preprep udaerum autem aut libero quo temperuptam, o"
+                }
+            ]
+        },
+        {
+            "type": "QUOTE",
+            "words": 2,
+            "characters": 11,
+            "firstParagraphStyle": "QUOT_Actua",
+            "oversetLines": -3,
+            "visibleArea": 0,
+            "requiredVisibleArea": -5511.101,
+            "frames": [
+                {
+                    "id": 424204,
+                    "geometricBounds": {
+                        "x": 384.121,
+                        "y": 352.152,
+                        "width": 177.834,
+                        "height": 56.693
+                    },
+                    "columns": 1,
+                    "words": 2,
+                    "characters": 11,
+                    "textWrapMode": "bounding_box",
+                    "zIndex": 89,
+                    "locked": false,
+                    "text": "Citaat\rNaam",
+                    "textWrapOffset": {
+                        "top": 25.795,
+                        "left": 9.921,
+                        "bottom": 8.504,
+                        "right": 9.921
+                    }
+                }
+            ]
+        },
+        {
+            "type": "BIJSCHRIFT",
+            "words": 1,
+            "characters": 21,
+            "firstParagraphStyle": "BIJS_Onderschrift",
+            "oversetLines": -1,
+            "visibleArea": 0,
+            "requiredVisibleArea": -3834.919,
+            "frames": [
+                {
+                    "id": 424259,
+                    "geometricBounds": {
+                        "x": 192.061,
+                        "y": 309.133,
+                        "width": 369.895,
+                        "height": 17.267
+                    },
+                    "columns": 1,
+                    "words": 1,
+                    "characters": 21,
+                    "textWrapMode": "none",
+                    "zIndex": 93,
+                    "locked": false,
+                    "text": "Fotobijschrift.credit"
+                }
+            ]
+        }
+    ],
+    "imageComponents": [
+        {
+            "id": 424257,
+            "geometricBounds": {
+                "x": 192.061,
+                "y": 112.2,
+                "width": 369.895,
+                "height": 193.814
+            },
+            "textWrapMode": "none",
+            "zIndex": 92,
+            "locked": false
+        }
+    ],
+    "decorComponents": [],
+    "canvasComponents": []
+}

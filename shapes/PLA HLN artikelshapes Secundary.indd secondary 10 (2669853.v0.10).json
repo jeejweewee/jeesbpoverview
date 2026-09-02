@@ -1,0 +1,135 @@
+{
+    "version": "3.0",
+    "brandName": "Het Laatste Nieuws",
+    "brandId": "9",
+    "sectionName": "Regio",
+    "sectionId": "132",
+    "genreId": "actua staand",
+    "shapeTypeName": "secondary",
+    "shapeTypeId": "2",
+    "geometricBounds": {
+        "x": -623.622,
+        "y": 70.002,
+        "width": 447.874,
+        "height": 336.793
+    },
+    "foldLine": null,
+    "textComponents": [
+        {
+            "type": "KOP",
+            "words": 4,
+            "characters": 20,
+            "firstParagraphStyle": "KOPP_Kort 1 kol",
+            "oversetLines": 0,
+            "visibleArea": 3143.081,
+            "requiredVisibleArea": 3143.081,
+            "frames": [
+                {
+                    "id": 408021,
+                    "geometricBounds": {
+                        "x": 0,
+                        "y": 25.441,
+                        "width": 119.055,
+                        "height": 40.8
+                    },
+                    "columns": 1,
+                    "words": 4,
+                    "characters": 20,
+                    "textWrapMode": "none",
+                    "zIndex": 6,
+                    "locked": false,
+                    "text": "KORTJE\r 700 tekens\r1"
+                }
+            ]
+        },
+        {
+            "type": "PLAATS",
+            "words": 1,
+            "characters": 6,
+            "firstParagraphStyle": "PLAA_plaatsnaam",
+            "oversetLines": 0,
+            "visibleArea": 578.521,
+            "requiredVisibleArea": 578.521,
+            "frames": [
+                {
+                    "id": 408045,
+                    "geometricBounds": {
+                        "x": 0,
+                        "y": 7.692,
+                        "width": 43.148,
+                        "height": 13.408
+                    },
+                    "columns": 1,
+                    "words": 1,
+                    "characters": 6,
+                    "textWrapMode": "bounding_box",
+                    "zIndex": 7,
+                    "locked": false,
+                    "text": "Plaats",
+                    "textWrapOffset": {
+                        "top": 0,
+                        "left": 0,
+                        "bottom": 0,
+                        "right": 5.669
+                    }
+                }
+            ]
+        },
+        {
+            "type": "TEKST",
+            "words": 91,
+            "characters": 566,
+            "firstParagraphStyle": "TKST_Tekst kortje",
+            "oversetLines": 0,
+            "visibleArea": 26064.106,
+            "requiredVisibleArea": 26064.106,
+            "frames": [
+                {
+                    "id": 408073,
+                    "geometricBounds": {
+                        "x": 0,
+                        "y": 71.4,
+                        "width": 119.055,
+                        "height": 265.394
+                    },
+                    "columns": 1,
+                    "words": 91,
+                    "characters": 566,
+                    "textWrapMode": "none",
+                    "zIndex": 8,
+                    "locked": false,
+                    "text": "TKST_307 TEK advert regular bold\rTKSX_307 TEK advert regular bold\r\rAUTE_SPEC_620 kenletters\r\rTKST\rNamendel iatur, te secusda ectaturem lam quis quis el iusdae et poreicabores alitam ra doluptat.\rUr? Ur, offictatiae pratibustis ratis at.\rAperestrum auta dellabo rererum fuga. Vid maio etur sin nis dolorer uptati tectur?\rUciis por sae pore odis minveritia derunt, odita conectis andera pratur apienimi, toreiusdanis et qui tectorro tende quam fugitio intiscias nobitatur, quatus aut vene nobit veleni discimod eum consed et es nempor re pre dolorit qui nonsecu saniam"
+                }
+            ]
+        }
+    ],
+    "imageComponents": [
+        {
+            "id": 408020,
+            "geometricBounds": {
+                "x": 132.253,
+                "y": 10.2,
+                "width": 315.621,
+                "height": 326.594
+            },
+            "textWrapMode": "none",
+            "zIndex": 5,
+            "locked": false
+        }
+    ],
+    "decorComponents": [],
+    "canvasComponents": [
+        {
+            "id": 408097,
+            "geometricBounds": {
+                "x": 0.159,
+                "y": 0,
+                "width": 447.715,
+                "height": 10.2
+            },
+            "textWrapMode": "none",
+            "zIndex": 9,
+            "locked": false
+        }
+    ]
+}

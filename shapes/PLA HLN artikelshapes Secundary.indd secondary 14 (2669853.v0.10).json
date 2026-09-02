@@ -1,0 +1,141 @@
+{
+    "version": "3.0",
+    "brandName": "Het Laatste Nieuws",
+    "brandId": "9",
+    "sectionName": "Regio",
+    "sectionId": "132",
+    "genreId": "actua staand",
+    "shapeTypeName": "secondary",
+    "shapeTypeId": "2",
+    "geometricBounds": {
+        "x": 481.89,
+        "y": 70.002,
+        "width": 294.803,
+        "height": 540.6
+    },
+    "foldLine": null,
+    "textComponents": [
+        {
+            "type": "KOP",
+            "words": 4,
+            "characters": 19,
+            "firstParagraphStyle": "KOPP_Kort 1 kol",
+            "oversetLines": 0,
+            "visibleArea": 6627.529,
+            "requiredVisibleArea": 6627.529,
+            "frames": [
+                {
+                    "id": 410584,
+                    "geometricBounds": {
+                        "x": 8.504,
+                        "y": 380.481,
+                        "width": 279.054,
+                        "height": 23.75
+                    },
+                    "columns": 1,
+                    "words": 4,
+                    "characters": 19,
+                    "textWrapMode": "bounding_box",
+                    "zIndex": 21,
+                    "locked": false,
+                    "text": "KORTJE 700 tekens\r1",
+                    "textWrapOffset": {
+                        "top": 5.669,
+                        "left": 5.669,
+                        "bottom": 5.669,
+                        "right": 5.669
+                    }
+                }
+            ]
+        },
+        {
+            "type": "PLAATS",
+            "words": 1,
+            "characters": 6,
+            "firstParagraphStyle": "PLAA_plaatsnaam",
+            "oversetLines": 0,
+            "visibleArea": 578.521,
+            "requiredVisibleArea": 578.521,
+            "frames": [
+                {
+                    "id": 410559,
+                    "geometricBounds": {
+                        "x": 8.504,
+                        "y": 360.302,
+                        "width": 43.148,
+                        "height": 13.408
+                    },
+                    "columns": 1,
+                    "words": 1,
+                    "characters": 6,
+                    "textWrapMode": "bounding_box",
+                    "zIndex": 20,
+                    "locked": false,
+                    "text": "Plaats",
+                    "textWrapOffset": {
+                        "top": 0,
+                        "left": 0,
+                        "bottom": 0,
+                        "right": 5.669
+                    }
+                }
+            ]
+        },
+        {
+            "type": "TEKST",
+            "words": 84,
+            "characters": 558,
+            "firstParagraphStyle": "TKST_Tekst kortje",
+            "oversetLines": 0,
+            "visibleArea": 35040.537,
+            "requiredVisibleArea": 35040.537,
+            "frames": [
+                {
+                    "id": 410535,
+                    "geometricBounds": {
+                        "x": 8.504,
+                        "y": 380.481,
+                        "width": 279.213,
+                        "height": 154.917
+                    },
+                    "columns": 1,
+                    "words": 84,
+                    "characters": 558,
+                    "textWrapMode": "none",
+                    "zIndex": 19,
+                    "locked": false,
+                    "text": "TKST_307 TEK advert regular bold\rTKSX_307 TEK advert regular bold\r\rAUTE_SPEC_620 kenletters\r\rTKST Ped mollabo. Itas de mint ium in rem eaquaepudae estrum eatur? Iquat.Ibus doluptaecto dolo blant expersp erchil ma quam faccabo. Ibeaque modiatatur sed ma alit faccatet, offic tecabor ehenihiciis sam et harum venia doloreiumLesti acepudi taepelique et as autas as delende nat velluptio. Itatibere, cumquatur? Pa consequae dolectatis molupta temperor adionsequae. Am, cus debitiis ea quia quibus, sum repelessi qui tem. Et magni reheninim eic tm eic to berferit"
+                }
+            ]
+        }
+    ],
+    "imageComponents": [
+        {
+            "id": 410533,
+            "geometricBounds": {
+                "x": 8.504,
+                "y": 10.2,
+                "width": 279.213,
+                "height": 357
+            },
+            "textWrapMode": "none",
+            "zIndex": 18,
+            "locked": false
+        }
+    ],
+    "decorComponents": [
+        {
+            "id": 410532,
+            "geometricBounds": {
+                "x": 0,
+                "y": 0,
+                "width": 294.803,
+                "height": 540.6
+            },
+            "textWrapMode": "none",
+            "zIndex": 17,
+            "locked": false
+        }
+    ],
+    "canvasComponents": []
+}

@@ -1,0 +1,433 @@
+{
+    "version": "3.0",
+    "brandName": "Het Laatste Nieuws",
+    "brandId": "9",
+    "sectionName": "Regio",
+    "sectionId": "132",
+    "genreId": "actua",
+    "shapeTypeName": "lead",
+    "shapeTypeId": "1",
+    "geometricBounds": {
+        "x": 0,
+        "y": 30.6,
+        "width": 754.016,
+        "height": 1071.014
+    },
+    "foldLine": null,
+    "textComponents": [
+        {
+            "type": "BOVENKOP",
+            "words": 1,
+            "characters": 8,
+            "firstParagraphStyle": "BKOP_bijtitel klein 18pt",
+            "oversetLines": 0,
+            "visibleArea": 23072.882,
+            "requiredVisibleArea": 23072.882,
+            "frames": [
+                {
+                    "id": 427356,
+                    "geometricBounds": {
+                        "x": 0,
+                        "y": 0,
+                        "width": 754.016,
+                        "height": 30.6
+                    },
+                    "columns": 1,
+                    "words": 1,
+                    "characters": 8,
+                    "textWrapMode": "none",
+                    "zIndex": 698,
+                    "locked": false,
+                    "text": "BIJTITEL"
+                }
+            ]
+        },
+        {
+            "type": "KOP",
+            "words": 8,
+            "characters": 38,
+            "firstParagraphStyle": "KOPP_Actua 40pt",
+            "oversetLines": 0,
+            "visibleArea": 61527.685,
+            "requiredVisibleArea": 61527.685,
+            "frames": [
+                {
+                    "id": 427224,
+                    "geometricBounds": {
+                        "x": 0,
+                        "y": 40.8,
+                        "width": 754.016,
+                        "height": 81.6
+                    },
+                    "columns": 1,
+                    "words": 8,
+                    "characters": 38,
+                    "textWrapMode": "none",
+                    "zIndex": 691,
+                    "locked": false,
+                    "text": "Kopstuk  6.000 tekens\r2 Foto - 2 quote"
+                }
+            ]
+        },
+        {
+            "type": "INTRO",
+            "words": 10,
+            "characters": 28,
+            "firstParagraphStyle": "INTR_Actua",
+            "oversetLines": 0,
+            "visibleArea": 0,
+            "requiredVisibleArea": 0,
+            "frames": [
+                {
+                    "id": 427306,
+                    "geometricBounds": {
+                        "x": 0,
+                        "y": 153,
+                        "width": 141.732,
+                        "height": 154.976
+                    },
+                    "columns": 1,
+                    "words": 10,
+                    "characters": 28,
+                    "textWrapMode": "bounding_box",
+                    "zIndex": 696,
+                    "locked": false,
+                    "text": "Inleiding \r1\r2\r3\r4\r5\r6\r7\r8\r9",
+                    "textWrapOffset": {
+                        "top": 0,
+                        "left": 0,
+                        "bottom": 9.921,
+                        "right": 0
+                    }
+                }
+            ]
+        },
+        {
+            "type": "AUTEUR",
+            "words": 2,
+            "characters": 15,
+            "firstParagraphStyle": "AUTE_Auteur",
+            "oversetLines": 0,
+            "visibleArea": 0,
+            "requiredVisibleArea": 0,
+            "frames": [
+                {
+                    "id": 427281,
+                    "geometricBounds": {
+                        "x": 0,
+                        "y": 163.2,
+                        "width": 141.732,
+                        "height": 161.447
+                    },
+                    "columns": 1,
+                    "words": 2,
+                    "characters": 15,
+                    "textWrapMode": "bounding_box",
+                    "zIndex": 695,
+                    "locked": false,
+                    "text": "AUTE_203 auteur",
+                    "textWrapOffset": {
+                        "top": 0,
+                        "left": 0,
+                        "bottom": 8.504,
+                        "right": 0
+                    }
+                }
+            ]
+        },
+        {
+            "type": "PLAATS",
+            "words": 1,
+            "characters": 6,
+            "firstParagraphStyle": "PLAA_plaatsnaam",
+            "oversetLines": 0,
+            "visibleArea": 1525.798,
+            "requiredVisibleArea": 1525.798,
+            "frames": [
+                {
+                    "id": 427248,
+                    "geometricBounds": {
+                        "x": 0,
+                        "y": 132.6,
+                        "width": 141.732,
+                        "height": 10.765
+                    },
+                    "columns": 1,
+                    "words": 1,
+                    "characters": 6,
+                    "textWrapMode": "none",
+                    "zIndex": 692,
+                    "locked": false,
+                    "text": "Plaats"
+                }
+            ]
+        },
+        {
+            "type": "TEKST",
+            "words": 977,
+            "characters": 6202,
+            "firstParagraphStyle": "TKST_Broodtekst",
+            "oversetLines": -1,
+            "visibleArea": 263387.048,
+            "requiredVisibleArea": 261939.355,
+            "frames": [
+                {
+                    "id": 427216,
+                    "geometricBounds": {
+                        "x": 0,
+                        "y": 163.2,
+                        "width": 141.732,
+                        "height": 907.814
+                    },
+                    "columns": 1,
+                    "words": 264,
+                    "characters": 1700,
+                    "textWrapMode": "none",
+                    "zIndex": 689,
+                    "locked": false,
+                    "text": "TKST_301 TEK mager vet cursief vet cursief\rTKSX_301 TEK mager vet cursief vet cursief\rVRAA_306 TEK vragen\rANTW_313 TEK mager vet cursief vet cursief\rTKOP_401 tussenkop\r\rAUTE_620 kenletters\r\rTKST\rIs erchiliqui conse doluptaesed magnature vellendi quo tore, con porum ut derepre ssuntur sitaquo et facia non pliquunt.\rObitat vel earunt evelectat que parum abo. Temporr umquae porro il ius archillabo. Erum et et latempo ribusa doluptatus, ut pe volecusant apelecat.\rIhil et desti dolores tistio. Nament voluptiis dolut porio. Ibus errum expe volenda ilic to et maio conseni hilicto quat quid quas inctio est dis nonsendis dolupta tendestios quiae volorio tem ut rae nonseque pel etus coresti busdaecte voloris etur sit estrum, nempori aepudae sectatur as as ut eum fuga. Nequo blaboria sae se conem voluptaqui sum que ilicius volest et ut aliae everumetur, cus.\rObit volorro cus ilitat quaes imagnihit, odiosap elitem fugit rehentium aut volorem idunt optas molum harchil inus dolorempor millitatur?\rLaute ommo ipsament libus sinustem faceatusdant mi, que vendi dernatiur, optaquata alit moloreh enienis sus is alique venti doluptatur? Quid maximi, sapicillorem si iur?\rItatur magnatet iur? Qui nobis est, officaborrum quatur suntem. Agnietur? Coruptiant, offictotatem nulparis quaerumetur sinctum harundi tetur sed quam, consequisi num nonsentia quodi ium rehent andis dolupta tiatios explacessimo enis et doluptas eturitia voluptatiis nihicia tisciduci suntore ptumend aestrumque simetur? Equiberum net quos am in plia sit, sit es etus sam, commodi dolor sed molupid qui consecabores quam ernam sequo conectiores et eicit es ipictur magnienim doluptaquid mincte essinus sequaspit lam, optus quid qui "
+                },
+                {
+                    "id": 427220,
+                    "geometricBounds": {
+                        "x": 153.071,
+                        "y": 663,
+                        "width": 141.732,
+                        "height": 408.014
+                    },
+                    "columns": 1,
+                    "words": 201,
+                    "characters": 1283,
+                    "textWrapMode": "none",
+                    "zIndex": 690,
+                    "locked": false,
+                    "text": "voloribus aut optionsequas abore mo cus dolo tecatis est ut idelliq uaest, si dolupti onsequuntur?\rOccupta simint qui verum ea di tet quibus, enisciaeseni sequiat eatur abores venderum nis molore et optusda duciae ilictotatis que excersp ellaboribere voluptatur, endis ratur sum quis si rempore, sum quam qui serferum faccatinis molorit etur, ad mint quiae doluptat aut ut dolorunt.\rUntecus, officitatur rendebiti omnimi, corem veni optam nimagnam, susanis nime pos peri vene voluptur simus velestetus none dolorum, nosto que nimaximus molorest que dolore, consequam, cus que re omniet dendunt fugitas simagnam iusam evendi vellore remquis pre ne nobis doluptat maximperchil entiatius.\rMagnihil maion re paritaq uateni bla aut abo. Fuga. Ut molupta tendellum aut audae iusam autempos quassimus et od maion num qui cuscit ommolup tatius sim et amet doles di dolum sinctib eatiasitiam sitatectetur as demquuntiis que similit iisquistrum reperumet et unt liquiam facearchit latque peritaspic tem veriatem ilique el im inciis excearis dolorias volum qui remporis ratessi as suntium faccat il iunt, et velitinumqui siti nonsedi teserupta necae nis quasitat.\rAt pario conse consecepudis dendund enimi, quidemq uuntur ad moluptae vel mod qui sunt, iunt voluptatur repudi autessi ncitas dige"
+                },
+                {
+                    "id": 427212,
+                    "geometricBounds": {
+                        "x": 306.142,
+                        "y": 663,
+                        "width": 141.732,
+                        "height": 408.014
+                    },
+                    "columns": 1,
+                    "words": 201,
+                    "characters": 1317,
+                    "textWrapMode": "none",
+                    "zIndex": 688,
+                    "locked": false,
+                    "text": "nim illuptatiur aciendendae corem voloribus et ex eatinctorem. Ossedia doluptaque dolum recturios rentiumque sin re vel moditiu mention sequibus molum labora venis delignam quae iundior atiuria etur, omnimoluptae pratibus dolut prem aute cusanda nihicid endeles arum res modi blautem olorior ectiorepe nobit qui volorrum, si dipsum quatust as alit dolor aut qui offictas accullorem quaessent estibus es apeliaecusae si nus ratempe lleceat verum etur? Genducia dis dolut quatipe nobit qui volorrum, si dipsum quatust as alit dolor aut qui offictas accullorem qpe nobit qui volorrum, si dipsum quatust as alit dolor aut qui offictas accullorem quaessent estibus es apeliaecusae si nus ratempe lleceat verum etur? Genducia dis dolut quatia vendae parupta tiuntotas sinvell estibus aut eatus.\rErumquam volorit odipsus autempor sam, quam, net omniet quid moloressit alitis ex ea susuaessent estibus es apeliaecusae si nus ratempe lleceat verum etur? Genducia dis dolut quatia vendae parupta tiuntotas sinvell estibus aut eatus.\rErumquam volorit odipsus autempor sam, quam, net omniet quid moloressit alitis ex ea suscullorem quaessent estibus es apeliaecusae si nus ratempe lleceat verum etur? Genducia dis dolut quatia vendae parupta tiuntotas sinvell estiErumquam volorit odipsus autempor sam, quam, net omniet quid molo"
+                },
+                {
+                    "id": 427277,
+                    "geometricBounds": {
+                        "x": 459.213,
+                        "y": 663,
+                        "width": 141.732,
+                        "height": 408.014
+                    },
+                    "columns": 1,
+                    "words": 163,
+                    "characters": 987,
+                    "textWrapMode": "none",
+                    "zIndex": 694,
+                    "locked": false,
+                    "text": "ressit alitis ex ea susut eatus.\rErumquam volorit odipsus autempor sam, quam, net omniet quid moloressit alitis ex ea susci dolum quam, comnihit ommod ut as ullatib uscipit quiam quia vendel inusa dolupta temque reped que pellam vel intemporese comni quo blabo. Apedipsum rerfero que pedis aute cus et quia cum si des dolorepel ideles millore ssimus dolorerum volorpos quae ommodis si sum expe est, conem excest utem quiandest ullum quis dolorro que pa voluptat quia quo eos net ressimus, nus, te et faccusandae. Et fugit alibus, si sumquib eatiandus.\rInciis qui beariorio. Eque consed quo te prae voluptatur mo mostiunt eos volorem fuga. Ihiliciet re, sustori aernati sciatur, ut pa denectiorum nim nam eos ratiores am quam reptaqu iditas enessumque repersp elendam reneceperum voloreritio. Mus sitincilist, occat aniam eum haritat occae perum inti cupta ped ea nus venimi, ipsunti orent, odia quae odistiur, eicilit aut et hil inciandis arumquaectis ma dolum dollo totatecto exceatus.\r"
+                },
+                {
+                    "id": 427187,
+                    "geometricBounds": {
+                        "x": 612.283,
+                        "y": 775.2,
+                        "width": 141.732,
+                        "height": 295.814
+                    },
+                    "columns": 1,
+                    "words": 148,
+                    "characters": 915,
+                    "textWrapMode": "none",
+                    "zIndex": 687,
+                    "locked": false,
+                    "text": "Uciusa simusam erio. Ebisciistrum hilit quiam hicil ipsus alit volor sam, aborestia sincit volorerum accabo. Damuscimus sincto consequis ea voluptat.\rIgnit, veniet lis eles eos et que doluptatest, que perspernatia quid quia plabo. Alignatius explam consectem veniate mporest occus debitam endunto tem rati sundipsam labor remped ulles et facerum restio quatem andis sinis deleceaquid quo tem alictas eturio inullabo. Nam eaque nias eos vitis ipsandigniet odis ea sequo idendae storio moloriandi con pro molores delecaest etur? estia del maximus, ni totatum voluptae consequam endi corrorem seris aliate Ictatiis ea quatiam quis quat hil milis ducit quae porepe aut volorep Cit eaquasit, ut etusam et, et a nobitissim et et ipipsunt ut exerruEhendit quossim inulla comnimpos nonse ad qui cullore ceriore susaescipsa ium atur? Apidest, consequas eatium re latat inci dignatu sapere od qui blab int imet qui blaborepro"
+                }
+            ]
+        },
+        {
+            "type": "QUOTE",
+            "words": 2,
+            "characters": 11,
+            "firstParagraphStyle": "QUOT_Actua",
+            "oversetLines": -3,
+            "visibleArea": 0,
+            "requiredVisibleArea": -4392.306,
+            "frames": [
+                {
+                    "id": 427331,
+                    "geometricBounds": {
+                        "x": 459.213,
+                        "y": 887.4,
+                        "width": 141.732,
+                        "height": 56.693
+                    },
+                    "columns": 1,
+                    "words": 2,
+                    "characters": 11,
+                    "textWrapMode": "bounding_box",
+                    "zIndex": 697,
+                    "locked": false,
+                    "text": "Citaat\rNaam",
+                    "textWrapOffset": {
+                        "top": 25.795,
+                        "left": 9.921,
+                        "bottom": 8.504,
+                        "right": 9.921
+                    }
+                }
+            ]
+        },
+        {
+            "type": "QUOTE",
+            "words": 2,
+            "characters": 11,
+            "firstParagraphStyle": "QUOT_Actua",
+            "oversetLines": -3,
+            "visibleArea": 8035.216,
+            "requiredVisibleArea": 3642.91,
+            "frames": [
+                {
+                    "id": 427380,
+                    "geometricBounds": {
+                        "x": 0,
+                        "y": 795.6,
+                        "width": 141.732,
+                        "height": 56.693
+                    },
+                    "columns": 1,
+                    "words": 2,
+                    "characters": 11,
+                    "textWrapMode": "bounding_box",
+                    "zIndex": 699,
+                    "locked": false,
+                    "text": "Citaat\rNaam",
+                    "textWrapOffset": {
+                        "top": 25.795,
+                        "left": 9.921,
+                        "bottom": 8.504,
+                        "right": 9.921
+                    }
+                }
+            ]
+        },
+        {
+            "type": "BIJSCHRIFT",
+            "words": 1,
+            "characters": 21,
+            "firstParagraphStyle": "BIJS_Onderschrift",
+            "oversetLines": 0,
+            "visibleArea": 0,
+            "requiredVisibleArea": 0,
+            "frames": [
+                {
+                    "id": 427432,
+                    "geometricBounds": {
+                        "x": 152.77,
+                        "y": 645.901,
+                        "width": 448.174,
+                        "height": 6.899
+                    },
+                    "columns": 1,
+                    "words": 1,
+                    "characters": 21,
+                    "textWrapMode": "bounding_box",
+                    "zIndex": 702,
+                    "locked": false,
+                    "text": "Fotobijschrift.credit",
+                    "textWrapOffset": {
+                        "top": 0,
+                        "left": 0,
+                        "bottom": 10.2,
+                        "right": 0
+                    }
+                }
+            ]
+        },
+        {
+            "type": "BIJSCHRIFT",
+            "words": 1,
+            "characters": 21,
+            "firstParagraphStyle": "BIJS_Onderschrift",
+            "oversetLines": 0,
+            "visibleArea": 880.052,
+            "requiredVisibleArea": 880.052,
+            "frames": [
+                {
+                    "id": 427407,
+                    "geometricBounds": {
+                        "x": 619.37,
+                        "y": 757.907,
+                        "width": 127.559,
+                        "height": 6.899
+                    },
+                    "columns": 1,
+                    "words": 1,
+                    "characters": 21,
+                    "textWrapMode": "bounding_box",
+                    "zIndex": 701,
+                    "locked": false,
+                    "text": "Fotobijschrift.credit",
+                    "textWrapOffset": {
+                        "top": 0,
+                        "left": 7.087,
+                        "bottom": 10.2,
+                        "right": 7.087
+                    }
+                }
+            ]
+        }
+    ],
+    "imageComponents": [
+        {
+            "id": 427273,
+            "geometricBounds": {
+                "x": 153.071,
+                "y": 132.6,
+                "width": 600.945,
+                "height": 510
+            },
+            "textWrapMode": "bounding_box",
+            "zIndex": 693,
+            "locked": false,
+            "textWrapOffset": {
+                "top": 5.669,
+                "left": 5.669,
+                "bottom": 5.669,
+                "right": 5.669
+            }
+        },
+        {
+            "id": 427405,
+            "geometricBounds": {
+                "x": 619.87,
+                "y": 585.028,
+                "width": 126.559,
+                "height": 169.079
+            },
+            "textWrapMode": "bounding_box",
+            "zIndex": 700,
+            "locked": false,
+            "textWrapOffset": {
+                "top": 5.669,
+                "left": 5.669,
+                "bottom": 5.669,
+                "right": 5.669
+            },
+            "stroke": {
+                "weight": 1,
+                "assign": "middle"
+            }
+        }
+    ],
+    "decorComponents": [],
+    "canvasComponents": []
+}

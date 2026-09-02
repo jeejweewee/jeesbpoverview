@@ -1,0 +1,329 @@
+{
+    "version": "3.0",
+    "brandName": "Het Laatste Nieuws",
+    "brandId": "9",
+    "sectionName": "Regio",
+    "sectionId": "132",
+    "genreId": "actua",
+    "shapeTypeName": "lead",
+    "shapeTypeId": "1",
+    "geometricBounds": {
+        "x": 153.071,
+        "y": 30.6,
+        "width": 601.218,
+        "height": 744.632
+    },
+    "foldLine": null,
+    "textComponents": [
+        {
+            "type": "BOVENKOP",
+            "words": 1,
+            "characters": 8,
+            "firstParagraphStyle": "BKOP_bijtitel klein 18pt",
+            "oversetLines": 0,
+            "visibleArea": 18397.284,
+            "requiredVisibleArea": 18397.284,
+            "frames": [
+                {
+                    "id": 426761,
+                    "geometricBounds": {
+                        "x": 0,
+                        "y": 0,
+                        "width": 601.218,
+                        "height": 30.6
+                    },
+                    "columns": 1,
+                    "words": 1,
+                    "characters": 8,
+                    "textWrapMode": "none",
+                    "zIndex": 11,
+                    "locked": false,
+                    "text": "BIJTITEL"
+                }
+            ]
+        },
+        {
+            "type": "KOP",
+            "words": 10,
+            "characters": 52,
+            "firstParagraphStyle": "KOPP_Actua 40pt",
+            "oversetLines": 0,
+            "visibleArea": 36620.167,
+            "requiredVisibleArea": 36620.167,
+            "frames": [
+                {
+                    "id": 426634,
+                    "geometricBounds": {
+                        "x": 0,
+                        "y": 40.8,
+                        "width": 601.218,
+                        "height": 91.8
+                    },
+                    "columns": 1,
+                    "words": 10,
+                    "characters": 52,
+                    "textWrapMode": "none",
+                    "zIndex": 5,
+                    "locked": false,
+                    "text": "Kopstuk  3.000 - 1 Foto  \r1 quote  (AD 2x100 rechts)"
+                }
+            ]
+        },
+        {
+            "type": "INTRO",
+            "words": 7,
+            "characters": 22,
+            "firstParagraphStyle": "INTR_Actua",
+            "oversetLines": 0,
+            "visibleArea": 0,
+            "requiredVisibleArea": 0,
+            "frames": [
+                {
+                    "id": 426711,
+                    "geometricBounds": {
+                        "x": 0,
+                        "y": 153,
+                        "width": 141.732,
+                        "height": 106.976
+                    },
+                    "columns": 1,
+                    "words": 7,
+                    "characters": 22,
+                    "textWrapMode": "bounding_box",
+                    "zIndex": 9,
+                    "locked": false,
+                    "text": "Inleiding \r1\r2\r3\r4\r5\r6",
+                    "textWrapOffset": {
+                        "top": 0,
+                        "left": 0,
+                        "bottom": 9.921,
+                        "right": 0
+                    }
+                }
+            ]
+        },
+        {
+            "type": "AUTEUR",
+            "words": 2,
+            "characters": 15,
+            "firstParagraphStyle": "AUTE_Auteur",
+            "oversetLines": 0,
+            "visibleArea": 0,
+            "requiredVisibleArea": 0,
+            "frames": [
+                {
+                    "id": 426686,
+                    "geometricBounds": {
+                        "x": 0,
+                        "y": 173.4,
+                        "width": 141.732,
+                        "height": 103.247
+                    },
+                    "columns": 1,
+                    "words": 2,
+                    "characters": 15,
+                    "textWrapMode": "bounding_box",
+                    "zIndex": 8,
+                    "locked": false,
+                    "text": "AUTE_203 auteur",
+                    "textWrapOffset": {
+                        "top": 0,
+                        "left": 0,
+                        "bottom": 8.504,
+                        "right": 0
+                    }
+                }
+            ]
+        },
+        {
+            "type": "PLAATS",
+            "words": 1,
+            "characters": 6,
+            "firstParagraphStyle": "PLAA_plaatsnaam",
+            "oversetLines": 0,
+            "visibleArea": 0,
+            "requiredVisibleArea": 0,
+            "frames": [
+                {
+                    "id": 426658,
+                    "geometricBounds": {
+                        "x": 0,
+                        "y": 132.6,
+                        "width": 141.732,
+                        "height": 17.466
+                    },
+                    "columns": 1,
+                    "words": 1,
+                    "characters": 6,
+                    "textWrapMode": "none",
+                    "zIndex": 6,
+                    "locked": false,
+                    "text": "Plaats"
+                }
+            ]
+        },
+        {
+            "type": "TEKST",
+            "words": 494,
+            "characters": 3019,
+            "firstParagraphStyle": "TKST_Broodtekst",
+            "oversetLines": 0,
+            "visibleArea": 0,
+            "requiredVisibleArea": 0,
+            "frames": [
+                {
+                    "id": 426626,
+                    "geometricBounds": {
+                        "x": 0,
+                        "y": 173.4,
+                        "width": 141.732,
+                        "height": 571.232
+                    },
+                    "columns": 1,
+                    "words": 200,
+                    "characters": 1202,
+                    "textWrapMode": "none",
+                    "zIndex": 3,
+                    "locked": false,
+                    "text": "TKST_301 TEK mager vet cursief vet cursief\rTKSX_301 TEK mager vet cursief vet cursief\rVRAA_306 TEK vragen\rANTW_313 TEK mager vet cursief vet cursief\rTKOP_401 tussenkop\r\rAUTE_620 kenletters\r\rTKSTOta doluptati tem essequi duscit veniendition prererioreic temporatem re natiisqui que numquia sperum expe cupis excerati nobit pore excerumqui derum cullabo. Nempel mint.\rBis ant ommodip istore conem acculluptae laborporro bercia secearum simincto tem. Vid ma nemporro mo volupta volorerum ipitius nonsequ iduntio rruptatur re que necatis aspel magnimin nis doluptate molorepudam int, untio volor sequidi simo del iligenis expel in nonsent illoreiunt.\rOre, con res qui id et as et qui omnime si se ped quis denis id quibusa erspis magnimus quatures aut aut odiaerumqui corpos ea sequam uta doles ape ipsuntem quasperspero eum isit, volo et quae omnisse aut maxim nihicaborepe nonseque con cus dipieni musae. Optaqui ommodi rat.\rAt quiam, ut quiatio nsequi cullabo. Obis maximus, quis net, omnisqui undio. Nam atecum quatem ipsam, velestr umquia pore optur recta con ex endit unt quam in cone vid et autam, vent eatis et am veribea invende ndist, ea idelessitium ium ra delenisit imus es mo ilis voluptatem. "
+                },
+                {
+                    "id": 426630,
+                    "geometricBounds": {
+                        "x": 153.071,
+                        "y": 520.214,
+                        "width": 141.732,
+                        "height": 224.419
+                    },
+                    "columns": 1,
+                    "words": 66,
+                    "characters": 405,
+                    "textWrapMode": "none",
+                    "zIndex": 4,
+                    "locked": false,
+                    "text": "Rionserum erspidus aspis re esenientum alique si offici sum que dionsequo tet lignit estibustrum exersperchil minitat emquiae nonestibus aliquia sit apero id ulleni abori diorionsero bero omnis aut ut dolut maion perae. Nem et ligento evel eturion plandanist, idus plaborporro et et dolorrovit volut aut offic tet lit officiasped mos dolorporum ea eum laut quia similit fuga. Et as adipsamenit landaer spi"
+                },
+                {
+                    "id": 426600,
+                    "geometricBounds": {
+                        "x": 306.142,
+                        "y": 520.2,
+                        "width": 141.732,
+                        "height": 224.432
+                    },
+                    "columns": 1,
+                    "words": 112,
+                    "characters": 714,
+                    "textWrapMode": "none",
+                    "zIndex": 2,
+                    "locked": false,
+                    "text": "catendus sed mil modictest, sectius ventusandi de lant voluptisqui iduntis re inctam essitatus reiunt aut estiis net omnient dolorit harum que sequis venet et ommoluptate am velliatisqui int facepre pro ommolor ehenist empore vent explam, oditem aut peritio denis de pediti core voluptate dolore sequatqui officta quiduciaecum et fugit velest, quidelessint facestet debitiae apid quae ma nestior porrora verisqu iasped modit et fuga. Nam et quos excessi sedi dolore voleculla verum harum exceperi unt.\rEtusa seque et eriatur?\rIbusam harit laborro rrovid et optaVolorerio moloritaquia dem siminis quis sus, iunti cus.\rRatatum, sequiaes quae estorum iligenimus pa nonseque ommoluptiati as pratur reperae laborest, ei"
+                },
+                {
+                    "id": 426785,
+                    "geometricBounds": {
+                        "x": 459.212,
+                        "y": 520.2,
+                        "width": 141.732,
+                        "height": 224.432
+                    },
+                    "columns": 1,
+                    "words": 116,
+                    "characters": 698,
+                    "textWrapMode": "none",
+                    "zIndex": 12,
+                    "locked": false,
+                    "text": "umqr? Ciatur?\rUs, quiame con cores ea platuri ilibust derit faccullitint ernam qui ut alignate nus.\rIgnihic itatusdae eosame etustru venim denissimet quunt fugitatem ipsapist quiata s et laborentur as vel fugitatem ipsapist quiata s et laborentur as vel mod s et laborentur as vel modi doluptaim denissimet quunt fugitatem ipsapist quiata s et laborentur as vel modi dolupt quae ipsapist quiatatur? Quia i dolupt quae ipsapist quiatatur? Quia vel ium, as aut untibusae vendelit, cus quisinc turiorum fuga. Am ium derro optatemod minumquia quibusae. Ut eaque diorro magnatum ut occus alist eum quam iustem simosa nobit qui reria volum suntius dunt desed quiasima porat min plit ad min natur ratiae. "
+                }
+            ]
+        },
+        {
+            "type": "QUOTE",
+            "words": 2,
+            "characters": 11,
+            "firstParagraphStyle": "QUOT_Actua",
+            "oversetLines": -3,
+            "visibleArea": 0,
+            "requiredVisibleArea": -4392.306,
+            "frames": [
+                {
+                    "id": 426736,
+                    "geometricBounds": {
+                        "x": 152.797,
+                        "y": 606.307,
+                        "width": 141.732,
+                        "height": 56.693
+                    },
+                    "columns": 1,
+                    "words": 2,
+                    "characters": 11,
+                    "textWrapMode": "bounding_box",
+                    "zIndex": 10,
+                    "locked": false,
+                    "text": "Citaat\rNaam",
+                    "textWrapOffset": {
+                        "top": 25.795,
+                        "left": 9.921,
+                        "bottom": 8.504,
+                        "right": 9.921
+                    }
+                }
+            ]
+        },
+        {
+            "type": "BIJSCHRIFT",
+            "words": 1,
+            "characters": 21,
+            "firstParagraphStyle": "BIJS_Onderschrift",
+            "oversetLines": 0,
+            "visibleArea": 0,
+            "requiredVisibleArea": 0,
+            "frames": [
+                {
+                    "id": 426789,
+                    "geometricBounds": {
+                        "x": 153.181,
+                        "y": 503.101,
+                        "width": 447.874,
+                        "height": 6.899
+                    },
+                    "columns": 1,
+                    "words": 1,
+                    "characters": 21,
+                    "textWrapMode": "bounding_box",
+                    "zIndex": 13,
+                    "locked": false,
+                    "text": "Fotobijschrift.credit",
+                    "textWrapOffset": {
+                        "top": 0,
+                        "left": 0,
+                        "bottom": 10.2,
+                        "right": 0
+                    }
+                }
+            ]
+        }
+    ],
+    "imageComponents": [
+        {
+            "id": 426683,
+            "geometricBounds": {
+                "x": 153.181,
+                "y": 132.6,
+                "width": 447.763,
+                "height": 367.2
+            },
+            "textWrapMode": "bounding_box",
+            "zIndex": 7,
+            "locked": false,
+            "textWrapOffset": {
+                "top": 5.669,
+                "left": 5.669,
+                "bottom": 5.669,
+                "right": 5.669
+            }
+        }
+    ],
+    "decorComponents": [],
+    "canvasComponents": []
+}
