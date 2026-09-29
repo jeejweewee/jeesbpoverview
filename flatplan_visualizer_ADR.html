@@ -48,6 +48,7 @@ header p{font-size:13px;color:#64748B;margin-top:3px;}
 .badge{display:inline-block;font-size:10px;font-weight:600;padding:1px 5px;border-radius:6px;margin-right:2px;vertical-align:middle;}
 .badge-img{background:#E0E7FF;color:#4338CA;}
 .badge-ad{background:#FEF3C7;color:#92400E;}
+.badge-part{background:#EDE9FE;color:#6D28D9;}
 
 .hint{font-size:11px;color:#94A3B8;margin-top:8px;text-align:center;}
 .hidden{display:none!important;}
@@ -115,6 +116,28 @@ header p{font-size:13px;color:#64748B;margin-top:3px;}
 #page-shapes{display:none;}
 #page-blueprints{display:block;}
 #page-lines{display:none;}
+#page-gaps{display:none;}
+
+/* ── Unmatched boxes overview ───────────────────────────────── */
+.gaps-toolbar{display:flex;align-items:center;gap:12px;margin-bottom:6px;flex-wrap:wrap;}
+.gaps-intro{font-size:13px;color:#64748B;margin-bottom:14px;}
+.gaps-list{display:flex;flex-direction:column;gap:12px;}
+.gap-row{background:white;border-radius:12px;padding:16px 20px;box-shadow:0 1px 3px rgba(0,0,0,.06),0 4px 12px rgba(0,0,0,.05);display:flex;align-items:flex-start;gap:24px;flex-wrap:wrap;}
+.gap-row.hidden{display:none!important;}
+.gap-info{width:240px;flex-shrink:0;}
+.gap-name{font-size:13px;font-weight:600;color:#0F172A;line-height:1.35;word-break:break-word;margin-bottom:6px;}
+.gap-count{font-size:12px;color:#B91C1C;font-weight:600;margin-bottom:10px;}
+.gap-open{padding:5px 12px;border-radius:16px;border:1.5px solid #CBD5E1;background:white;font-size:12px;font-weight:600;color:#334155;cursor:pointer;}
+.gap-open:hover{background:#F8FAFC;border-color:#3B82F6;color:#1D4ED8;}
+.gap-diagram{flex-shrink:0;}
+.gap-diagram svg{display:block;}
+.gap-boxes{flex:1;min-width:260px;border-collapse:collapse;font-size:12px;}
+.gap-boxes th{background:#F8FAFC;color:#64748B;font-weight:600;font-size:10px;text-transform:uppercase;letter-spacing:.3px;padding:5px 8px;text-align:left;border-bottom:1px solid #E2E8F0;}
+.gap-boxes td{padding:6px 8px;border-bottom:1px solid #F1F5F9;color:#334155;vertical-align:top;}
+.gap-boxes tr:last-child td{border-bottom:none;}
+.gap-reason{color:#B91C1C;}
+.gap-reason.fold{color:#B45309;}
+.gaps-empty{background:white;border-radius:12px;padding:24px;color:#15803D;font-size:14px;font-weight:600;}
 
 /* ── Lines overview ─────────────────────────────────────────── */
 .lines-toolbar{display:flex;align-items:center;gap:12px;margin-bottom:14px;flex-wrap:wrap;}
@@ -192,6 +215,30 @@ header p{font-size:13px;color:#64748B;margin-top:3px;}
 .fold-mismatch summary{font-size:11px;color:#B91C1C;font-weight:600;cursor:pointer;padding:4px 0;}
 .fold-mismatch .shapes-row{margin-top:8px;}
 .fold-mismatch .shape-card{opacity:.6;border-color:#FCA5A5;}
+
+/* partitioning overview (blueprint panel) */
+.part-overview{margin-top:18px;padding:14px 16px;background:white;border:1.5px dashed #C4B5FD;border-radius:10px;}
+.part-overview-header{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:6px;}
+.part-overview-title{font-size:13px;font-weight:700;color:#0F172A;}
+.part-overview-meta{font-size:11px;color:#64748B;}
+.part-toggle{margin-left:auto;padding:3px 10px;border-radius:14px;border:1.5px solid #CBD5E1;background:white;font-size:11px;font-weight:600;color:#475569;cursor:pointer;}
+.part-toggle:hover{background:#F8FAFC;}
+.part-note{font-size:11px;color:#92400E;background:#FEF3C7;border-radius:6px;padding:5px 8px;margin:6px 0;}
+.part-option{border-top:1px solid #F1F5F9;}
+.part-option summary{display:flex;align-items:center;gap:12px;padding:8px 0;cursor:pointer;list-style:none;}
+.part-option summary::-webkit-details-marker{display:none;}
+.part-option summary::before{content:"\25B8";font-size:10px;color:#94A3B8;width:10px;}
+.part-option[open] summary::before{content:"\25BE";}
+.part-label{font-family:'SF Mono','Fira Code',monospace;font-size:12px;font-weight:600;color:#334155;min-width:110px;}
+.part-mini svg{display:block;}
+.part-status{font-size:11px;font-weight:600;margin-left:auto;white-space:nowrap;}
+.part-status.full{color:#15803D;}
+.part-status.partial{color:#B45309;}
+.part-status.empty{color:#B91C1C;}
+.part-slots{padding:4px 0 14px 22px;}
+.part-slot{margin-bottom:12px;}
+.part-slot-header{display:flex;align-items:center;gap:8px;flex-wrap:wrap;font-size:11px;color:#64748B;margin-bottom:6px;}
+.part-slot-header b{color:#0F172A;font-size:12px;}
 </style>
 </head>
 <body>
@@ -202,6 +249,7 @@ header p{font-size:13px;color:#64748B;margin-top:3px;}
   <button class="page-tab active" id="tab-blueprints" onclick="switchPage('blueprints')">Blueprint Overview</button>
   <button class="page-tab" id="tab-shapes" onclick="switchPage('shapes')">Shape Overview</button>
   <button class="page-tab" id="tab-lines" onclick="switchPage('lines')">Lines overview</button>
+  <button class="page-tab" id="tab-gaps" onclick="switchPage('gaps')">Unmatched boxes</button>
 </div>
 
 <div id="bp-topbar">
@@ -272,6 +320,19 @@ header p{font-size:13px;color:#64748B;margin-top:3px;}
 
 </div><!-- #lines-topbar -->
 
+<div id="gaps-topbar" style="display:none;">
+<header>
+  <h1>Unmatched boxes</h1>
+  <p>Blueprints with at least one box that no shape fits (article type, size and fold)</p>
+</header>
+<div class="gaps-toolbar" style="margin-top:16px;">
+  <button class="filter-btn active" data-type="all" onclick="setGapsType('all')">All</button>
+  <button class="filter-btn" data-type="page" onclick="setGapsType('page')">Pages only</button>
+  <button class="filter-btn" data-type="spread" onclick="setGapsType('spread')">Spreads only</button>
+  <span class="stats" id="gaps-stats"></span>
+</div>
+</div><!-- #gaps-topbar -->
+
 </div><!-- #topbar -->
 
 <div id="page-blueprints">
@@ -286,6 +347,11 @@ header p{font-size:13px;color:#64748B;margin-top:3px;}
 
 <div class="lines-list" id="lines-cards"></div>
 </div><!-- #page-lines -->
+
+<div id="page-gaps" style="display:none;">
+<p class="gaps-intro">Boxes with only an ad ($) or image (#) are not checked. A partitioned box counts as matched when the whole box has a shape, or when at least one partitioning option has a shape for every mini-box. Unmatched boxes are outlined in red.</p>
+<div class="gaps-list" id="gaps-cards"></div>
+</div><!-- #page-gaps -->
 
 <div id="overlay" onclick="closePanel()"></div>
 <div id="panel">
@@ -372,11 +438,32 @@ function findSplit(str) {
   return null;
 }
 
+// Partitioning suffix inside a box, e.g. "|{8,2:6,2:3:3}".
+//   "|" = the box is split side by side (the numbers divide its WIDTH)
+//   "-" = the box is split stacked      (the numbers divide its HEIGHT)
+// Each comma-separated entry is one available partitioning; the numbers
+// within an entry (separated by ":") are the sizes of its mini-boxes.
+function parsePartition(raw, sep) {
+  var options = [];
+  raw.split(',').forEach(function(opt) {
+    opt = opt.trim();
+    if (!opt) return;
+    var parts = opt.split(':').map(function(n) { return +n.trim(); });
+    var valid = parts.every(function(n) { return n > 0 && Math.floor(n) === n; });
+    if (valid) options.push(parts);
+  });
+  if (!options.length) return null;
+  return {dir: sep === '-' ? 'v' : 'h', options: options};
+}
+
 function parseContents(s) {
-  // Strip any trailing |{...} / -{...} layout-hint suffix before reading flags.
+  // Split off a trailing |{...} / -{...} partitioning suffix before reading flags.
+  var partition = null;
   var braceIdx = s.indexOf('{');
   if (braceIdx !== -1) {
     var sep = braceIdx > 0 ? s[braceIdx-1] : '';
+    var closeIdx = s.indexOf('}', braceIdx);
+    partition = parsePartition(s.slice(braceIdx+1, closeIdx === -1 ? s.length : closeIdx), sep);
     s = (sep === '|' || sep === '-') ? s.slice(0, braceIdx-1) : s.slice(0, braceIdx);
   }
   var hasImage = false, hasAd = false, customImgCols = null;
@@ -391,7 +478,7 @@ function parseContents(s) {
   if (s.includes('$')) hasAd = true;
   var colM = s.match(/\u00a7\d+\/(\d+)/);
   if (colM) customImgCols = +colM[1];
-  return {tid, tids, hasImage, hasAd, customImgCols};
+  return {tid, tids, hasImage, hasAd, customImgCols, partition};
 }
 
 function getSize(node) {
@@ -454,8 +541,9 @@ function foldLabel(before, after) {
 }
 
 // \u2500\u2500 SVG renderer \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500
-function renderSVG(bp, scale) {
+function renderSVG(bp, scale, highlight) {
   scale = scale || 1;
+  highlight = highlight || [];
   var boxes = parse(bp.definition);
   // Blocks are only square by coincidence: a block's real proportions come
   // from the page's physical column-width / module-height (BLOCK_ASPECT).
@@ -488,6 +576,12 @@ function renderSVG(bp, scale) {
     var label = lp.join(' ');
     var fs = Math.min(10, Math.min(w,h)*0.28);
     svg += '<text x="'+(x+w/2)+'" y="'+(y+h/2+fs*0.35)+'" text-anchor="middle" font-family="system-ui,sans-serif" font-size="'+fs+'" font-weight="700" fill="white" opacity="0.9">'+label+'</text>';
+  });
+  highlight.forEach(function(bi) {
+    var hb = boxes[bi]; if (!hb) return;
+    var hx = PAD + hb.col*(CELLW+GAP), hy = PAD + hb.row*(CELLH+GAP);
+    var hw = hb.bw*CELLW + (hb.bw-1)*GAP, hh = hb.bh*CELLH + (hb.bh-1)*GAP;
+    svg += '<rect x="'+(hx+1.5)+'" y="'+(hy+1.5)+'" width="'+(hw-3)+'" height="'+(hh-3)+'" rx="3" fill="none" stroke="#DC2626" stroke-width="3"/>';
   });
   var foldCol = bpFoldCol(bp);
   if (foldCol !== null) {
@@ -568,10 +662,173 @@ function openPanel(idx) {
         sec.appendChild(det);
       }
     }
+    if (box.contents.partition) sec.appendChild(buildPartitionOverview(box, tids, foldCol));
     body.appendChild(sec);
   });
   document.getElementById('overlay').classList.add('open');
   document.getElementById('panel').classList.add('open');
+}
+
+// \u2500\u2500 Partitioning overview \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500
+// Turns one partitioning option (e.g. [2,3,3]) into mini-boxes with their
+// real grid position, so each can be matched on size AND fold.
+function partitionSlots(box, dir, sizes) {
+  var slots = [], offset = 0;
+  sizes.forEach(function(n) {
+    slots.push(dir === 'h'
+      ? {col: box.col + offset, row: box.row, bw: n, bh: box.bh}
+      : {col: box.col, row: box.row + offset, bw: box.bw, bh: n});
+    offset += n;
+  });
+  return slots;
+}
+
+function slotShapes(slot, tids, foldCol) {
+  var bf = boxFold(slot, foldCol);
+  var size = SHAPES.filter(function(s) {
+    return tids.indexOf(s.tid) !== -1 && s.bw === slot.bw && s.bh === slot.bh;
+  });
+  return {
+    bf: bf,
+    matches: size.filter(function(s) { return foldMatches(s, bf); }),
+    misses:  size.filter(function(s) { return !foldMatches(s, bf); })
+  };
+}
+
+// Small bar diagram of one partitioning: filled segments have fitting
+// shapes, grey hatched segments have none.
+var partMiniSeq = 0;
+function renderPartitionMini(box, dir, slots, results, foldCol) {
+  var hid = 'hatch' + (++partMiniSeq);
+  var total = dir === 'h' ? box.bw : box.bh;
+  var LONG = 150, SHORT = 22, GAP = 2;
+  var unit = (LONG - GAP*(slots.length-1)) / total;
+  var W = dir === 'h' ? LONG : SHORT, H = dir === 'h' ? SHORT : LONG;
+  var fill = (COLORS['\u00a7'+(box.contents.tid||'4')]||{fill:'#8B5CF6'}).fill;
+  var svg = '<svg width="'+W+'" height="'+H+'" viewBox="0 0 '+W+' '+H+'" xmlns="http://www.w3.org/2000/svg">'
+    + '<defs><pattern id="'+hid+'" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">'
+    + '<rect width="5" height="5" fill="#F1F5F9"/><line x1="0" y1="0" x2="0" y2="5" stroke="#CBD5E1" stroke-width="2"/></pattern></defs>';
+  var pos = 0;
+  slots.forEach(function(slot, i) {
+    var n = dir === 'h' ? slot.bw : slot.bh;
+    var len = n*unit;
+    var ok = results[i].matches.length > 0;
+    var x = dir === 'h' ? pos : 0, y = dir === 'h' ? 0 : pos;
+    var w = dir === 'h' ? len : SHORT, h = dir === 'h' ? SHORT : len;
+    svg += '<rect x="'+x+'" y="'+y+'" width="'+w+'" height="'+h+'" rx="2" fill="'+(ok?fill:'url(#'+hid+')')+'"'+(ok?' opacity="0.85"':' stroke="#CBD5E1"')+'/>';
+    svg += '<text x="'+(x+w/2)+'" y="'+(y+h/2+3.5)+'" text-anchor="middle" font-family="system-ui,sans-serif" font-size="10" font-weight="700" fill="'+(ok?'white':'#94A3B8')+'">'+n+'</text>';
+    pos += len + GAP;
+  });
+  // Fold line, only meaningful for side-by-side partitionings.
+  if (dir === 'h' && foldCol !== null && foldCol > box.col && foldCol < box.col + box.bw) {
+    var k = foldCol - box.col, acc = 0, px = 0, fx = null;
+    slots.forEach(function(slot) {
+      if (fx !== null) return;
+      if (acc + slot.bw >= k) {
+        fx = px + (k - acc)*unit + (acc + slot.bw === k ? GAP/2 : 0);
+      }
+      acc += slot.bw; px += slot.bw*unit + GAP;
+    });
+    svg += '<line x1="'+fx+'" y1="0" x2="'+fx+'" y2="'+H+'" stroke="#6D28D9" stroke-width="1.5" stroke-dasharray="3 2"/>';
+  }
+  return svg + '</svg>';
+}
+
+function buildPartitionOverview(box, tids, foldCol) {
+  var part = box.contents.partition;
+  var dir = part.dir;
+  var total = dir === 'h' ? box.bw : box.bh;
+  var wrap = document.createElement('div'); wrap.className = 'part-overview';
+
+  var head = document.createElement('div'); head.className = 'part-overview-header';
+  head.innerHTML = '<span class="part-overview-title">Partitionings</span>'
+    + '<span class="part-overview-meta">'+part.options.length+' option'+(part.options.length!==1?'s':'')
+    + ' \u2022 '+(dir === 'h' ? 'side by side, dividing the '+total+' blocks of width' : 'stacked, dividing the '+total+' blocks of height')+'</span>';
+  var toggle = document.createElement('button'); toggle.className = 'part-toggle'; toggle.textContent = 'Expand all';
+  toggle.onclick = function() {
+    var open = toggle.textContent === 'Expand all';
+    wrap.querySelectorAll('details.part-option').forEach(function(d) { d.open = open; });
+    toggle.textContent = open ? 'Collapse all' : 'Expand all';
+  };
+  head.appendChild(toggle);
+  wrap.appendChild(head);
+
+  if (tids.indexOf('4') === -1) {
+    var n1 = document.createElement('div'); n1.className = 'part-note';
+    n1.textContent = 'Only filler boxes (\u00a74) should have a partitioning. This box is not marked as filler.';
+    wrap.appendChild(n1);
+  }
+  if (!tids.length) {
+    var n2 = document.createElement('div'); n2.className = 'no-shapes';
+    n2.textContent = 'No article type on this box \u2014 no shapes to match.';
+    wrap.appendChild(n2);
+    return wrap;
+  }
+
+  part.options.forEach(function(sizes) {
+    var slots = partitionSlots(box, dir, sizes);
+    var results = slots.map(function(sl) { return slotShapes(sl, tids, foldCol); });
+    var filled = results.filter(function(r) { return r.matches.length > 0; }).length;
+    var sum = sizes.reduce(function(a, b) { return a + b; }, 0);
+
+    var det = document.createElement('details'); det.className = 'part-option';
+    var summ = document.createElement('summary');
+    var statusCls = filled === slots.length ? 'full' : (filled ? 'partial' : 'empty');
+    var statusTxt = filled === slots.length
+      ? 'All mini-boxes have shapes'
+      : filled+' of '+slots.length+' mini-boxes have shapes';
+    summ.innerHTML = '<span class="part-label">'+sizes.join(' : ')+'</span>'
+      + '<span class="part-mini">'+renderPartitionMini(box, dir, slots, results, foldCol)+'</span>'
+      + '<span class="part-status '+statusCls+'">'+statusTxt+'</span>';
+    det.appendChild(summ);
+
+    var body = document.createElement('div'); body.className = 'part-slots';
+    if (sum !== total) {
+      var warn = document.createElement('div'); warn.className = 'part-note';
+      warn.textContent = 'These sizes add up to '+sum+' blocks, but the box is '+total+' blocks '+(dir === 'h' ? 'wide' : 'high')+'.';
+      body.appendChild(warn);
+    }
+
+    // Group identical mini-boxes (same size and same fold) so e.g.
+    // 1:1:1:1:1:3 lists the 1-block shapes once instead of five times.
+    var groups = [], byKey = {};
+    slots.forEach(function(sl, i) {
+      var r = results[i];
+      var key = sl.bw+'x'+sl.bh+'|'+(r.bf ? r.bf.before+':'+r.bf.after : '-');
+      if (!byKey[key]) { byKey[key] = {slot: sl, res: r, count: 0}; groups.push(byKey[key]); }
+      byKey[key].count++;
+    });
+
+    groups.forEach(function(g) {
+      var slotEl = document.createElement('div'); slotEl.className = 'part-slot';
+      var sh = document.createElement('div'); sh.className = 'part-slot-header';
+      sh.innerHTML = '<b>'+g.slot.bw+'\u00d7'+g.slot.bh+' blocks</b>'
+        + (g.count > 1 ? '<span>\u00d7'+g.count+' in this partitioning</span>' : '')
+        + (g.res.bf ? '<span class="fold-chip">Fold '+foldLabel(g.res.bf.before, g.res.bf.after)+'</span>' : '')
+        + '<span>'+g.res.matches.length+' matching shape'+(g.res.matches.length!==1?'s':'')
+        + (g.res.misses.length ? ' \u2022 '+g.res.misses.length+' fold mismatch'+(g.res.misses.length!==1?'es':'') : '')+'</span>';
+      slotEl.appendChild(sh);
+      if (g.res.matches.length) {
+        slotEl.appendChild(buildPanelShapeRow(g.res.matches, tids, g.res.bf));
+      } else {
+        var nm = document.createElement('div'); nm.className = 'no-shapes';
+        nm.textContent = 'No shapes fit this mini-box.';
+        slotEl.appendChild(nm);
+      }
+      if (g.res.misses.length) {
+        var md = document.createElement('details'); md.className = 'fold-mismatch';
+        var ms = document.createElement('summary');
+        ms.textContent = g.res.misses.length+' shape'+(g.res.misses.length!==1?'s':'')+' with the right size but a different fold';
+        md.appendChild(ms);
+        md.appendChild(buildPanelShapeRow(g.res.misses, tids, g.res.bf));
+        slotEl.appendChild(md);
+      }
+      body.appendChild(slotEl);
+    });
+    det.appendChild(body);
+    wrap.appendChild(det);
+  });
+  return wrap;
 }
 
 function buildPanelShapeRow(list, tids, bf) {
@@ -650,6 +907,10 @@ function renderCard(bp,idx) {
     (box.contents.tids||[]).forEach(function(t){ lp.push('\u00a7'+t); });
     if(box.contents.hasImage) lp.push('<span class="badge badge-img">#</span>');
     if(box.contents.hasAd)   lp.push('<span class="badge badge-ad">$</span>');
+    if(box.contents.partition) {
+      var np=box.contents.partition.options.length;
+      lp.push('<span class="badge badge-part" title="'+np+' partitioning option'+(np!==1?'s':'')+'">'+(box.contents.partition.dir==='h'?'|':'-')+'{'+np+'}</span>');
+    }
     var bf=boxFold(box, foldCol);
     var foldCell = foldCol===null ? '' : '<td>'+(bf?foldLabel(bf.before, bf.after):'\u2014')+'</td>';
     return '<tr><td>'+(i+1)+'</td><td>col '+(box.col+1)+', row '+(box.row+1)+'</td><td>'+box.bw+'\u00d7'+box.bh+'</td>'+foldCell+'<td>'+lp.join('')+'</td></tr>';
@@ -797,10 +1058,13 @@ function switchPage(page) {
   var tBp=document.getElementById('tab-blueprints');
   var tSp=document.getElementById('tab-shapes');
   var tLp=document.getElementById('tab-lines');
+  var gp=document.getElementById('page-gaps');
+  var gpTop=document.getElementById('gaps-topbar');
+  var tGp=document.getElementById('tab-gaps');
 
-  bp.style.display='none'; sp.style.display='none'; lp.style.display='none';
-  bpTop.style.display='none'; spTop.style.display='none'; lpTop.style.display='none';
-  tBp.classList.remove('active'); tSp.classList.remove('active'); tLp.classList.remove('active');
+  bp.style.display='none'; sp.style.display='none'; lp.style.display='none'; gp.style.display='none';
+  bpTop.style.display='none'; spTop.style.display='none'; lpTop.style.display='none'; gpTop.style.display='none';
+  tBp.classList.remove('active'); tSp.classList.remove('active'); tLp.classList.remove('active'); tGp.classList.remove('active');
 
   if (page==='shapes') {
     sp.style.display='block'; spTop.style.display='block'; tSp.classList.add('active');
@@ -808,10 +1072,135 @@ function switchPage(page) {
   } else if (page==='lines') {
     lp.style.display='block'; lpTop.style.display='block'; tLp.classList.add('active');
     if (!linesPageBuilt) { buildLinesPage(); linesPageBuilt=true; }
+  } else if (page==='gaps') {
+    gp.style.display='block'; gpTop.style.display='block'; tGp.classList.add('active');
+    if (!gapsPageBuilt) { buildGapsPage(); gapsPageBuilt=true; }
   } else {
     bp.style.display='block'; bpTop.style.display='block'; tBp.classList.add('active');
   }
   window.scrollTo(0,0);
+}
+
+// \u2500\u2500 Unmatched boxes overview \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500
+var gapsPageBuilt = false;
+var activeGapsType = 'all';
+
+// Same matching rules as the blueprint panel: article type + size + fold.
+// Returns null when the box is fine (or has no article type to check),
+// otherwise a short description of why nothing fits.
+function boxGap(box, foldCol) {
+  var tids = box.contents.tids || [];
+  if (!tids.length) return null;
+  var bf = boxFold(box, foldCol);
+  var size = SHAPES.filter(function(s) {
+    return tids.indexOf(s.tid) !== -1 && s.bw === box.bw && s.bh === box.bh;
+  });
+  var matches = size.filter(function(s) { return foldMatches(s, bf); });
+  if (matches.length) return null;
+
+  var part = box.contents.partition;
+  var partNote = '';
+  if (part) {
+    var total = part.dir === 'h' ? box.bw : box.bh;
+    var fillable = part.options.some(function(sizes) {
+      var sum = sizes.reduce(function(a, b) { return a + b; }, 0);
+      if (sum !== total) return false;
+      return partitionSlots(box, part.dir, sizes).every(function(sl) {
+        return slotShapes(sl, tids, foldCol).matches.length > 0;
+      });
+    });
+    if (fillable) return null;
+    partNote = ' None of the '+part.options.length+' partitioning option'+(part.options.length!==1?'s':'')+' can be filled completely either.';
+  }
+
+  var reason, kind;
+  if (size.length) {
+    kind = 'fold';
+    reason = size.length+' shape'+(size.length!==1?'s':'')+' of this size, but none with a matching fold'
+      + (bf ? ' (needs '+foldLabel(bf.before, bf.after)+')' : ' (needs no fold)')+'.';
+  } else {
+    kind = 'size';
+    reason = 'No shapes of this type and size.';
+  }
+  return {kind: kind, reason: reason + partNote, bf: bf};
+}
+
+function blueprintGaps(bp) {
+  var boxes = parse(bp.definition);
+  var foldCol = bpFoldCol(bp);
+  var gaps = [];
+  boxes.forEach(function(box, i) {
+    var g = boxGap(box, foldCol);
+    if (g) gaps.push({index: i, box: box, gap: g});
+  });
+  return gaps;
+}
+
+function renderGapRow(bp, idx, gaps) {
+  var row = document.createElement('div');
+  row.className = 'gap-row'; row.dataset.type = bp.type;
+
+  var info = document.createElement('div'); info.className = 'gap-info';
+  info.innerHTML = '<div class="card-type '+bp.type+'">'+(bp.type==='spread'?'Spread '+bp.width+'\u00d7'+bp.height:'Page '+bp.width+'\u00d7'+bp.height)+'</div>'
+    + '<div class="gap-name">'+escHtml(bp.name)+'</div>'
+    + '<div class="gap-count">'+gaps.length+' unmatched box'+(gaps.length!==1?'es':'')+'</div>';
+  var btn = document.createElement('button'); btn.className = 'gap-open'; btn.textContent = 'Open blueprint';
+  btn.onclick = function() { openPanel(idx); };
+  info.appendChild(btn);
+
+  var diag = document.createElement('div'); diag.className = 'gap-diagram';
+  diag.innerHTML = renderSVG(bp, 0.8, gaps.map(function(g) { return g.index; }));
+
+  var table = document.createElement('table'); table.className = 'gap-boxes';
+  table.innerHTML = '<thead><tr><th>Box</th><th>Position</th><th>Size</th><th>Type</th><th>Why no shape fits</th></tr></thead>'
+    + '<tbody>' + gaps.map(function(g) {
+        var types = g.box.contents.tids.map(function(t) { return '\u00a7'+t+' '+(TID_NAMES[t]||''); }).join(', ');
+        return '<tr><td>'+(g.index+1)+'</td>'
+          + '<td>col '+(g.box.col+1)+', row '+(g.box.row+1)+'</td>'
+          + '<td>'+g.box.bw+'\u00d7'+g.box.bh+(g.gap.bf ? '<br><span class="fold-chip">Fold '+foldLabel(g.gap.bf.before, g.gap.bf.after)+'</span>' : '')+'</td>'
+          + '<td>'+escHtml(types)+'</td>'
+          + '<td class="gap-reason'+(g.gap.kind==='fold'?' fold':'')+'">'+escHtml(g.gap.reason)+'</td></tr>';
+      }).join('') + '</tbody>';
+
+  row.appendChild(info); row.appendChild(diag); row.appendChild(table);
+  return row;
+}
+
+function buildGapsPage() {
+  var root = document.getElementById('gaps-cards');
+  root.innerHTML = '';
+  var found = 0;
+  BLUEPRINTS.forEach(function(bp, i) {
+    try {
+      var gaps = blueprintGaps(bp);
+      if (!gaps.length) return;
+      root.appendChild(renderGapRow(bp, i, gaps));
+      found++;
+    } catch(e) { console.error('Failed to check blueprint "'+bp.name+'":', e); }
+  });
+  if (!found) {
+    var ok = document.createElement('div'); ok.className = 'gaps-empty';
+    ok.textContent = 'Every box in every blueprint has at least one matching shape.';
+    root.appendChild(ok);
+  }
+  applyGapsFilters();
+}
+
+function setGapsType(type) {
+  activeGapsType = type;
+  document.querySelectorAll('.gaps-toolbar .filter-btn').forEach(function(b) {
+    b.classList.toggle('active', b.dataset.type === type);
+  });
+  applyGapsFilters();
+}
+
+function applyGapsFilters() {
+  var rows = document.querySelectorAll('#gaps-cards .gap-row'), vis = 0;
+  rows.forEach(function(r) {
+    var show = activeGapsType === 'all' || r.dataset.type === activeGapsType;
+    r.classList.toggle('hidden', !show); if (show) vis++;
+  });
+  document.getElementById('gaps-stats').textContent = vis+' of '+BLUEPRINTS.length+' blueprints have unmatched boxes';
 }
 
 // \u2500\u2500 Lines overview \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500
