@@ -48,6 +48,7 @@ header p{font-size:13px;color:#64748B;margin-top:3px;}
 .badge{display:inline-block;font-size:10px;font-weight:600;padding:1px 5px;border-radius:6px;margin-right:2px;vertical-align:middle;}
 .badge-img{background:#E0E7FF;color:#4338CA;}
 .badge-ad{background:#FEF3C7;color:#92400E;}
+.badge-part{background:#EDE9FE;color:#6D28D9;}
 
 .hint{font-size:11px;color:#94A3B8;margin-top:8px;text-align:center;}
 .hidden{display:none!important;}
@@ -115,6 +116,28 @@ header p{font-size:13px;color:#64748B;margin-top:3px;}
 #page-shapes{display:none;}
 #page-blueprints{display:block;}
 #page-lines{display:none;}
+#page-gaps{display:none;}
+
+/* ── Unmatched boxes overview ───────────────────────────────── */
+.gaps-toolbar{display:flex;align-items:center;gap:12px;margin-bottom:6px;flex-wrap:wrap;}
+.gaps-intro{font-size:13px;color:#64748B;margin-bottom:14px;}
+.gaps-list{display:flex;flex-direction:column;gap:12px;}
+.gap-row{background:white;border-radius:12px;padding:16px 20px;box-shadow:0 1px 3px rgba(0,0,0,.06),0 4px 12px rgba(0,0,0,.05);display:flex;align-items:flex-start;gap:24px;flex-wrap:wrap;}
+.gap-row.hidden{display:none!important;}
+.gap-info{width:240px;flex-shrink:0;}
+.gap-name{font-size:13px;font-weight:600;color:#0F172A;line-height:1.35;word-break:break-word;margin-bottom:6px;}
+.gap-count{font-size:12px;color:#B91C1C;font-weight:600;margin-bottom:10px;}
+.gap-open{padding:5px 12px;border-radius:16px;border:1.5px solid #CBD5E1;background:white;font-size:12px;font-weight:600;color:#334155;cursor:pointer;}
+.gap-open:hover{background:#F8FAFC;border-color:#3B82F6;color:#1D4ED8;}
+.gap-diagram{flex-shrink:0;}
+.gap-diagram svg{display:block;}
+.gap-boxes{flex:1;min-width:260px;border-collapse:collapse;font-size:12px;}
+.gap-boxes th{background:#F8FAFC;color:#64748B;font-weight:600;font-size:10px;text-transform:uppercase;letter-spacing:.3px;padding:5px 8px;text-align:left;border-bottom:1px solid #E2E8F0;}
+.gap-boxes td{padding:6px 8px;border-bottom:1px solid #F1F5F9;color:#334155;vertical-align:top;}
+.gap-boxes tr:last-child td{border-bottom:none;}
+.gap-reason{color:#B91C1C;}
+.gap-reason.fold{color:#B45309;}
+.gaps-empty{background:white;border-radius:12px;padding:24px;color:#15803D;font-size:14px;font-weight:600;}
 
 /* ── Lines overview ─────────────────────────────────────────── */
 .lines-toolbar{display:flex;align-items:center;gap:12px;margin-bottom:14px;flex-wrap:wrap;}
@@ -181,6 +204,41 @@ header p{font-size:13px;color:#64748B;margin-top:3px;}
 .genre-btn.active{background:#0F172A;border-color:#0F172A;color:white;}
 .genre-btn.active .gcnt{background:rgba(255,255,255,.2);color:white;}
 .genre-btn:hover:not(.active){background:#F8FAFC;border-color:#94A3B8;}
+.type-dot{display:inline-block;width:8px;height:8px;border-radius:50%;}
+
+/* fold matching (blueprint panel) */
+.fold-chip{display:inline-flex;align-items:center;padding:2px 8px;border-radius:10px;font-size:10px;font-weight:700;background:#EDE9FE;color:#6D28D9;}
+.fold-chip.none{background:#F1F5F9;color:#64748B;}
+.fold-ok{color:#15803D;font-weight:700;}
+.fold-bad{color:#B91C1C;font-weight:700;}
+.fold-mismatch{margin-top:12px;}
+.fold-mismatch summary{font-size:11px;color:#B91C1C;font-weight:600;cursor:pointer;padding:4px 0;}
+.fold-mismatch .shapes-row{margin-top:8px;}
+.fold-mismatch .shape-card{opacity:.6;border-color:#FCA5A5;}
+
+/* partitioning overview (blueprint panel) */
+.part-overview{margin-top:18px;padding:14px 16px;background:white;border:1.5px dashed #C4B5FD;border-radius:10px;}
+.part-overview-header{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:6px;}
+.part-overview-title{font-size:13px;font-weight:700;color:#0F172A;}
+.part-overview-meta{font-size:11px;color:#64748B;}
+.part-toggle{margin-left:auto;padding:3px 10px;border-radius:14px;border:1.5px solid #CBD5E1;background:white;font-size:11px;font-weight:600;color:#475569;cursor:pointer;}
+.part-toggle:hover{background:#F8FAFC;}
+.part-note{font-size:11px;color:#92400E;background:#FEF3C7;border-radius:6px;padding:5px 8px;margin:6px 0;}
+.part-option{border-top:1px solid #F1F5F9;}
+.part-option summary{display:flex;align-items:center;gap:12px;padding:8px 0;cursor:pointer;list-style:none;}
+.part-option summary::-webkit-details-marker{display:none;}
+.part-option summary::before{content:"\25B8";font-size:10px;color:#94A3B8;width:10px;}
+.part-option[open] summary::before{content:"\25BE";}
+.part-label{font-family:'SF Mono','Fira Code',monospace;font-size:12px;font-weight:600;color:#334155;min-width:110px;}
+.part-mini svg{display:block;}
+.part-status{font-size:11px;font-weight:600;margin-left:auto;white-space:nowrap;}
+.part-status.full{color:#15803D;}
+.part-status.partial{color:#B45309;}
+.part-status.empty{color:#B91C1C;}
+.part-slots{padding:4px 0 14px 22px;}
+.part-slot{margin-bottom:12px;}
+.part-slot-header{display:flex;align-items:center;gap:8px;flex-wrap:wrap;font-size:11px;color:#64748B;margin-bottom:6px;}
+.part-slot-header b{color:#0F172A;font-size:12px;}
 </style>
 </head>
 <body>
@@ -191,13 +249,14 @@ header p{font-size:13px;color:#64748B;margin-top:3px;}
   <button class="page-tab active" id="tab-blueprints" onclick="switchPage('blueprints')">Blueprint Overview</button>
   <button class="page-tab" id="tab-shapes" onclick="switchPage('shapes')">Shape Overview</button>
   <button class="page-tab" id="tab-lines" onclick="switchPage('lines')">Lines overview</button>
+  <button class="page-tab" id="tab-gaps" onclick="switchPage('gaps')">Unmatched boxes</button>
 </div>
 
 <div id="bp-topbar">
 
 <header>
   <h1>AILA Blueprint Visualizer</h1>
-  <p>Layout Automation config HLN.xlsm &mdash; Click a blueprint to browse matching shapes</p>
+  <p>Het Laatste Nieuws - Layout Automation config (1).xlsx &mdash; Click a blueprint to browse matching shapes</p>
 </header>
 
 <div class="toolbar">
@@ -239,6 +298,7 @@ header p{font-size:13px;color:#64748B;margin-top:3px;}
   <span class="sp-val" id="sp-val">130px</span>
 </div>
 
+<div class="genre-bar" id="sp-type-bar"></div>
 <div class="genre-bar" id="genre-bar"></div>
 <div class="genre-bar" id="sp-section-bar"></div>
 
@@ -260,6 +320,19 @@ header p{font-size:13px;color:#64748B;margin-top:3px;}
 
 </div><!-- #lines-topbar -->
 
+<div id="gaps-topbar" style="display:none;">
+<header>
+  <h1>Unmatched boxes</h1>
+  <p>Blueprints with at least one box that no shape fits (article type, size and fold)</p>
+</header>
+<div class="gaps-toolbar" style="margin-top:16px;">
+  <button class="filter-btn active" data-type="all" onclick="setGapsType('all')">All</button>
+  <button class="filter-btn" data-type="page" onclick="setGapsType('page')">Pages only</button>
+  <button class="filter-btn" data-type="spread" onclick="setGapsType('spread')">Spreads only</button>
+  <span class="stats" id="gaps-stats"></span>
+</div>
+</div><!-- #gaps-topbar -->
+
 </div><!-- #topbar -->
 
 <div id="page-blueprints">
@@ -274,6 +347,11 @@ header p{font-size:13px;color:#64748B;margin-top:3px;}
 
 <div class="lines-list" id="lines-cards"></div>
 </div><!-- #page-lines -->
+
+<div id="page-gaps" style="display:none;">
+<p class="gaps-intro">Boxes with only an ad ($) or image (#) are not checked. A partitioned box counts as matched when the whole box has a shape, or when at least one partitioning option has a shape for every mini-box. Unmatched boxes are outlined in red.</p>
+<div class="gaps-list" id="gaps-cards"></div>
+</div><!-- #page-gaps -->
 
 <div id="overlay" onclick="closePanel()"></div>
 <div id="panel">
@@ -294,9 +372,9 @@ header p{font-size:13px;color:#64748B;margin-top:3px;}
 
 <script>
 // Shapes: 86 total | Genres: actua, actua staand
-var BLUEPRINTS = [{"name":"HRVP_010","type":"page","width":5,"height":21,"definition":"(5x3[#]-5x18[\u00a71#])","sections":["\"Regio Voorpagina\""],"sourceLocation":"PLA-HLN_lines_VP","sourceStructure":"No-lines","linesJpg":"No-lines.jpg"},{"name":"HRVP_020","type":"page","width":5,"height":21,"definition":"(5x3[#]-((1x7[\u00a74#]-1x11[#])|4x18[\u00a71#]))","sections":["\"Regio Voorpagina\""],"sourceLocation":"PLA-HLN_lines_VP","sourceStructure":"No-lines","linesJpg":"No-lines.jpg"},{"name":"HRVP_030","type":"page","width":5,"height":21,"definition":"((5x3[#]-5x7[\u00a72#])-(1x11[#]|4x11[\u00a71#]))","sections":["\"Regio Voorpagina\""],"sourceLocation":"PLA-HLN_lines_VP","sourceStructure":"HRVP_030","linesJpg":"HRVP_030.jpg"},{"name":"HRVP_040","type":"page","width":5,"height":21,"definition":"(5x3[#]-((1x7[\u00a74#]|4x7[\u00a72#])-(1x11[#]|4x11[\u00a71#])))","sections":["\"Regio Voorpagina\""],"sourceLocation":"PLA-HLN_lines_VP","sourceStructure":"HRVP_040","linesJpg":"HRVP_040.jpg"},{"name":"HRVP_050","type":"page","width":5,"height":21,"definition":"(5x3[#]-((1x7[\u00a74#]-1x11[#])|(4x14[\u00a71#]-4x4[\u00a72#])))","sections":["\"Regio Voorpagina\""],"sourceLocation":"PLA-HLN_lines_VP","sourceStructure":"HRVP_050","linesJpg":"HRVP_050.jpg"},{"name":"HRBP_010","type":"page","width":5,"height":21,"definition":"5x21[\u00a71#]","sections":["\"Regio\"","\"Reportage\"","\"Algemeen\""],"sourceLocation":"PLA-HLN_lines","sourceStructure":"No-lines","linesJpg":"No-lines.jpg"},{"name":"HRBP_015","type":"page","width":5,"height":21,"definition":"(5x15[\u00a71]-(3x6[\u00a72]|2x6[\u00a72]))","sections":["\"Regio\"","\"Reportage\"","\"Algemeen\""],"sourceLocation":"PLA-HLN_lines","sourceStructure":"HRBP_015","linesJpg":"HRBP_015.jpg"},{"name":"HRBP_015A","type":"page","width":5,"height":21,"definition":"(5x15[\u00a71]-(3x6[$]|2x6[\u00a72]))","sections":["\"Regio\"","\"Reportage\"","\"Algemeen\""],"sourceLocation":"PLA-HLN_lines","sourceStructure":"HRBP_015A","linesJpg":"HRBP_015A.jpg"},{"name":"HRBP_015B","type":"page","width":5,"height":21,"definition":"(5x15[\u00a71]-(3x6[\u00a72]|2x6[$]))","sections":["\"Regio\"","\"Reportage\"","\"Algemeen\""],"sourceLocation":"PLA-HLN_lines","sourceStructure":"HRBP_015B","linesJpg":"HRBP_015B.jpg"},{"name":"HRBP_015C","type":"page","width":5,"height":21,"definition":"(5x15[\u00a71#]-5x6[#$])","sections":["\"Regio\"","\"Reportage\"","\"Algemeen\""],"sourceLocation":"PLA-HLN_lines","sourceStructure":"HRBP_015C","linesJpg":"HRBP_015C.jpg"},{"name":"HRBP_016","type":"page","width":5,"height":21,"definition":"(5x15[\u00a71]-(2x6[\u00a72]|3x6[\u00a72]))","sections":["\"Regio\"","\"Reportage\"","\"Algemeen\""],"sourceLocation":"PLA-HLN_lines","sourceStructure":"HRBP_015","linesJpg":"HRBP_015.jpg"},{"name":"HRBP_016A","type":"page","width":5,"height":21,"definition":"(5x15[\u00a71]-(2x6[$]|3x6[\u00a72]))","sections":["\"Regio\"","\"Reportage\"","\"Algemeen\""],"sourceLocation":"PLA-HLN_lines","sourceStructure":"HRBP_016A","linesJpg":"HRBP_016A.jpg"},{"name":"HRBP_016B","type":"page","width":5,"height":21,"definition":"(5x15[\u00a71]-(2x6[\u00a72]|3x6[$]))","sections":["\"Regio\"","\"Reportage\"","\"Algemeen\""],"sourceLocation":"PLA-HLN_lines","sourceStructure":"HRBP_016B","linesJpg":"HRBP_016B.jpg"},{"name":"HRBP_020","type":"page","width":5,"height":21,"definition":"(4x21[\u00a71]|1x21[\u00a74#-{21,7:7:7}])","sections":["\"Regio\"","\"Reportage\"","\"Algemeen\""],"sourceLocation":"PLA-HLN_lines","sourceStructure":"No-lines","linesJpg":"No-lines.jpg"},{"name":"HRBP_030","type":"page","width":5,"height":21,"definition":"((4x18[\u00a71]-4x3[\u00a72$])|1x21[\u00a74#-{21,7:7:7}])","sections":["\"Regio\"","\"Reportage\"","\"Algemeen\""],"sourceLocation":"PLA-HLN_lines","sourceStructure":"HRBP_030","linesJpg":"HRBP_030.jpg"},{"name":"HRBP_040","type":"page","width":5,"height":21,"definition":"((4x17[\u00a71]-4x4[\u00a72$])|1x21[\u00a74#-{21,7:7:7}])","sections":["\"Regio\"","\"Reportage\"","\"Algemeen\""],"sourceLocation":"PLA-HLN_lines","sourceStructure":"HRBP_040","linesJpg":"HRBP_040.jpg"},{"name":"HRBP_050","type":"page","width":5,"height":21,"definition":"((4x15[\u00a71]-4x6[\u00a72$])|1x21[\u00a74#-{21,7:7:7}])","sections":["\"Regio\"","\"Reportage\"","\"Algemeen\""],"sourceLocation":"PLA-HLN_lines","sourceStructure":"HRBP_050","linesJpg":"HRBP_050.jpg"},{"name":"HRBP_050A","type":"page","width":5,"height":21,"definition":"(1x21[\u00a74#-{7:7:7,21}]|(4x15[\u00a71#]-4x6[\u00a72#]))","sections":["\"Regio\"","\"Reportage\"","\"Algemeen\""],"sourceLocation":"PLA-HLN_lines","sourceStructure":"HRBP_050A","linesJpg":"HRBP_050A.jpg"},{"name":"HRBP_050B","type":"page","width":5,"height":21,"definition":"((4x15[\u00a71]-(2x6[#$]|2x6[\u00a72#]))|1x21[\u00a74#-{21,7:7:7}])","sections":["\"Regio\"","\"Reportage\"","\"Algemeen\""],"sourceLocation":"PLA-HLN_lines","sourceStructure":"HRBP_050B","linesJpg":"HRBP_050B.jpg"},{"name":"HRBP_050C","type":"page","width":5,"height":21,"definition":"(1x21[\u00a74#-{7:7:7,21}]|(4x15[\u00a71#]-(2x6[\u00a72#]|2x6[#$])))","sections":["\"Regio\"","\"Reportage\"","\"Algemeen\""],"sourceLocation":"PLA-HLN_lines","sourceStructure":"HRBP_050C","linesJpg":"HRBP_050C.jpg"},{"name":"HRBP_060","type":"page","width":5,"height":21,"definition":"((4x7[\u00a71]-4x14[\u00a72])|1x21[\u00a74-{21,7:7:7}])","sections":["\"Regio\"","\"Reportage\"","\"Algemeen\""],"sourceLocation":"PLA-HLN_lines","sourceStructure":"HRBP_060","linesJpg":"HRBP_060.jpg"},{"name":"HRBP_070","type":"page","width":5,"height":21,"definition":"(5x7[\u00a71]-(4x14[\u00a72]|1x14[\u00a74-{14,7:7}]))","sections":["\"Regio\"","\"Reportage\"","\"Algemeen\""],"sourceLocation":"PLA-HLN_lines","sourceStructure":"HRBP_070","linesJpg":"HRBP_070.jpg"},{"name":"HRBP_080","type":"page","width":5,"height":21,"definition":"(5x7[\u00a71]-5x14[\u00a72])","sections":["\"Regio\"","\"Reportage\"","\"Algemeen\""],"sourceLocation":"PLA-HLN_lines","sourceStructure":"HRBP_080","linesJpg":"HRBP_080.jpg"},{"name":"HRBP_090","type":"page","width":5,"height":21,"definition":"(5x11[\u00a71#]-5x10[#$])","sections":["\"Regio\"","\"Reportage\"","\"Algemeen\""],"sourceLocation":"PLA-HLN_lines","sourceStructure":"HRBP_090","linesJpg":"HRBP_090.jpg"},{"name":"HRBP_090A","type":"page","width":5,"height":21,"definition":"((3x11[\u00a71#]|2x11[\u00a72#])-5x10[#$])","sections":["\"Regio\"","\"Reportage\"","\"Algemeen\""],"sourceLocation":"PLA-HLN_lines","sourceStructure":"HRBP_090","linesJpg":"HRBP_090.jpg"},{"name":"HRBP_090B","type":"page","width":5,"height":21,"definition":"(5x11[\u00a71#]-(3x10[#$]|2x10[\u00a72#]))","sections":["\"Regio\"","\"Reportage\"","\"Algemeen\""],"sourceLocation":"PLA-HLN_lines","sourceStructure":"HRBP_090B","linesJpg":"HRBP_090B.jpg"},{"name":"HRBP_090C","type":"page","width":5,"height":21,"definition":"(5x11[\u00a71#]-(2x10[\u00a72#]|3x10[#$]))","sections":["\"Regio\"","\"Reportage\"","\"Algemeen\""],"sourceLocation":"PLA-HLN_lines","sourceStructure":"HRBP_090C","linesJpg":"HRBP_090C.jpg"},{"name":"HRBP_100","type":"page","width":5,"height":21,"definition":"(2x21[#$]|3x21[\u00a71#])","sections":["\"Regio\"","\"Reportage\"","\"Algemeen\""],"sourceLocation":"PLA-HLN_lines","sourceStructure":"No-lines","linesJpg":"No-lines.jpg"},{"name":"HRBP_100A","type":"page","width":5,"height":21,"definition":"(3x21[\u00a71#]|2x21[#$])","sections":["\"Regio\"","\"Reportage\"","\"Algemeen\""],"sourceLocation":"PLA-HLN_lines","sourceStructure":"No-lines","linesJpg":"No-lines.jpg"},{"name":"HRBP_100B","type":"page","width":5,"height":21,"definition":"(1x21[\u00a74#-{7:7:7,21}]|(1x21[\u00a74#-{7:7:7,21}]|3x21[\u00a71#]))","sections":["\"Regio\"","\"Reportage\"","\"Algemeen\""],"sourceLocation":"PLA-HLN_lines","sourceStructure":"No-lines","linesJpg":"No-lines.jpg"},{"name":"HRBP_100C","type":"page","width":5,"height":21,"definition":"((3x21[\u00a71#]|1x21[\u00a74#-{7:7:7,21}])|1x21[\u00a74#-{7:7:7,21}])","sections":["\"Regio\"","\"Reportage\"","\"Algemeen\""],"sourceLocation":"PLA-HLN_lines","sourceStructure":"No-lines","linesJpg":"No-lines.jpg"},{"name":"HRBP_105","type":"page","width":5,"height":21,"definition":"(2x21[#$]|(3x15[\u00a71#]-3x6[\u00a72#$]))","sections":["\"Regio\"","\"Reportage\"","\"Algemeen\""],"sourceLocation":"PLA-HLN_lines","sourceStructure":"HRBP_105","linesJpg":"HRBP_105.jpg"},{"name":"HRBP_105A","type":"page","width":5,"height":21,"definition":"((3x15[\u00a71#]-3x6[\u00a72#$])|2x21[#$])","sections":["\"Regio\"","\"Reportage\"","\"Algemeen\""],"sourceLocation":"PLA-HLN_lines","sourceStructure":"HRBP_105A","linesJpg":"HRBP_105A.jpg"},{"name":"HRBP_105B","type":"page","width":5,"height":21,"definition":"((1x21[\u00a74#-{7:7:7,21}]|1x21[\u00a74#-{7:7:7,21}])|(3x15[\u00a71#]-3x6[\u00a72#$]))","sections":["\"Regio\"","\"Reportage\"","\"Algemeen\""],"sourceLocation":"PLA-HLN_lines","sourceStructure":"HRBP_105","linesJpg":"HRBP_105.jpg"},{"name":"HRBP_105C","type":"page","width":5,"height":21,"definition":"((3x15[\u00a71#]-3x6[\u00a72#$])|(1x21[\u00a74#-{7:7:7,21}]|1x21[\u00a74#-{7:7:7,21}]))","sections":["\"Regio\"","\"Reportage\"","\"Algemeen\""],"sourceLocation":"PLA-HLN_lines","sourceStructure":"HRBP_105A","linesJpg":"HRBP_105A.jpg"},{"name":"HRBP_105D","type":"page","width":5,"height":21,"definition":"((3x15[\u00a71#]-3x6[#$])|(1x21[\u00a74#-{7:7:7,21}]|1x21[\u00a74#-{7:7:7,21}]))","sections":["\"Regio\"","\"Reportage\"","\"Algemeen\""],"sourceLocation":"PLA-HLN_lines","sourceStructure":"HRBP_105D","linesJpg":"HRBP_105D.jpg"},{"name":"HRBP_105E","type":"page","width":5,"height":21,"definition":"((3x15[\u00a71#]-3x6[#$])|(1x21[\u00a74#-{7:7:7,21}]|1x21[\u00a74#-{7:7:7,21}]))","sections":["\"Regio\"","\"Reportage\"","\"Algemeen\""],"sourceLocation":"PLA-HLN_lines","sourceStructure":"HRBP_105E","linesJpg":"HRBP_105E.jpg"},{"name":"HRBP_110","type":"page","width":5,"height":21,"definition":"((1x21[\u00a74#-{7:7:7,21}]|1x21[\u00a74#-{7:7:7,21}])|(3x12[\u00a71#]-3x9[#$]))","sections":["\"Regio\"","\"Reportage\"","\"Algemeen\""],"sourceLocation":"PLA-HLN_lines","sourceStructure":"HRBP_110","linesJpg":"HRBP_110.jpg"},{"name":"HRBP_110A","type":"page","width":5,"height":21,"definition":"((3x12[\u00a71#]-3x9[#$])|(1x21[\u00a74#-{7:7:7,21}]|1x21[\u00a74#-{7:7:7,21}]))","sections":["\"Regio\"","\"Reportage\"","\"Algemeen\""],"sourceLocation":"PLA-HLN_lines","sourceStructure":"HRBP_110A","linesJpg":"HRBP_110A.jpg"},{"name":"HRBS1 (21)","type":"spread","width":10,"height":21,"definition":"((4x17[\u00a71]-4x4[\u00a72#])|1x21[\u00a74#-{21,7:7:7}])","sections":["\"Regio\"","\"Reportage\"","\"Algemeen\""],"sourceLocation":"PLA-HLN_lines","sourceStructure":"No-lines","linesJpg":"No-lines.jpg"}];
+var BLUEPRINTS = [{"name":"HRVP_020","type":"page","width":5,"height":21,"definition":"(5x3[#]-((1x7[\u00a74#]-1x11[#])|4x18[\u00a71#]))","sections":["\"Regio Voorpagina\""],"sourceLocation":"PLA-HLN_lines_VP","sourceStructure":"No-lines","linesJpg":"No-lines.jpg"},{"name":"HRVP_030","type":"page","width":5,"height":21,"definition":"((5x3[#]-5x7[\u00a73#])-(1x11[#]|4x11[\u00a71#]))","sections":["\"Regio Voorpagina\""],"sourceLocation":"PLA-HLN_lines_VP","sourceStructure":"HRVP_030","linesJpg":"HRVP_030.jpg"},{"name":"HRVP_040","type":"page","width":5,"height":21,"definition":"((5x3[#]-(1x7[\u00a74#]|4x7[\u00a73#]))-(1x11[#]|4x11[\u00a71#]))","sections":["\"Regio Voorpagina\""],"sourceLocation":"PLA-HLN_lines_VP","sourceStructure":"HRVP_040","linesJpg":"HRVP_040.jpg"},{"name":"HRVP_050","type":"page","width":5,"height":21,"definition":"(5x3[#]-((1x7[\u00a74#]-1x11[#])|(4x14[\u00a71#]-4x4[\u00a72#])))","sections":["\"Regio Voorpagina\""],"sourceLocation":"PLA-HLN_lines_VP","sourceStructure":"HRVP_050","linesJpg":"HRVP_050.jpg"},{"name":"HRBP_010","type":"page","width":5,"height":21,"definition":"5x21[\u00a71#]","sections":["\"Regio\"","\"Reportage\"","\"Algemeen\""],"sourceLocation":"PLA-HLN_lines","sourceStructure":"No-lines","linesJpg":"No-lines.jpg"},{"name":"HRBP_015","type":"page","width":5,"height":21,"definition":"(5x15[\u00a71]-(3x6[\u00a72]|2x6[\u00a72]))","sections":["\"Regio\"","\"Reportage\"","\"Algemeen\""],"sourceLocation":"PLA-HLN_lines","sourceStructure":"HRBP_015","linesJpg":"HRBP_015.jpg"},{"name":"HRBP_015A","type":"page","width":5,"height":21,"definition":"(5x15[\u00a71]-(3x6[$]|2x6[\u00a72]))","sections":["\"Regio\"","\"Reportage\"","\"Algemeen\""],"sourceLocation":"PLA-HLN_lines","sourceStructure":"HRBP_015A","linesJpg":"HRBP_015A.jpg"},{"name":"HRBP_015B","type":"page","width":5,"height":21,"definition":"(5x15[\u00a71]-(3x6[\u00a72]|2x6[$]))","sections":["\"Regio\"","\"Reportage\"","\"Algemeen\""],"sourceLocation":"PLA-HLN_lines","sourceStructure":"HRBP_015B","linesJpg":"HRBP_015B.jpg"},{"name":"HRBP_015C","type":"page","width":5,"height":21,"definition":"(5x15[\u00a71#]-5x6[#$])","sections":["\"Regio\"","\"Reportage\"","\"Algemeen\""],"sourceLocation":"PLA-HLN_lines","sourceStructure":"HRBP_015C","linesJpg":"HRBP_015C.jpg"},{"name":"HRBP_016","type":"page","width":5,"height":21,"definition":"(5x15[\u00a71]-(2x6[\u00a72]|3x6[\u00a72]))","sections":["\"Regio\"","\"Reportage\"","\"Algemeen\""],"sourceLocation":"PLA-HLN_lines","sourceStructure":"HRBP_016","linesJpg":"HRBP_016.jpg"},{"name":"HRBP_016A","type":"page","width":5,"height":21,"definition":"(5x15[\u00a71]-(2x6[$]|3x6[\u00a72]))","sections":["\"Regio\"","\"Reportage\"","\"Algemeen\""],"sourceLocation":"PLA-HLN_lines","sourceStructure":"HRBP_016A","linesJpg":"HRBP_016A.jpg"},{"name":"HRBP_016B","type":"page","width":5,"height":21,"definition":"(5x15[\u00a71]-(2x6[\u00a72]|3x6[$]))","sections":["\"Regio\"","\"Reportage\"","\"Algemeen\""],"sourceLocation":"PLA-HLN_lines","sourceStructure":"HRBP_016B","linesJpg":"HRBP_016B.jpg"},{"name":"HRBP_020","type":"page","width":5,"height":21,"definition":"(4x21[\u00a71]|1x21[\u00a74#-{21,7:7:7}])","sections":["\"Regio\"","\"Reportage\"","\"Algemeen\""],"sourceLocation":"PLA-HLN_lines","sourceStructure":"No-lines","linesJpg":"No-lines.jpg"},{"name":"HRBP_030","type":"page","width":5,"height":21,"definition":"((4x18[\u00a71]-4x3[\u00a72$])|1x21[\u00a74#-{21,7:7:7}])","sections":["\"Regio\"","\"Reportage\"","\"Algemeen\""],"sourceLocation":"PLA-HLN_lines","sourceStructure":"HRBP_030","linesJpg":"HRBP_030.jpg"},{"name":"HRBP_040","type":"page","width":5,"height":21,"definition":"((4x17[\u00a71]-4x4[\u00a72$])|1x21[\u00a74#-{21,7:7:7}])","sections":["\"Regio\"","\"Reportage\"","\"Algemeen\""],"sourceLocation":"PLA-HLN_lines","sourceStructure":"HRBP_040","linesJpg":"HRBP_040.jpg"},{"name":"HRBP_050","type":"page","width":5,"height":21,"definition":"((4x15[\u00a71]-4x6[\u00a72$])|1x21[\u00a74#-{21,7:7:7}])","sections":["\"Regio\"","\"Reportage\"","\"Algemeen\""],"sourceLocation":"PLA-HLN_lines","sourceStructure":"HRBP_050","linesJpg":"HRBP_050.jpg"},{"name":"HRBP_050A","type":"page","width":5,"height":21,"definition":"(1x21[\u00a74#-{7:7:7,21}]|(4x15[\u00a71#]-4x6[\u00a72#]))","sections":["\"Regio\"","\"Reportage\"","\"Algemeen\""],"sourceLocation":"PLA-HLN_lines","sourceStructure":"HRBP_050A","linesJpg":"HRBP_050A.jpg"},{"name":"HRBP_050B","type":"page","width":5,"height":21,"definition":"((4x15[\u00a71]-(2x6[#$]|2x6[\u00a72#]))|1x21[\u00a74#-{21,7:7:7}])","sections":["\"Regio\"","\"Reportage\"","\"Algemeen\""],"sourceLocation":"PLA-HLN_lines","sourceStructure":"HRBP_050B","linesJpg":"HRBP_050B.jpg"},{"name":"HRBP_050C","type":"page","width":5,"height":21,"definition":"(1x21[\u00a74#-{7:7:7,21}]|(4x15[\u00a71#]-(2x6[\u00a72#]|2x6[#$])))","sections":["\"Regio\"","\"Reportage\"","\"Algemeen\""],"sourceLocation":"PLA-HLN_lines","sourceStructure":"HRBP_050C","linesJpg":"HRBP_050C.jpg"},{"name":"HRBP_060","type":"page","width":5,"height":21,"definition":"((4x7[\u00a73]-4x14[\u00a71])|1x21[\u00a74-{21,7:7:7}])","sections":["\"Regio\"","\"Reportage\"","\"Algemeen\""],"sourceLocation":"PLA-HLN_lines","sourceStructure":"HRBP_060","linesJpg":"HRBP_060.jpg"},{"name":"HRBP_070","type":"page","width":5,"height":21,"definition":"(5x7[\u00a73]-(4x14[\u00a71]|1x14[\u00a74-{14,7:7}]))","sections":["\"Regio\"","\"Reportage\"","\"Algemeen\""],"sourceLocation":"PLA-HLN_lines","sourceStructure":"HRBP_070","linesJpg":"HRBP_070.jpg"},{"name":"HRBP_080","type":"page","width":5,"height":21,"definition":"(5x7[\u00a73]-5x14[\u00a71])","sections":["\"Regio\"","\"Reportage\"","\"Algemeen\""],"sourceLocation":"PLA-HLN_lines","sourceStructure":"HRBP_080","linesJpg":"HRBP_080.jpg"},{"name":"HRBP_090","type":"page","width":5,"height":21,"definition":"(5x11[\u00a71#]-5x10[#$])","sections":["\"Regio\"","\"Reportage\"","\"Algemeen\""],"sourceLocation":"PLA-HLN_lines","sourceStructure":"HRBP_090","linesJpg":"HRBP_090.jpg"},{"name":"HRBP_090A","type":"page","width":5,"height":21,"definition":"((3x11[\u00a71#]|2x11[\u00a73#])-5x10[#$])","sections":["\"Regio\"","\"Reportage\"","\"Algemeen\""],"sourceLocation":"PLA-HLN_lines","sourceStructure":"HRBP_090","linesJpg":"HRBP_090.jpg"},{"name":"HRBP_090B","type":"page","width":5,"height":21,"definition":"(5x11[\u00a71#]-(3x10[#$]|2x10[\u00a72#]))","sections":["\"Regio\"","\"Reportage\"","\"Algemeen\""],"sourceLocation":"PLA-HLN_lines","sourceStructure":"HRBP_091","linesJpg":"HRBP_091.jpg"},{"name":"HRBP_090C","type":"page","width":5,"height":21,"definition":"(5x11[\u00a71#]-(2x10[\u00a72#]|3x10[#$]))","sections":["\"Regio\"","\"Reportage\"","\"Algemeen\""],"sourceLocation":"PLA-HLN_lines","sourceStructure":"HRBP_091","linesJpg":"HRBP_091.jpg"},{"name":"HRBP_100","type":"page","width":5,"height":21,"definition":"(2x21[#$]|3x21[\u00a71#])","sections":["\"Regio\"","\"Reportage\"","\"Algemeen\""],"sourceLocation":"PLA-HLN_lines","sourceStructure":"No-lines","linesJpg":"No-lines.jpg"},{"name":"HRBP_100A","type":"page","width":5,"height":21,"definition":"(3x21[\u00a71#]|2x21[#$])","sections":["\"Regio\"","\"Reportage\"","\"Algemeen\""],"sourceLocation":"PLA-HLN_lines","sourceStructure":"No-lines","linesJpg":"No-lines.jpg"},{"name":"HRBP_100B","type":"page","width":5,"height":21,"definition":"(1x21[\u00a74#-{7:7:7,21}]|(1x21[\u00a74#-{7:7:7,21}]|3x21[\u00a71#]))","sections":["\"Regio\"","\"Reportage\"","\"Algemeen\""],"sourceLocation":"PLA-HLN_lines","sourceStructure":"No-lines","linesJpg":"No-lines.jpg"},{"name":"HRBP_100C","type":"page","width":5,"height":21,"definition":"((3x21[\u00a71#]|1x21[\u00a74#-{7:7:7,21}])|1x21[\u00a74#-{7:7:7,21}])","sections":["\"Regio\"","\"Reportage\"","\"Algemeen\""],"sourceLocation":"PLA-HLN_lines","sourceStructure":"No-lines","linesJpg":"No-lines.jpg"},{"name":"HRBP_105","type":"page","width":5,"height":21,"definition":"(2x21[#$]|(3x15[\u00a71#]-3x6[\u00a72#$]))","sections":["\"Regio\"","\"Reportage\"","\"Algemeen\""],"sourceLocation":"PLA-HLN_lines","sourceStructure":"HRBP_105","linesJpg":"HRBP_105.jpg"},{"name":"HRBP_105A","type":"page","width":5,"height":21,"definition":"((3x15[\u00a71#]-3x6[\u00a72#$])|2x21[#$])","sections":["\"Regio\"","\"Reportage\"","\"Algemeen\""],"sourceLocation":"PLA-HLN_lines","sourceStructure":"HRBP_105A","linesJpg":"HRBP_105A.jpg"},{"name":"HRBP_105B","type":"page","width":5,"height":21,"definition":"((1x21[\u00a74#-{7:7:7,21}]|1x21[\u00a74#-{7:7:7,21}])|(3x15[\u00a71#]-3x6[\u00a72#$]))","sections":["\"Regio\"","\"Reportage\"","\"Algemeen\""],"sourceLocation":"PLA-HLN_lines","sourceStructure":"HRBP_105","linesJpg":"HRBP_105.jpg"},{"name":"HRBP_105C","type":"page","width":5,"height":21,"definition":"((3x15[\u00a71#]-3x6[\u00a72#$])|(1x21[\u00a74#-{7:7:7,21}]|1x21[\u00a74#-{7:7:7,21}]))","sections":["\"Regio\"","\"Reportage\"","\"Algemeen\""],"sourceLocation":"PLA-HLN_lines","sourceStructure":"HRBP_105A","linesJpg":"HRBP_105A.jpg"},{"name":"HRBP_105D","type":"page","width":5,"height":21,"definition":"((3x15[\u00a71#]-3x6[#$])|(1x21[\u00a74#-{7:7:7,21}]|1x21[\u00a74#-{7:7:7,21}]))","sections":["\"Regio\"","\"Reportage\"","\"Algemeen\""],"sourceLocation":"PLA-HLN_lines","sourceStructure":"HRBP_105D","linesJpg":"HRBP_105D.jpg"},{"name":"HRBP_105E","type":"page","width":5,"height":21,"definition":"((3x15[\u00a71#]-3x6[#$])|(1x21[\u00a74#-{7:7:7,21}]|1x21[\u00a74#-{7:7:7,21}]))","sections":["\"Regio\"","\"Reportage\"","\"Algemeen\""],"sourceLocation":"PLA-HLN_lines","sourceStructure":"HRBP_105E","linesJpg":"HRBP_105E.jpg"},{"name":"HRBP_110","type":"page","width":5,"height":21,"definition":"((1x21[\u00a74#-{7:7:7,21}]|1x21[\u00a74#-{7:7:7,21}])|(3x11[\u00a71]-3x10[$]))","sections":["\"Regio\"","\"Reportage\"","\"Algemeen\""],"sourceLocation":"PLA-HLN_lines","sourceStructure":"HRBP_110","linesJpg":"HRBP_110.jpg"},{"name":"HRBP_110A","type":"page","width":5,"height":21,"definition":"((3x11[\u00a71]-3x10[$])|(1x21[\u00a74#-{7:7:7,21}]|1x21[\u00a74#-{7:7:7,21}]))","sections":["\"Regio\"","\"Reportage\"","\"Algemeen\""],"sourceLocation":"PLA-HLN_lines","sourceStructure":"HRBP_110A","linesJpg":"HRBP_110A.jpg"},{"name":"HRBS1 (21)","type":"spread","width":10,"height":21,"definition":"10x21[\u00a71]","sections":["\"Regio\"","\"Reportage\"","\"Algemeen\""],"sourceLocation":"PLA-HLN_lines","sourceStructure":"No-lines","linesJpg":"No-lines.jpg"}];
 
-var SHAPES     = [{"name":"PLA HLN artikelshapes Lead.indd lead 1 (2701424.v0.1)","jpg":"PLA HLN artikelshapes Lead.indd lead 1 (2701424.v0.1).jpg","tid":"1","bw":4,"bh":18,"brand":"Het Laatste Nieuws","section":"Regio","typeName":"lead","foldLine":null,"tekstChars":3045,"genreId":"actua","imageCount":1,"quoteCount":1},{"name":"PLA HLN artikelshapes Lead.indd lead 10 (2701424.v0.1)","jpg":"PLA HLN artikelshapes Lead.indd lead 10 (2701424.v0.1).jpg","tid":"1","bw":4,"bh":18,"brand":"Het Laatste Nieuws","section":"Regio","typeName":"lead","foldLine":null,"tekstChars":4941,"genreId":"actua","imageCount":2,"quoteCount":1},{"name":"PLA HLN artikelshapes Lead.indd lead 11 (2701424.v0.1)","jpg":"PLA HLN artikelshapes Lead.indd lead 11 (2701424.v0.1).jpg","tid":"1","bw":4,"bh":17,"brand":"Het Laatste Nieuws","section":"Regio","typeName":"lead","foldLine":null,"tekstChars":3125,"genreId":"actua staand","imageCount":1,"quoteCount":1},{"name":"PLA HLN artikelshapes Lead.indd lead 12 (2701424.v0.1)","jpg":"PLA HLN artikelshapes Lead.indd lead 12 (2701424.v0.1).jpg","tid":"1","bw":4,"bh":17,"brand":"Het Laatste Nieuws","section":"Regio","typeName":"lead","foldLine":null,"tekstChars":3062,"genreId":"actua","imageCount":2,"quoteCount":1},{"name":"PLA HLN artikelshapes Lead.indd lead 13 (2701424.v0.1)","jpg":"PLA HLN artikelshapes Lead.indd lead 13 (2701424.v0.1).jpg","tid":"1","bw":4,"bh":17,"brand":"Het Laatste Nieuws","section":"Regio","typeName":"lead","foldLine":null,"tekstChars":4111,"genreId":"actua","imageCount":1,"quoteCount":1},{"name":"PLA HLN artikelshapes Lead.indd lead 14 (2701424.v0.1)","jpg":"PLA HLN artikelshapes Lead.indd lead 14 (2701424.v0.1).jpg","tid":"1","bw":4,"bh":17,"brand":"Het Laatste Nieuws","section":"Regio","typeName":"lead","foldLine":null,"tekstChars":4116,"genreId":"actua","imageCount":2,"quoteCount":1},{"name":"PLA HLN artikelshapes Lead.indd lead 15 (2701424.v0.1)","jpg":"PLA HLN artikelshapes Lead.indd lead 15 (2701424.v0.1).jpg","tid":"1","bw":4,"bh":17,"brand":"Het Laatste Nieuws","section":"Regio","typeName":"lead","foldLine":null,"tekstChars":4116,"genreId":"actua","imageCount":2,"quoteCount":1},{"name":"PLA HLN artikelshapes Lead.indd lead 16 (2701424.v0.1)","jpg":"PLA HLN artikelshapes Lead.indd lead 16 (2701424.v0.1).jpg","tid":"1","bw":4,"bh":21,"brand":"Het Laatste Nieuws","section":"Regio","typeName":"lead","foldLine":null,"tekstChars":5660,"genreId":"actua","imageCount":1,"quoteCount":2},{"name":"PLA HLN artikelshapes Lead.indd lead 17 (2701424.v0.1)","jpg":"PLA HLN artikelshapes Lead.indd lead 17 (2701424.v0.1).jpg","tid":"1","bw":5,"bh":15,"brand":"Het Laatste Nieuws","section":"Regio","typeName":"lead","foldLine":null,"tekstChars":2944,"genreId":"actua","imageCount":1,"quoteCount":1},{"name":"PLA HLN artikelshapes Lead.indd lead 18 (2701424.v0.1)","jpg":"PLA HLN artikelshapes Lead.indd lead 18 (2701424.v0.1).jpg","tid":"1","bw":5,"bh":15,"brand":"Het Laatste Nieuws","section":"Regio","typeName":"lead","foldLine":null,"tekstChars":3936,"genreId":"actua","imageCount":1,"quoteCount":1},{"name":"PLA HLN artikelshapes Lead.indd lead 19 (2701424.v0.1)","jpg":"PLA HLN artikelshapes Lead.indd lead 19 (2701424.v0.1).jpg","tid":"1","bw":5,"bh":15,"brand":"Het Laatste Nieuws","section":"Regio","typeName":"lead","foldLine":null,"tekstChars":4810,"genreId":"actua","imageCount":1,"quoteCount":1},{"name":"PLA HLN artikelshapes Lead.indd lead 2 (2701424.v0.1)","jpg":"PLA HLN artikelshapes Lead.indd lead 2 (2701424.v0.1).jpg","tid":"1","bw":4,"bh":18,"brand":"Het Laatste Nieuws","section":"Regio","typeName":"lead","foldLine":null,"tekstChars":2982,"genreId":"actua","imageCount":2,"quoteCount":1},{"name":"PLA HLN artikelshapes Lead.indd lead 20 (2701424.v0.1)","jpg":"PLA HLN artikelshapes Lead.indd lead 20 (2701424.v0.1).jpg","tid":"1","bw":5,"bh":15,"brand":"Het Laatste Nieuws","section":"Regio","typeName":"lead","foldLine":null,"tekstChars":5646,"genreId":"actua staand","imageCount":1,"quoteCount":1},{"name":"PLA HLN artikelshapes Lead.indd lead 21 (2701424.v0.1)","jpg":"PLA HLN artikelshapes Lead.indd lead 21 (2701424.v0.1).jpg","tid":"1","bw":5,"bh":21,"brand":"Het Laatste Nieuws","section":"Regio","typeName":"lead","foldLine":null,"tekstChars":5699,"genreId":"actua","imageCount":2,"quoteCount":2},{"name":"PLA HLN artikelshapes Lead.indd lead 22 (2701424.v0.1)","jpg":"PLA HLN artikelshapes Lead.indd lead 22 (2701424.v0.1).jpg","tid":"1","bw":5,"bh":21,"brand":"Het Laatste Nieuws","section":"Regio","typeName":"lead","foldLine":null,"tekstChars":5941,"genreId":"actua","imageCount":1,"quoteCount":1},{"name":"PLA HLN artikelshapes Lead.indd lead 23 (2701424.v0.1)","jpg":"PLA HLN artikelshapes Lead.indd lead 23 (2701424.v0.1).jpg","tid":"1","bw":4,"bh":14,"brand":"Het Laatste Nieuws","section":"Regio","typeName":"lead","foldLine":null,"tekstChars":3052,"genreId":"actua","imageCount":1,"quoteCount":1},{"name":"PLA HLN artikelshapes Lead.indd lead 24 (2701424.v0.1)","jpg":"PLA HLN artikelshapes Lead.indd lead 24 (2701424.v0.1).jpg","tid":"1","bw":4,"bh":14,"brand":"Het Laatste Nieuws","section":"Regio","typeName":"lead","foldLine":null,"tekstChars":2877,"genreId":"actua staand","imageCount":1,"quoteCount":1},{"name":"PLA HLN artikelshapes Lead.indd lead 25 (2701424.v0.1)","jpg":"PLA HLN artikelshapes Lead.indd lead 25 (2701424.v0.1).jpg","tid":"1","bw":5,"bh":14,"brand":"Het Laatste Nieuws","section":"Regio","typeName":"lead","foldLine":null,"tekstChars":4716,"genreId":"actua staand","imageCount":2,"quoteCount":1},{"name":"PLA HLN artikelshapes Lead.indd lead 26 (2701424.v0.1)","jpg":"PLA HLN artikelshapes Lead.indd lead 26 (2701424.v0.1).jpg","tid":"1","bw":5,"bh":14,"brand":"Het Laatste Nieuws","section":"Regio","typeName":"lead","foldLine":null,"tekstChars":2960,"genreId":"actua","imageCount":2,"quoteCount":1},{"name":"PLA HLN artikelshapes Lead.indd lead 27 (2701424.v0.1)","jpg":"PLA HLN artikelshapes Lead.indd lead 27 (2701424.v0.1).jpg","tid":"1","bw":5,"bh":14,"brand":"Het Laatste Nieuws","section":"Regio","typeName":"lead","foldLine":null,"tekstChars":2945,"genreId":"actua staand","imageCount":2,"quoteCount":1},{"name":"PLA HLN artikelshapes Lead.indd lead 28 (2701424.v0.1)","jpg":"PLA HLN artikelshapes Lead.indd lead 28 (2701424.v0.1).jpg","tid":"1","bw":5,"bh":14,"brand":"Het Laatste Nieuws","section":"Regio","typeName":"lead","foldLine":null,"tekstChars":2873,"genreId":"actua staand","imageCount":2,"quoteCount":1},{"name":"PLA HLN artikelshapes Lead.indd lead 29 (2701424.v0.1)","jpg":"PLA HLN artikelshapes Lead.indd lead 29 (2701424.v0.1).jpg","tid":"1","bw":5,"bh":14,"brand":"Het Laatste Nieuws","section":"Regio","typeName":"lead","foldLine":null,"tekstChars":2870,"genreId":"actua staand","imageCount":1,"quoteCount":1},{"name":"PLA HLN artikelshapes Lead.indd lead 3 (2701424.v0.1)","jpg":"PLA HLN artikelshapes Lead.indd lead 3 (2701424.v0.1).jpg","tid":"1","bw":4,"bh":18,"brand":"Het Laatste Nieuws","section":"Regio","typeName":"lead","foldLine":null,"tekstChars":3117,"genreId":"actua","imageCount":2,"quoteCount":1},{"name":"PLA HLN artikelshapes Lead.indd lead 30 (2701424.v0.1)","jpg":"PLA HLN artikelshapes Lead.indd lead 30 (2701424.v0.1).jpg","tid":"1","bw":5,"bh":14,"brand":"Het Laatste Nieuws","section":"Regio","typeName":"lead","foldLine":null,"tekstChars":2870,"genreId":"actua staand","imageCount":1,"quoteCount":1},{"name":"PLA HLN artikelshapes Lead.indd lead 31 (2701424.v0.1)","jpg":"PLA HLN artikelshapes Lead.indd lead 31 (2701424.v0.1).jpg","tid":"1","bw":5,"bh":11,"brand":"Het Laatste Nieuws","section":"Regio","typeName":"lead","foldLine":null,"tekstChars":2757,"genreId":"actua","imageCount":1,"quoteCount":1},{"name":"PLA HLN artikelshapes Lead.indd lead 32 (2701424.v0.1)","jpg":"PLA HLN artikelshapes Lead.indd lead 32 (2701424.v0.1).jpg","tid":"1","bw":5,"bh":11,"brand":"Het Laatste Nieuws","section":"Regio","typeName":"lead","foldLine":null,"tekstChars":2792,"genreId":"actua staand","imageCount":2,"quoteCount":1},{"name":"PLA HLN artikelshapes Lead.indd lead 33 (2701424.v0.1)","jpg":"PLA HLN artikelshapes Lead.indd lead 33 (2701424.v0.1).jpg","tid":"1","bw":3,"bh":11,"brand":"Het Laatste Nieuws","section":"Regio","typeName":"lead","foldLine":null,"tekstChars":2659,"genreId":"actua","imageCount":0,"quoteCount":1},{"name":"PLA HLN artikelshapes Lead.indd lead 34 (2701424.v0.1)","jpg":"PLA HLN artikelshapes Lead.indd lead 34 (2701424.v0.1).jpg","tid":"1","bw":3,"bh":21,"brand":"Het Laatste Nieuws","section":"Regio","typeName":"lead","foldLine":null,"tekstChars":4100,"genreId":"actua staand","imageCount":1,"quoteCount":1},{"name":"PLA HLN artikelshapes Lead.indd lead 35 (2701424.v0.1)","jpg":"PLA HLN artikelshapes Lead.indd lead 35 (2701424.v0.1).jpg","tid":"1","bw":3,"bh":15,"brand":"Het Laatste Nieuws","section":"Regio","typeName":"lead","foldLine":null,"tekstChars":3036,"genreId":"actua","imageCount":1,"quoteCount":1},{"name":"PLA HLN artikelshapes Lead.indd lead 36 (2701424.v0.1)","jpg":"PLA HLN artikelshapes Lead.indd lead 36 (2701424.v0.1).jpg","tid":"1","bw":5,"bh":11,"brand":"Het Laatste Nieuws","section":"Regio","typeName":"lead","foldLine":null,"tekstChars":4089,"genreId":"actua","imageCount":1,"quoteCount":1},{"name":"PLA HLN artikelshapes Lead.indd lead 37 (2701424.v0.1)","jpg":"PLA HLN artikelshapes Lead.indd lead 37 (2701424.v0.1).jpg","tid":"1","bw":3,"bh":11,"brand":"Het Laatste Nieuws","section":"Regio","typeName":"lead","foldLine":null,"tekstChars":2590,"genreId":"actua","imageCount":0,"quoteCount":0},{"name":"PLA HLN artikelshapes Lead.indd lead 38 (2701424.v0.1)","jpg":"PLA HLN artikelshapes Lead.indd lead 38 (2701424.v0.1).jpg","tid":"1","bw":3,"bh":15,"brand":"Het Laatste Nieuws","section":"Regio","typeName":"lead","foldLine":null,"tekstChars":2998,"genreId":"actua","imageCount":1,"quoteCount":1},{"name":"PLA HLN artikelshapes Lead.indd lead 39 (2701424.v0.1)","jpg":"PLA HLN artikelshapes Lead.indd lead 39 (2701424.v0.1).jpg","tid":"1","bw":4,"bh":15,"brand":"Het Laatste Nieuws","section":"Regio","typeName":"lead","foldLine":null,"tekstChars":3019,"genreId":"actua","imageCount":1,"quoteCount":1},{"name":"PLA HLN artikelshapes Lead.indd lead 4 (2701424.v0.1)","jpg":"PLA HLN artikelshapes Lead.indd lead 4 (2701424.v0.1).jpg","tid":"1","bw":4,"bh":18,"brand":"Het Laatste Nieuws","section":"Regio","typeName":"lead","foldLine":null,"tekstChars":3145,"genreId":"actua","imageCount":3,"quoteCount":1},{"name":"PLA HLN artikelshapes Lead.indd lead 40 (2701424.v0.1)","jpg":"PLA HLN artikelshapes Lead.indd lead 40 (2701424.v0.1).jpg","tid":"1","bw":5,"bh":21,"brand":"Het Laatste Nieuws","section":"Regio","typeName":"lead","foldLine":null,"tekstChars":6056,"genreId":"actua","imageCount":1,"quoteCount":2},{"name":"PLA HLN artikelshapes Lead.indd lead 41 (2701424.v0.1)","jpg":"PLA HLN artikelshapes Lead.indd lead 41 (2701424.v0.1).jpg","tid":"1","bw":5,"bh":21,"brand":"Het Laatste Nieuws","section":"Regio","typeName":"lead","foldLine":null,"tekstChars":6202,"genreId":"actua","imageCount":2,"quoteCount":2},{"name":"PLA HLN artikelshapes Lead.indd lead 42 (2701424.v0.1)","jpg":"PLA HLN artikelshapes Lead.indd lead 42 (2701424.v0.1).jpg","tid":"1","bw":5,"bh":21,"brand":"Het Laatste Nieuws","section":"Regio","typeName":"lead","foldLine":null,"tekstChars":6021,"genreId":"actua","imageCount":3,"quoteCount":2},{"name":"PLA HLN artikelshapes Lead.indd lead 43 (2701424.v0.1)","jpg":"PLA HLN artikelshapes Lead.indd lead 43 (2701424.v0.1).jpg","tid":"1","bw":5,"bh":21,"brand":"Het Laatste Nieuws","section":"Regio","typeName":"lead","foldLine":null,"tekstChars":4850,"genreId":"actua","imageCount":2,"quoteCount":2},{"name":"PLA HLN artikelshapes Lead.indd lead 44 (2701424.v0.1)","jpg":"PLA HLN artikelshapes Lead.indd lead 44 (2701424.v0.1).jpg","tid":"1","bw":5,"bh":21,"brand":"Het Laatste Nieuws","section":"Regio","typeName":"lead","foldLine":null,"tekstChars":5269,"genreId":"actua","imageCount":3,"quoteCount":2},{"name":"PLA HLN artikelshapes Lead.indd lead 45 (2701424.v0.1)","jpg":"PLA HLN artikelshapes Lead.indd lead 45 (2701424.v0.1).jpg","tid":"1","bw":5,"bh":21,"brand":"Het Laatste Nieuws","section":"Regio","typeName":"lead","foldLine":null,"tekstChars":5921,"genreId":"actua staand","imageCount":1,"quoteCount":2},{"name":"PLA HLN artikelshapes Lead.indd lead 46 (2701424.v0.1)","jpg":"PLA HLN artikelshapes Lead.indd lead 46 (2701424.v0.1).jpg","tid":"1","bw":5,"bh":14,"brand":"Het Laatste Nieuws","section":"Regio","typeName":"lead","foldLine":null,"tekstChars":3869,"genreId":"actua","imageCount":1,"quoteCount":1},{"name":"PLA HLN artikelshapes Lead.indd lead 47 (2701424.v0.1)","jpg":"PLA HLN artikelshapes Lead.indd lead 47 (2701424.v0.1).jpg","tid":"1","bw":5,"bh":14,"brand":"Het Laatste Nieuws","section":"Regio","typeName":"lead","foldLine":null,"tekstChars":3893,"genreId":"actua","imageCount":2,"quoteCount":1},{"name":"PLA HLN artikelshapes Lead.indd lead 48 (2701424.v0.1)","jpg":"PLA HLN artikelshapes Lead.indd lead 48 (2701424.v0.1).jpg","tid":"1","bw":5,"bh":14,"brand":"Het Laatste Nieuws","section":"Regio","typeName":"lead","foldLine":null,"tekstChars":3864,"genreId":"actua","imageCount":2,"quoteCount":1},{"name":"PLA HLN artikelshapes Lead.indd lead 49 (2701424.v0.1)","jpg":"PLA HLN artikelshapes Lead.indd lead 49 (2701424.v0.1).jpg","tid":"1","bw":5,"bh":14,"brand":"Het Laatste Nieuws","section":"Regio","typeName":"lead","foldLine":null,"tekstChars":4772,"genreId":"actua staand","imageCount":1,"quoteCount":1},{"name":"PLA HLN artikelshapes Lead.indd lead 5 (2701424.v0.1)","jpg":"PLA HLN artikelshapes Lead.indd lead 5 (2701424.v0.1).jpg","tid":"1","bw":4,"bh":18,"brand":"Het Laatste Nieuws","section":"Regio","typeName":"lead","foldLine":null,"tekstChars":4161,"genreId":"actua","imageCount":1,"quoteCount":1},{"name":"PLA HLN artikelshapes Lead.indd lead 6 (2701424.v0.1)","jpg":"PLA HLN artikelshapes Lead.indd lead 6 (2701424.v0.1).jpg","tid":"1","bw":4,"bh":18,"brand":"Het Laatste Nieuws","section":"Regio","typeName":"lead","foldLine":null,"tekstChars":4102,"genreId":"actua","imageCount":2,"quoteCount":1},{"name":"PLA HLN artikelshapes Lead.indd lead 7 (2701424.v0.1)","jpg":"PLA HLN artikelshapes Lead.indd lead 7 (2701424.v0.1).jpg","tid":"1","bw":4,"bh":18,"brand":"Het Laatste Nieuws","section":"Regio","typeName":"lead","foldLine":null,"tekstChars":4148,"genreId":"actua","imageCount":2,"quoteCount":1},{"name":"PLA HLN artikelshapes Lead.indd lead 8 (2701424.v0.1)","jpg":"PLA HLN artikelshapes Lead.indd lead 8 (2701424.v0.1).jpg","tid":"1","bw":4,"bh":18,"brand":"Het Laatste Nieuws","section":"Regio","typeName":"lead","foldLine":null,"tekstChars":3989,"genreId":"actua","imageCount":3,"quoteCount":1},{"name":"PLA HLN artikelshapes Lead.indd lead 9 (2701424.v0.1)","jpg":"PLA HLN artikelshapes Lead.indd lead 9 (2701424.v0.1).jpg","tid":"1","bw":4,"bh":18,"brand":"Het Laatste Nieuws","section":"Regio","typeName":"lead","foldLine":null,"tekstChars":4855,"genreId":"actua","imageCount":1,"quoteCount":1},{"name":"PLA HLN artikelshapes Secundary.indd filler 15 (2669853.v0.14)","jpg":"PLA HLN artikelshapes Secundary.indd filler 15 (2669853.v0.14).jpg","tid":"4","bw":1,"bh":7,"brand":"Het Laatste Nieuws","section":"Regio","typeName":"filler","foldLine":null,"tekstChars":592,"genreId":"actua","imageCount":0,"quoteCount":0},{"name":"PLA HLN artikelshapes Secundary.indd secondary 1 (2669853.v0.14)","jpg":"PLA HLN artikelshapes Secundary.indd secondary 1 (2669853.v0.14).jpg","tid":"2","bw":4,"bh":3,"brand":"Het Laatste Nieuws","section":"Regio","typeName":"secondary","foldLine":null,"tekstChars":1052,"genreId":"actua","imageCount":0,"quoteCount":0},{"name":"PLA HLN artikelshapes Secundary.indd secondary 10 (2669853.v0.14)","jpg":"PLA HLN artikelshapes Secundary.indd secondary 10 (2669853.v0.14).jpg","tid":"2","bw":3,"bh":7,"brand":"Het Laatste Nieuws","section":"Regio","typeName":"secondary","foldLine":null,"tekstChars":566,"genreId":"actua staand","imageCount":1,"quoteCount":0},{"name":"PLA HLN artikelshapes Secundary.indd secondary 11 (2669853.v0.14)","jpg":"PLA HLN artikelshapes Secundary.indd secondary 11 (2669853.v0.14).jpg","tid":"2","bw":2,"bh":7,"brand":"Het Laatste Nieuws","section":"Regio","typeName":"secondary","foldLine":null,"tekstChars":451,"genreId":"actua","imageCount":1,"quoteCount":0},{"name":"PLA HLN artikelshapes Secundary.indd secondary 13 (2669853.v0.14)","jpg":"PLA HLN artikelshapes Secundary.indd secondary 13 (2669853.v0.14).jpg","tid":"2","bw":2,"bh":10,"brand":"Het Laatste Nieuws","section":"Regio","typeName":"secondary","foldLine":null,"tekstChars":1515,"genreId":"actua staand","imageCount":1,"quoteCount":0},{"name":"PLA HLN artikelshapes Secundary.indd secondary 14 (2669853.v0.14)","jpg":"PLA HLN artikelshapes Secundary.indd secondary 14 (2669853.v0.14).jpg","tid":"2","bw":2,"bh":11,"brand":"Het Laatste Nieuws","section":"Regio","typeName":"secondary","foldLine":null,"tekstChars":558,"genreId":"actua staand","imageCount":1,"quoteCount":0},{"name":"PLA HLN artikelshapes Secundary.indd secondary 2 (2669853.v0.14)","jpg":"PLA HLN artikelshapes Secundary.indd secondary 2 (2669853.v0.14).jpg","tid":"2","bw":4,"bh":4,"brand":"Het Laatste Nieuws","section":"Regio","typeName":"secondary","foldLine":null,"tekstChars":1520,"genreId":"actua","imageCount":0,"quoteCount":0},{"name":"PLA HLN artikelshapes Secundary.indd secondary 3 (2669853.v0.14)","jpg":"PLA HLN artikelshapes Secundary.indd secondary 3 (2669853.v0.14).jpg","tid":"2","bw":3,"bh":6,"brand":"Het Laatste Nieuws","section":"Regio","typeName":"secondary","foldLine":null,"tekstChars":1656,"genreId":"actua","imageCount":0,"quoteCount":0},{"name":"PLA HLN artikelshapes Secundary.indd secondary 4 (2669853.v0.14)","jpg":"PLA HLN artikelshapes Secundary.indd secondary 4 (2669853.v0.14).jpg","tid":"2","bw":2,"bh":6,"brand":"Het Laatste Nieuws","section":"Regio","typeName":"secondary","foldLine":null,"tekstChars":1039,"genreId":"actua","imageCount":0,"quoteCount":0},{"name":"PLA HLN artikelshapes Secundary.indd secondary 5 (2669853.v0.14)","jpg":"PLA HLN artikelshapes Secundary.indd secondary 5 (2669853.v0.14).jpg","tid":"2","bw":3,"bh":6,"brand":"Het Laatste Nieuws","section":"Regio","typeName":"secondary","foldLine":null,"tekstChars":1018,"genreId":"actua","imageCount":1,"quoteCount":0},{"name":"PLA HLN artikelshapes Secundary.indd secondary 6 (2669853.v0.14)","jpg":"PLA HLN artikelshapes Secundary.indd secondary 6 (2669853.v0.14).jpg","tid":"2","bw":5,"bh":7,"brand":"Het Laatste Nieuws","section":"Regio","typeName":"secondary","foldLine":null,"tekstChars":566,"genreId":"actua","imageCount":1,"quoteCount":0},{"name":"PLA HLN artikelshapes Secundary.indd secondary 7 (2669853.v0.14)","jpg":"PLA HLN artikelshapes Secundary.indd secondary 7 (2669853.v0.14).jpg","tid":"2","bw":3,"bh":7,"brand":"Het Laatste Nieuws","section":"Regio","typeName":"secondary","foldLine":null,"tekstChars":506,"genreId":"actua","imageCount":1,"quoteCount":0},{"name":"PLA HLN artikelshapes Secundary.indd secondary 8 (2669853.v0.14)","jpg":"PLA HLN artikelshapes Secundary.indd secondary 8 (2669853.v0.14).jpg","tid":"2","bw":4,"bh":7,"brand":"Het Laatste Nieuws","section":"Regio","typeName":"secondary","foldLine":null,"tekstChars":566,"genreId":"actua","imageCount":1,"quoteCount":0},{"name":"PLA HLN artikelshapes Secundary.indd secondary 9 (2669853.v0.14)","jpg":"PLA HLN artikelshapes Secundary.indd secondary 9 (2669853.v0.14).jpg","tid":"2","bw":4,"bh":7,"brand":"Het Laatste Nieuws","section":"Regio","typeName":"secondary","foldLine":null,"tekstChars":1452,"genreId":"actua","imageCount":1,"quoteCount":0},{"name":"PLA HLN artikelshapes VP.indd filler 1 (2698429.v0.8)","jpg":"PLA HLN artikelshapes VP.indd filler 1 (2698429.v0.8).jpg","tid":"4","bw":1,"bh":7,"brand":"Het Laatste Nieuws","section":"Regio Voorpagina","typeName":"filler","foldLine":null,"tekstChars":592,"genreId":"actua","imageCount":1,"quoteCount":0},{"name":"PLA HLN artikelshapes VP.indd lead 10 (2698429.v0.8)","jpg":"PLA HLN artikelshapes VP.indd lead 10 (2698429.v0.8).jpg","tid":"1","bw":4,"bh":18,"brand":"Het Laatste Nieuws","section":"Regio Voorpagina","typeName":"lead","foldLine":null,"tekstChars":4058,"genreId":"actua staand","imageCount":2,"quoteCount":1},{"name":"PLA HLN artikelshapes VP.indd lead 11 (2698429.v0.8)","jpg":"PLA HLN artikelshapes VP.indd lead 11 (2698429.v0.8).jpg","tid":"1","bw":4,"bh":18,"brand":"Het Laatste Nieuws","section":"Regio Voorpagina","typeName":"lead","foldLine":null,"tekstChars":3968,"genreId":"actua","imageCount":2,"quoteCount":1},{"name":"PLA HLN artikelshapes VP.indd lead 12 (2698429.v0.8)","jpg":"PLA HLN artikelshapes VP.indd lead 12 (2698429.v0.8).jpg","tid":"1","bw":4,"bh":18,"brand":"Het Laatste Nieuws","section":"Regio Voorpagina","typeName":"lead","foldLine":null,"tekstChars":4029,"genreId":"actua","imageCount":2,"quoteCount":1},{"name":"PLA HLN artikelshapes VP.indd lead 13 (2698429.v0.8)","jpg":"PLA HLN artikelshapes VP.indd lead 13 (2698429.v0.8).jpg","tid":"1","bw":4,"bh":18,"brand":"Het Laatste Nieuws","section":"Regio Voorpagina","typeName":"lead","foldLine":null,"tekstChars":4041,"genreId":"actua","imageCount":3,"quoteCount":1},{"name":"PLA HLN artikelshapes VP.indd lead 16 (2698429.v0.8)","jpg":"PLA HLN artikelshapes VP.indd lead 16 (2698429.v0.8).jpg","tid":"1","bw":4,"bh":11,"brand":"Het Laatste Nieuws","section":"Regio Voorpagina","typeName":"lead","foldLine":null,"tekstChars":3655,"genreId":"actua","imageCount":1,"quoteCount":1},{"name":"PLA HLN artikelshapes VP.indd lead 17 (2698429.v0.8)","jpg":"PLA HLN artikelshapes VP.indd lead 17 (2698429.v0.8).jpg","tid":"1","bw":4,"bh":11,"brand":"Het Laatste Nieuws","section":"Regio Voorpagina","typeName":"lead","foldLine":null,"tekstChars":2704,"genreId":"actua","imageCount":1,"quoteCount":1},{"name":"PLA HLN artikelshapes VP.indd lead 2 (2698429.v0.8)","jpg":"PLA HLN artikelshapes VP.indd lead 2 (2698429.v0.8).jpg","tid":"1","bw":4,"bh":18,"brand":"Het Laatste Nieuws","section":"Regio Voorpagina","typeName":"lead","foldLine":null,"tekstChars":3932,"genreId":"actua","imageCount":1,"quoteCount":1},{"name":"PLA HLN artikelshapes VP.indd lead 21 (2698429.v0.8)","jpg":"PLA HLN artikelshapes VP.indd lead 21 (2698429.v0.8).jpg","tid":"1","bw":4,"bh":14,"brand":"Het Laatste Nieuws","section":"Regio Voorpagina","typeName":"lead","foldLine":null,"tekstChars":2704,"genreId":"actua","imageCount":1,"quoteCount":1},{"name":"PLA HLN artikelshapes VP.indd lead 22 (2698429.v0.8)","jpg":"PLA HLN artikelshapes VP.indd lead 22 (2698429.v0.8).jpg","tid":"1","bw":4,"bh":14,"brand":"Het Laatste Nieuws","section":"Regio Voorpagina","typeName":"lead","foldLine":null,"tekstChars":2704,"genreId":"actua","imageCount":2,"quoteCount":1},{"name":"PLA HLN artikelshapes VP.indd lead 3 (2698429.v0.8)","jpg":"PLA HLN artikelshapes VP.indd lead 3 (2698429.v0.8).jpg","tid":"1","bw":4,"bh":18,"brand":"Het Laatste Nieuws","section":"Regio Voorpagina","typeName":"lead","foldLine":null,"tekstChars":4977,"genreId":"actua","imageCount":1,"quoteCount":1},{"name":"PLA HLN artikelshapes VP.indd lead 4 (2698429.v0.8)","jpg":"PLA HLN artikelshapes VP.indd lead 4 (2698429.v0.8).jpg","tid":"1","bw":4,"bh":18,"brand":"Het Laatste Nieuws","section":"Regio Voorpagina","typeName":"lead","foldLine":null,"tekstChars":4908,"genreId":"actua","imageCount":2,"quoteCount":1},{"name":"PLA HLN artikelshapes VP.indd lead 5 (2698429.v0.8)","jpg":"PLA HLN artikelshapes VP.indd lead 5 (2698429.v0.8).jpg","tid":"1","bw":4,"bh":18,"brand":"Het Laatste Nieuws","section":"Regio Voorpagina","typeName":"lead","foldLine":null,"tekstChars":4696,"genreId":"actua","imageCount":1,"quoteCount":1},{"name":"PLA HLN artikelshapes VP.indd lead 6 (2698429.v0.8)","jpg":"PLA HLN artikelshapes VP.indd lead 6 (2698429.v0.8).jpg","tid":"1","bw":4,"bh":18,"brand":"Het Laatste Nieuws","section":"Regio Voorpagina","typeName":"lead","foldLine":null,"tekstChars":4721,"genreId":"actua","imageCount":2,"quoteCount":1},{"name":"PLA HLN artikelshapes VP.indd lead 7 (2698429.v0.8)","jpg":"PLA HLN artikelshapes VP.indd lead 7 (2698429.v0.8).jpg","tid":"1","bw":4,"bh":18,"brand":"Het Laatste Nieuws","section":"Regio Voorpagina","typeName":"lead","foldLine":null,"tekstChars":4927,"genreId":"actua","imageCount":2,"quoteCount":1},{"name":"PLA HLN artikelshapes VP.indd lead 8 (2698429.v0.8)","jpg":"PLA HLN artikelshapes VP.indd lead 8 (2698429.v0.8).jpg","tid":"1","bw":4,"bh":18,"brand":"Het Laatste Nieuws","section":"Regio Voorpagina","typeName":"lead","foldLine":null,"tekstChars":4827,"genreId":"actua","imageCount":3,"quoteCount":1},{"name":"PLA HLN artikelshapes VP.indd lead 9 (2698429.v0.8)","jpg":"PLA HLN artikelshapes VP.indd lead 9 (2698429.v0.8).jpg","tid":"1","bw":4,"bh":18,"brand":"Het Laatste Nieuws","section":"Regio Voorpagina","typeName":"lead","foldLine":null,"tekstChars":4058,"genreId":"actua staand","imageCount":1,"quoteCount":1},{"name":"PLA HLN artikelshapes VP.indd secondary 14 (2698429.v0.8)","jpg":"PLA HLN artikelshapes VP.indd secondary 14 (2698429.v0.8).jpg","tid":"2","bw":5,"bh":7,"brand":"Het Laatste Nieuws","section":"Regio Voorpagina","typeName":"secondary","foldLine":null,"tekstChars":566,"genreId":"actua","imageCount":1,"quoteCount":0},{"name":"PLA HLN artikelshapes VP.indd secondary 15 (2698429.v0.8)","jpg":"PLA HLN artikelshapes VP.indd secondary 15 (2698429.v0.8).jpg","tid":"2","bw":4,"bh":7,"brand":"Het Laatste Nieuws","section":"Regio Voorpagina","typeName":"secondary","foldLine":null,"tekstChars":566,"genreId":"actua","imageCount":1,"quoteCount":0},{"name":"PLA HLN artikelshapes VP.indd secondary 18 (2698429.v0.8)","jpg":"PLA HLN artikelshapes VP.indd secondary 18 (2698429.v0.8).jpg","tid":"2","bw":4,"bh":4,"brand":"Het Laatste Nieuws","section":"Regio Voorpagina","typeName":"secondary","foldLine":null,"tekstChars":1052,"genreId":"actua","imageCount":1,"quoteCount":0},{"name":"PLA HLN artikelshapes VP.indd secondary 19 (2698429.v0.8)","jpg":"PLA HLN artikelshapes VP.indd secondary 19 (2698429.v0.8).jpg","tid":"2","bw":4,"bh":4,"brand":"Het Laatste Nieuws","section":"Regio Voorpagina","typeName":"secondary","foldLine":null,"tekstChars":566,"genreId":"actua","imageCount":2,"quoteCount":0},{"name":"PLA HLN artikelshapes VP.indd secondary 20 (2698429.v0.8)","jpg":"PLA HLN artikelshapes VP.indd secondary 20 (2698429.v0.8).jpg","tid":"2","bw":4,"bh":4,"brand":"Het Laatste Nieuws","section":"Regio Voorpagina","typeName":"secondary","foldLine":null,"tekstChars":1052,"genreId":"actua staand","imageCount":1,"quoteCount":0},{"name":"PLA HLN artikelshapes VP.indd secondary 23 (2698429.v0.8)","jpg":"PLA HLN artikelshapes VP.indd secondary 23 (2698429.v0.8).jpg","tid":"2","bw":4,"bh":4,"brand":"Het Laatste Nieuws","section":"Regio Voorpagina","typeName":"secondary","foldLine":null,"tekstChars":566,"genreId":"actua","imageCount":2,"quoteCount":0}];
+var SHAPES     = [{"name":"PLA HLN artikelshapes Lead.indd lead 1 (2701424.v0.1)","jpg":"PLA HLN artikelshapes Lead.indd lead 1 (2701424.v0.1).jpg","tid":"1","bw":4,"bh":18,"brand":"Het Laatste Nieuws","section":"Regio","typeName":"lead","foldLine":null,"foldBefore":null,"foldAfter":null,"tekstChars":3045,"genreId":"actua","imageCount":1,"quoteCount":1},{"name":"PLA HLN artikelshapes Lead.indd lead 10 (2701424.v0.1)","jpg":"PLA HLN artikelshapes Lead.indd lead 10 (2701424.v0.1).jpg","tid":"1","bw":4,"bh":18,"brand":"Het Laatste Nieuws","section":"Regio","typeName":"lead","foldLine":null,"foldBefore":null,"foldAfter":null,"tekstChars":4941,"genreId":"actua","imageCount":2,"quoteCount":1},{"name":"PLA HLN artikelshapes Lead.indd lead 11 (2701424.v0.1)","jpg":"PLA HLN artikelshapes Lead.indd lead 11 (2701424.v0.1).jpg","tid":"1","bw":4,"bh":17,"brand":"Het Laatste Nieuws","section":"Regio","typeName":"lead","foldLine":null,"foldBefore":null,"foldAfter":null,"tekstChars":3125,"genreId":"actua staand","imageCount":1,"quoteCount":1},{"name":"PLA HLN artikelshapes Lead.indd lead 12 (2701424.v0.1)","jpg":"PLA HLN artikelshapes Lead.indd lead 12 (2701424.v0.1).jpg","tid":"1","bw":4,"bh":17,"brand":"Het Laatste Nieuws","section":"Regio","typeName":"lead","foldLine":null,"foldBefore":null,"foldAfter":null,"tekstChars":3062,"genreId":"actua","imageCount":2,"quoteCount":1},{"name":"PLA HLN artikelshapes Lead.indd lead 13 (2701424.v0.1)","jpg":"PLA HLN artikelshapes Lead.indd lead 13 (2701424.v0.1).jpg","tid":"1","bw":4,"bh":17,"brand":"Het Laatste Nieuws","section":"Regio","typeName":"lead","foldLine":null,"foldBefore":null,"foldAfter":null,"tekstChars":4111,"genreId":"actua","imageCount":1,"quoteCount":1},{"name":"PLA HLN artikelshapes Lead.indd lead 14 (2701424.v0.1)","jpg":"PLA HLN artikelshapes Lead.indd lead 14 (2701424.v0.1).jpg","tid":"1","bw":4,"bh":17,"brand":"Het Laatste Nieuws","section":"Regio","typeName":"lead","foldLine":null,"foldBefore":null,"foldAfter":null,"tekstChars":4116,"genreId":"actua","imageCount":2,"quoteCount":1},{"name":"PLA HLN artikelshapes Lead.indd lead 15 (2701424.v0.1)","jpg":"PLA HLN artikelshapes Lead.indd lead 15 (2701424.v0.1).jpg","tid":"1","bw":4,"bh":17,"brand":"Het Laatste Nieuws","section":"Regio","typeName":"lead","foldLine":null,"foldBefore":null,"foldAfter":null,"tekstChars":4116,"genreId":"actua","imageCount":2,"quoteCount":1},{"name":"PLA HLN artikelshapes Lead.indd lead 16 (2701424.v0.1)","jpg":"PLA HLN artikelshapes Lead.indd lead 16 (2701424.v0.1).jpg","tid":"1","bw":4,"bh":21,"brand":"Het Laatste Nieuws","section":"Regio","typeName":"lead","foldLine":null,"foldBefore":null,"foldAfter":null,"tekstChars":5660,"genreId":"actua","imageCount":1,"quoteCount":2},{"name":"PLA HLN artikelshapes Lead.indd lead 17 (2701424.v0.1)","jpg":"PLA HLN artikelshapes Lead.indd lead 17 (2701424.v0.1).jpg","tid":"1","bw":5,"bh":15,"brand":"Het Laatste Nieuws","section":"Regio","typeName":"lead","foldLine":null,"foldBefore":null,"foldAfter":null,"tekstChars":2944,"genreId":"actua","imageCount":1,"quoteCount":1},{"name":"PLA HLN artikelshapes Lead.indd lead 18 (2701424.v0.1)","jpg":"PLA HLN artikelshapes Lead.indd lead 18 (2701424.v0.1).jpg","tid":"1","bw":5,"bh":15,"brand":"Het Laatste Nieuws","section":"Regio","typeName":"lead","foldLine":null,"foldBefore":null,"foldAfter":null,"tekstChars":3936,"genreId":"actua","imageCount":1,"quoteCount":1},{"name":"PLA HLN artikelshapes Lead.indd lead 19 (2701424.v0.1)","jpg":"PLA HLN artikelshapes Lead.indd lead 19 (2701424.v0.1).jpg","tid":"1","bw":5,"bh":15,"brand":"Het Laatste Nieuws","section":"Regio","typeName":"lead","foldLine":null,"foldBefore":null,"foldAfter":null,"tekstChars":4810,"genreId":"actua","imageCount":1,"quoteCount":1},{"name":"PLA HLN artikelshapes Lead.indd lead 2 (2701424.v0.1)","jpg":"PLA HLN artikelshapes Lead.indd lead 2 (2701424.v0.1).jpg","tid":"1","bw":4,"bh":18,"brand":"Het Laatste Nieuws","section":"Regio","typeName":"lead","foldLine":null,"foldBefore":null,"foldAfter":null,"tekstChars":2982,"genreId":"actua","imageCount":2,"quoteCount":1},{"name":"PLA HLN artikelshapes Lead.indd lead 20 (2701424.v0.1)","jpg":"PLA HLN artikelshapes Lead.indd lead 20 (2701424.v0.1).jpg","tid":"1","bw":5,"bh":15,"brand":"Het Laatste Nieuws","section":"Regio","typeName":"lead","foldLine":null,"foldBefore":null,"foldAfter":null,"tekstChars":5646,"genreId":"actua staand","imageCount":1,"quoteCount":1},{"name":"PLA HLN artikelshapes Lead.indd lead 21 (2701424.v0.1)","jpg":"PLA HLN artikelshapes Lead.indd lead 21 (2701424.v0.1).jpg","tid":"1","bw":5,"bh":21,"brand":"Het Laatste Nieuws","section":"Regio","typeName":"lead","foldLine":null,"foldBefore":null,"foldAfter":null,"tekstChars":5699,"genreId":"actua","imageCount":2,"quoteCount":2},{"name":"PLA HLN artikelshapes Lead.indd lead 22 (2701424.v0.1)","jpg":"PLA HLN artikelshapes Lead.indd lead 22 (2701424.v0.1).jpg","tid":"1","bw":5,"bh":21,"brand":"Het Laatste Nieuws","section":"Regio","typeName":"lead","foldLine":null,"foldBefore":null,"foldAfter":null,"tekstChars":5941,"genreId":"actua","imageCount":1,"quoteCount":1},{"name":"PLA HLN artikelshapes Lead.indd lead 23 (2701424.v0.1)","jpg":"PLA HLN artikelshapes Lead.indd lead 23 (2701424.v0.1).jpg","tid":"1","bw":4,"bh":14,"brand":"Het Laatste Nieuws","section":"Regio","typeName":"lead","foldLine":null,"foldBefore":null,"foldAfter":null,"tekstChars":3052,"genreId":"actua","imageCount":1,"quoteCount":1},{"name":"PLA HLN artikelshapes Lead.indd lead 24 (2701424.v0.1)","jpg":"PLA HLN artikelshapes Lead.indd lead 24 (2701424.v0.1).jpg","tid":"1","bw":4,"bh":14,"brand":"Het Laatste Nieuws","section":"Regio","typeName":"lead","foldLine":null,"foldBefore":null,"foldAfter":null,"tekstChars":2877,"genreId":"actua staand","imageCount":1,"quoteCount":1},{"name":"PLA HLN artikelshapes Lead.indd lead 25 (2701424.v0.1)","jpg":"PLA HLN artikelshapes Lead.indd lead 25 (2701424.v0.1).jpg","tid":"1","bw":5,"bh":14,"brand":"Het Laatste Nieuws","section":"Regio","typeName":"lead","foldLine":null,"foldBefore":null,"foldAfter":null,"tekstChars":4716,"genreId":"actua staand","imageCount":2,"quoteCount":1},{"name":"PLA HLN artikelshapes Lead.indd lead 26 (2701424.v0.1)","jpg":"PLA HLN artikelshapes Lead.indd lead 26 (2701424.v0.1).jpg","tid":"1","bw":5,"bh":14,"brand":"Het Laatste Nieuws","section":"Regio","typeName":"lead","foldLine":null,"foldBefore":null,"foldAfter":null,"tekstChars":2960,"genreId":"actua","imageCount":2,"quoteCount":1},{"name":"PLA HLN artikelshapes Lead.indd lead 27 (2701424.v0.1)","jpg":"PLA HLN artikelshapes Lead.indd lead 27 (2701424.v0.1).jpg","tid":"1","bw":5,"bh":14,"brand":"Het Laatste Nieuws","section":"Regio","typeName":"lead","foldLine":null,"foldBefore":null,"foldAfter":null,"tekstChars":2945,"genreId":"actua staand","imageCount":2,"quoteCount":1},{"name":"PLA HLN artikelshapes Lead.indd lead 28 (2701424.v0.1)","jpg":"PLA HLN artikelshapes Lead.indd lead 28 (2701424.v0.1).jpg","tid":"1","bw":5,"bh":14,"brand":"Het Laatste Nieuws","section":"Regio","typeName":"lead","foldLine":null,"foldBefore":null,"foldAfter":null,"tekstChars":2873,"genreId":"actua staand","imageCount":2,"quoteCount":1},{"name":"PLA HLN artikelshapes Lead.indd lead 29 (2701424.v0.1)","jpg":"PLA HLN artikelshapes Lead.indd lead 29 (2701424.v0.1).jpg","tid":"1","bw":5,"bh":14,"brand":"Het Laatste Nieuws","section":"Regio","typeName":"lead","foldLine":null,"foldBefore":null,"foldAfter":null,"tekstChars":2870,"genreId":"actua staand","imageCount":1,"quoteCount":1},{"name":"PLA HLN artikelshapes Lead.indd lead 3 (2701424.v0.1)","jpg":"PLA HLN artikelshapes Lead.indd lead 3 (2701424.v0.1).jpg","tid":"1","bw":4,"bh":18,"brand":"Het Laatste Nieuws","section":"Regio","typeName":"lead","foldLine":null,"foldBefore":null,"foldAfter":null,"tekstChars":3117,"genreId":"actua","imageCount":2,"quoteCount":1},{"name":"PLA HLN artikelshapes Lead.indd lead 30 (2701424.v0.1)","jpg":"PLA HLN artikelshapes Lead.indd lead 30 (2701424.v0.1).jpg","tid":"1","bw":5,"bh":14,"brand":"Het Laatste Nieuws","section":"Regio","typeName":"lead","foldLine":null,"foldBefore":null,"foldAfter":null,"tekstChars":2870,"genreId":"actua staand","imageCount":1,"quoteCount":1},{"name":"PLA HLN artikelshapes Lead.indd lead 31 (2701424.v0.1)","jpg":"PLA HLN artikelshapes Lead.indd lead 31 (2701424.v0.1).jpg","tid":"1","bw":5,"bh":11,"brand":"Het Laatste Nieuws","section":"Regio","typeName":"lead","foldLine":null,"foldBefore":null,"foldAfter":null,"tekstChars":2757,"genreId":"actua","imageCount":1,"quoteCount":1},{"name":"PLA HLN artikelshapes Lead.indd lead 32 (2701424.v0.1)","jpg":"PLA HLN artikelshapes Lead.indd lead 32 (2701424.v0.1).jpg","tid":"1","bw":5,"bh":11,"brand":"Het Laatste Nieuws","section":"Regio","typeName":"lead","foldLine":null,"foldBefore":null,"foldAfter":null,"tekstChars":2792,"genreId":"actua staand","imageCount":2,"quoteCount":1},{"name":"PLA HLN artikelshapes Lead.indd lead 33 (2701424.v0.1)","jpg":"PLA HLN artikelshapes Lead.indd lead 33 (2701424.v0.1).jpg","tid":"1","bw":3,"bh":11,"brand":"Het Laatste Nieuws","section":"Regio","typeName":"lead","foldLine":null,"foldBefore":null,"foldAfter":null,"tekstChars":2659,"genreId":"actua","imageCount":0,"quoteCount":1},{"name":"PLA HLN artikelshapes Lead.indd lead 34 (2701424.v0.1)","jpg":"PLA HLN artikelshapes Lead.indd lead 34 (2701424.v0.1).jpg","tid":"1","bw":3,"bh":21,"brand":"Het Laatste Nieuws","section":"Regio","typeName":"lead","foldLine":null,"foldBefore":null,"foldAfter":null,"tekstChars":4100,"genreId":"actua staand","imageCount":1,"quoteCount":1},{"name":"PLA HLN artikelshapes Lead.indd lead 35 (2701424.v0.1)","jpg":"PLA HLN artikelshapes Lead.indd lead 35 (2701424.v0.1).jpg","tid":"1","bw":3,"bh":15,"brand":"Het Laatste Nieuws","section":"Regio","typeName":"lead","foldLine":null,"foldBefore":null,"foldAfter":null,"tekstChars":3036,"genreId":"actua","imageCount":1,"quoteCount":1},{"name":"PLA HLN artikelshapes Lead.indd lead 36 (2701424.v0.1)","jpg":"PLA HLN artikelshapes Lead.indd lead 36 (2701424.v0.1).jpg","tid":"1","bw":5,"bh":11,"brand":"Het Laatste Nieuws","section":"Regio","typeName":"lead","foldLine":null,"foldBefore":null,"foldAfter":null,"tekstChars":4089,"genreId":"actua","imageCount":1,"quoteCount":1},{"name":"PLA HLN artikelshapes Lead.indd lead 37 (2701424.v0.1)","jpg":"PLA HLN artikelshapes Lead.indd lead 37 (2701424.v0.1).jpg","tid":"1","bw":3,"bh":11,"brand":"Het Laatste Nieuws","section":"Regio","typeName":"lead","foldLine":null,"foldBefore":null,"foldAfter":null,"tekstChars":2590,"genreId":"actua","imageCount":0,"quoteCount":0},{"name":"PLA HLN artikelshapes Lead.indd lead 38 (2701424.v0.1)","jpg":"PLA HLN artikelshapes Lead.indd lead 38 (2701424.v0.1).jpg","tid":"1","bw":3,"bh":15,"brand":"Het Laatste Nieuws","section":"Regio","typeName":"lead","foldLine":null,"foldBefore":null,"foldAfter":null,"tekstChars":2998,"genreId":"actua","imageCount":1,"quoteCount":1},{"name":"PLA HLN artikelshapes Lead.indd lead 39 (2701424.v0.1)","jpg":"PLA HLN artikelshapes Lead.indd lead 39 (2701424.v0.1).jpg","tid":"1","bw":4,"bh":15,"brand":"Het Laatste Nieuws","section":"Regio","typeName":"lead","foldLine":null,"foldBefore":null,"foldAfter":null,"tekstChars":3019,"genreId":"actua","imageCount":1,"quoteCount":1},{"name":"PLA HLN artikelshapes Lead.indd lead 4 (2701424.v0.1)","jpg":"PLA HLN artikelshapes Lead.indd lead 4 (2701424.v0.1).jpg","tid":"1","bw":4,"bh":18,"brand":"Het Laatste Nieuws","section":"Regio","typeName":"lead","foldLine":null,"foldBefore":null,"foldAfter":null,"tekstChars":3145,"genreId":"actua","imageCount":3,"quoteCount":1},{"name":"PLA HLN artikelshapes Lead.indd lead 40 (2701424.v0.1)","jpg":"PLA HLN artikelshapes Lead.indd lead 40 (2701424.v0.1).jpg","tid":"1","bw":5,"bh":21,"brand":"Het Laatste Nieuws","section":"Regio","typeName":"lead","foldLine":null,"foldBefore":null,"foldAfter":null,"tekstChars":6056,"genreId":"actua","imageCount":1,"quoteCount":2},{"name":"PLA HLN artikelshapes Lead.indd lead 41 (2701424.v0.1)","jpg":"PLA HLN artikelshapes Lead.indd lead 41 (2701424.v0.1).jpg","tid":"1","bw":5,"bh":21,"brand":"Het Laatste Nieuws","section":"Regio","typeName":"lead","foldLine":null,"foldBefore":null,"foldAfter":null,"tekstChars":6202,"genreId":"actua","imageCount":2,"quoteCount":2},{"name":"PLA HLN artikelshapes Lead.indd lead 42 (2701424.v0.1)","jpg":"PLA HLN artikelshapes Lead.indd lead 42 (2701424.v0.1).jpg","tid":"1","bw":5,"bh":21,"brand":"Het Laatste Nieuws","section":"Regio","typeName":"lead","foldLine":null,"foldBefore":null,"foldAfter":null,"tekstChars":6021,"genreId":"actua","imageCount":3,"quoteCount":2},{"name":"PLA HLN artikelshapes Lead.indd lead 43 (2701424.v0.1)","jpg":"PLA HLN artikelshapes Lead.indd lead 43 (2701424.v0.1).jpg","tid":"1","bw":5,"bh":21,"brand":"Het Laatste Nieuws","section":"Regio","typeName":"lead","foldLine":null,"foldBefore":null,"foldAfter":null,"tekstChars":4850,"genreId":"actua","imageCount":2,"quoteCount":2},{"name":"PLA HLN artikelshapes Lead.indd lead 44 (2701424.v0.1)","jpg":"PLA HLN artikelshapes Lead.indd lead 44 (2701424.v0.1).jpg","tid":"1","bw":5,"bh":21,"brand":"Het Laatste Nieuws","section":"Regio","typeName":"lead","foldLine":null,"foldBefore":null,"foldAfter":null,"tekstChars":5269,"genreId":"actua","imageCount":3,"quoteCount":2},{"name":"PLA HLN artikelshapes Lead.indd lead 45 (2701424.v0.1)","jpg":"PLA HLN artikelshapes Lead.indd lead 45 (2701424.v0.1).jpg","tid":"1","bw":5,"bh":21,"brand":"Het Laatste Nieuws","section":"Regio","typeName":"lead","foldLine":null,"foldBefore":null,"foldAfter":null,"tekstChars":5921,"genreId":"actua staand","imageCount":1,"quoteCount":2},{"name":"PLA HLN artikelshapes Lead.indd lead 46 (2701424.v0.1)","jpg":"PLA HLN artikelshapes Lead.indd lead 46 (2701424.v0.1).jpg","tid":"1","bw":5,"bh":14,"brand":"Het Laatste Nieuws","section":"Regio","typeName":"lead","foldLine":null,"foldBefore":null,"foldAfter":null,"tekstChars":3869,"genreId":"actua","imageCount":1,"quoteCount":1},{"name":"PLA HLN artikelshapes Lead.indd lead 47 (2701424.v0.1)","jpg":"PLA HLN artikelshapes Lead.indd lead 47 (2701424.v0.1).jpg","tid":"1","bw":5,"bh":14,"brand":"Het Laatste Nieuws","section":"Regio","typeName":"lead","foldLine":null,"foldBefore":null,"foldAfter":null,"tekstChars":3893,"genreId":"actua","imageCount":2,"quoteCount":1},{"name":"PLA HLN artikelshapes Lead.indd lead 48 (2701424.v0.1)","jpg":"PLA HLN artikelshapes Lead.indd lead 48 (2701424.v0.1).jpg","tid":"1","bw":5,"bh":14,"brand":"Het Laatste Nieuws","section":"Regio","typeName":"lead","foldLine":null,"foldBefore":null,"foldAfter":null,"tekstChars":3864,"genreId":"actua","imageCount":2,"quoteCount":1},{"name":"PLA HLN artikelshapes Lead.indd lead 49 (2701424.v0.1)","jpg":"PLA HLN artikelshapes Lead.indd lead 49 (2701424.v0.1).jpg","tid":"1","bw":5,"bh":14,"brand":"Het Laatste Nieuws","section":"Regio","typeName":"lead","foldLine":null,"foldBefore":null,"foldAfter":null,"tekstChars":4772,"genreId":"actua staand","imageCount":1,"quoteCount":1},{"name":"PLA HLN artikelshapes Lead.indd lead 5 (2701424.v0.1)","jpg":"PLA HLN artikelshapes Lead.indd lead 5 (2701424.v0.1).jpg","tid":"1","bw":4,"bh":18,"brand":"Het Laatste Nieuws","section":"Regio","typeName":"lead","foldLine":null,"foldBefore":null,"foldAfter":null,"tekstChars":4161,"genreId":"actua","imageCount":1,"quoteCount":1},{"name":"PLA HLN artikelshapes Lead.indd lead 6 (2701424.v0.1)","jpg":"PLA HLN artikelshapes Lead.indd lead 6 (2701424.v0.1).jpg","tid":"1","bw":4,"bh":18,"brand":"Het Laatste Nieuws","section":"Regio","typeName":"lead","foldLine":null,"foldBefore":null,"foldAfter":null,"tekstChars":4102,"genreId":"actua","imageCount":2,"quoteCount":1},{"name":"PLA HLN artikelshapes Lead.indd lead 7 (2701424.v0.1)","jpg":"PLA HLN artikelshapes Lead.indd lead 7 (2701424.v0.1).jpg","tid":"1","bw":4,"bh":18,"brand":"Het Laatste Nieuws","section":"Regio","typeName":"lead","foldLine":null,"foldBefore":null,"foldAfter":null,"tekstChars":4148,"genreId":"actua","imageCount":2,"quoteCount":1},{"name":"PLA HLN artikelshapes Lead.indd lead 8 (2701424.v0.1)","jpg":"PLA HLN artikelshapes Lead.indd lead 8 (2701424.v0.1).jpg","tid":"1","bw":4,"bh":18,"brand":"Het Laatste Nieuws","section":"Regio","typeName":"lead","foldLine":null,"foldBefore":null,"foldAfter":null,"tekstChars":3989,"genreId":"actua","imageCount":3,"quoteCount":1},{"name":"PLA HLN artikelshapes Lead.indd lead 9 (2701424.v0.1)","jpg":"PLA HLN artikelshapes Lead.indd lead 9 (2701424.v0.1).jpg","tid":"1","bw":4,"bh":18,"brand":"Het Laatste Nieuws","section":"Regio","typeName":"lead","foldLine":null,"foldBefore":null,"foldAfter":null,"tekstChars":4855,"genreId":"actua","imageCount":1,"quoteCount":1},{"name":"PLA HLN artikelshapes Secundary.indd filler 15 (2669853.v0.13)","jpg":"PLA HLN artikelshapes Secundary.indd filler 15 (2669853.v0.13).jpg","tid":"4","bw":1,"bh":7,"brand":"Het Laatste Nieuws","section":"Regio","typeName":"filler","foldLine":null,"foldBefore":null,"foldAfter":null,"tekstChars":592,"genreId":"actua","imageCount":0,"quoteCount":0},{"name":"PLA HLN artikelshapes Secundary.indd secondary 1 (2669853.v0.13)","jpg":"PLA HLN artikelshapes Secundary.indd secondary 1 (2669853.v0.13).jpg","tid":"2","bw":4,"bh":3,"brand":"Het Laatste Nieuws","section":"Regio","typeName":"secondary","foldLine":null,"foldBefore":null,"foldAfter":null,"tekstChars":1052,"genreId":"actua","imageCount":0,"quoteCount":0},{"name":"PLA HLN artikelshapes Secundary.indd secondary 13 (2669853.v0.13)","jpg":"PLA HLN artikelshapes Secundary.indd secondary 13 (2669853.v0.13).jpg","tid":"2","bw":2,"bh":10,"brand":"Het Laatste Nieuws","section":"Regio","typeName":"secondary","foldLine":null,"foldBefore":null,"foldAfter":null,"tekstChars":1515,"genreId":"actua staand","imageCount":1,"quoteCount":0},{"name":"PLA HLN artikelshapes Secundary.indd secondary 2 (2669853.v0.13)","jpg":"PLA HLN artikelshapes Secundary.indd secondary 2 (2669853.v0.13).jpg","tid":"2","bw":4,"bh":4,"brand":"Het Laatste Nieuws","section":"Regio","typeName":"secondary","foldLine":null,"foldBefore":null,"foldAfter":null,"tekstChars":1520,"genreId":"actua","imageCount":0,"quoteCount":0},{"name":"PLA HLN artikelshapes Secundary.indd secondary 3 (2669853.v0.13)","jpg":"PLA HLN artikelshapes Secundary.indd secondary 3 (2669853.v0.13).jpg","tid":"2","bw":3,"bh":6,"brand":"Het Laatste Nieuws","section":"Regio","typeName":"secondary","foldLine":null,"foldBefore":null,"foldAfter":null,"tekstChars":1656,"genreId":"actua","imageCount":0,"quoteCount":0},{"name":"PLA HLN artikelshapes Secundary.indd secondary 4 (2669853.v0.13)","jpg":"PLA HLN artikelshapes Secundary.indd secondary 4 (2669853.v0.13).jpg","tid":"2","bw":2,"bh":6,"brand":"Het Laatste Nieuws","section":"Regio","typeName":"secondary","foldLine":null,"foldBefore":null,"foldAfter":null,"tekstChars":1039,"genreId":"actua","imageCount":0,"quoteCount":0},{"name":"PLA HLN artikelshapes Secundary.indd secondary 5 (2669853.v0.13)","jpg":"PLA HLN artikelshapes Secundary.indd secondary 5 (2669853.v0.13).jpg","tid":"2","bw":3,"bh":6,"brand":"Het Laatste Nieuws","section":"Regio","typeName":"secondary","foldLine":null,"foldBefore":null,"foldAfter":null,"tekstChars":1018,"genreId":"actua","imageCount":1,"quoteCount":0},{"name":"PLA HLN artikelshapes Secundary.indd secondary 9 (2669853.v0.13)","jpg":"PLA HLN artikelshapes Secundary.indd secondary 9 (2669853.v0.13).jpg","tid":"2","bw":4,"bh":7,"brand":"Het Laatste Nieuws","section":"Regio","typeName":"secondary","foldLine":null,"foldBefore":null,"foldAfter":null,"tekstChars":1452,"genreId":"actua","imageCount":1,"quoteCount":0},{"name":"PLA HLN artikelshapes Secundary.indd third 10 (2669853.v0.13)","jpg":"PLA HLN artikelshapes Secundary.indd third 10 (2669853.v0.13).jpg","tid":"3","bw":3,"bh":7,"brand":"Het Laatste Nieuws","section":"Regio","typeName":"third","foldLine":null,"foldBefore":null,"foldAfter":null,"tekstChars":566,"genreId":"actua staand","imageCount":1,"quoteCount":0},{"name":"PLA HLN artikelshapes Secundary.indd third 11 (2669853.v0.13)","jpg":"PLA HLN artikelshapes Secundary.indd third 11 (2669853.v0.13).jpg","tid":"3","bw":2,"bh":7,"brand":"Het Laatste Nieuws","section":"Regio","typeName":"third","foldLine":null,"foldBefore":null,"foldAfter":null,"tekstChars":451,"genreId":"actua","imageCount":1,"quoteCount":0},{"name":"PLA HLN artikelshapes Secundary.indd third 14 (2669853.v0.13)","jpg":"PLA HLN artikelshapes Secundary.indd third 14 (2669853.v0.13).jpg","tid":"3","bw":2,"bh":11,"brand":"Het Laatste Nieuws","section":"Regio","typeName":"third","foldLine":null,"foldBefore":null,"foldAfter":null,"tekstChars":558,"genreId":"actua staand","imageCount":1,"quoteCount":0},{"name":"PLA HLN artikelshapes Secundary.indd third 6 (2669853.v0.13)","jpg":"PLA HLN artikelshapes Secundary.indd third 6 (2669853.v0.13).jpg","tid":"3","bw":5,"bh":7,"brand":"Het Laatste Nieuws","section":"Regio","typeName":"third","foldLine":null,"foldBefore":null,"foldAfter":null,"tekstChars":566,"genreId":"actua","imageCount":1,"quoteCount":0},{"name":"PLA HLN artikelshapes Secundary.indd third 7 (2669853.v0.13)","jpg":"PLA HLN artikelshapes Secundary.indd third 7 (2669853.v0.13).jpg","tid":"3","bw":3,"bh":7,"brand":"Het Laatste Nieuws","section":"Regio","typeName":"third","foldLine":null,"foldBefore":null,"foldAfter":null,"tekstChars":506,"genreId":"actua","imageCount":1,"quoteCount":0},{"name":"PLA HLN artikelshapes Secundary.indd third 8 (2669853.v0.13)","jpg":"PLA HLN artikelshapes Secundary.indd third 8 (2669853.v0.13).jpg","tid":"3","bw":4,"bh":7,"brand":"Het Laatste Nieuws","section":"Regio","typeName":"third","foldLine":null,"foldBefore":null,"foldAfter":null,"tekstChars":566,"genreId":"actua","imageCount":1,"quoteCount":0},{"name":"PLA HLN artikelshapes VP.indd filler 1 (2698429.v0.8)","jpg":"PLA HLN artikelshapes VP.indd filler 1 (2698429.v0.8).jpg","tid":"4","bw":1,"bh":7,"brand":"Het Laatste Nieuws","section":"Regio Voorpagina","typeName":"filler","foldLine":null,"foldBefore":null,"foldAfter":null,"tekstChars":592,"genreId":"actua","imageCount":1,"quoteCount":0},{"name":"PLA HLN artikelshapes VP.indd lead 10 (2698429.v0.8)","jpg":"PLA HLN artikelshapes VP.indd lead 10 (2698429.v0.8).jpg","tid":"1","bw":4,"bh":18,"brand":"Het Laatste Nieuws","section":"Regio Voorpagina","typeName":"lead","foldLine":null,"foldBefore":null,"foldAfter":null,"tekstChars":4058,"genreId":"actua staand","imageCount":2,"quoteCount":1},{"name":"PLA HLN artikelshapes VP.indd lead 11 (2698429.v0.8)","jpg":"PLA HLN artikelshapes VP.indd lead 11 (2698429.v0.8).jpg","tid":"1","bw":4,"bh":18,"brand":"Het Laatste Nieuws","section":"Regio Voorpagina","typeName":"lead","foldLine":null,"foldBefore":null,"foldAfter":null,"tekstChars":3968,"genreId":"actua","imageCount":2,"quoteCount":1},{"name":"PLA HLN artikelshapes VP.indd lead 12 (2698429.v0.8)","jpg":"PLA HLN artikelshapes VP.indd lead 12 (2698429.v0.8).jpg","tid":"1","bw":4,"bh":18,"brand":"Het Laatste Nieuws","section":"Regio Voorpagina","typeName":"lead","foldLine":null,"foldBefore":null,"foldAfter":null,"tekstChars":4029,"genreId":"actua","imageCount":2,"quoteCount":1},{"name":"PLA HLN artikelshapes VP.indd lead 13 (2698429.v0.8)","jpg":"PLA HLN artikelshapes VP.indd lead 13 (2698429.v0.8).jpg","tid":"1","bw":4,"bh":18,"brand":"Het Laatste Nieuws","section":"Regio Voorpagina","typeName":"lead","foldLine":null,"foldBefore":null,"foldAfter":null,"tekstChars":4041,"genreId":"actua","imageCount":3,"quoteCount":1},{"name":"PLA HLN artikelshapes VP.indd lead 16 (2698429.v0.8)","jpg":"PLA HLN artikelshapes VP.indd lead 16 (2698429.v0.8).jpg","tid":"1","bw":4,"bh":11,"brand":"Het Laatste Nieuws","section":"Regio Voorpagina","typeName":"lead","foldLine":null,"foldBefore":null,"foldAfter":null,"tekstChars":3655,"genreId":"actua","imageCount":1,"quoteCount":1},{"name":"PLA HLN artikelshapes VP.indd lead 17 (2698429.v0.8)","jpg":"PLA HLN artikelshapes VP.indd lead 17 (2698429.v0.8).jpg","tid":"1","bw":4,"bh":11,"brand":"Het Laatste Nieuws","section":"Regio Voorpagina","typeName":"lead","foldLine":null,"foldBefore":null,"foldAfter":null,"tekstChars":2704,"genreId":"actua","imageCount":1,"quoteCount":1},{"name":"PLA HLN artikelshapes VP.indd lead 2 (2698429.v0.8)","jpg":"PLA HLN artikelshapes VP.indd lead 2 (2698429.v0.8).jpg","tid":"1","bw":4,"bh":18,"brand":"Het Laatste Nieuws","section":"Regio Voorpagina","typeName":"lead","foldLine":null,"foldBefore":null,"foldAfter":null,"tekstChars":3932,"genreId":"actua","imageCount":1,"quoteCount":1},{"name":"PLA HLN artikelshapes VP.indd lead 21 (2698429.v0.8)","jpg":"PLA HLN artikelshapes VP.indd lead 21 (2698429.v0.8).jpg","tid":"1","bw":4,"bh":14,"brand":"Het Laatste Nieuws","section":"Regio Voorpagina","typeName":"lead","foldLine":null,"foldBefore":null,"foldAfter":null,"tekstChars":2704,"genreId":"actua","imageCount":1,"quoteCount":1},{"name":"PLA HLN artikelshapes VP.indd lead 22 (2698429.v0.8)","jpg":"PLA HLN artikelshapes VP.indd lead 22 (2698429.v0.8).jpg","tid":"1","bw":4,"bh":14,"brand":"Het Laatste Nieuws","section":"Regio Voorpagina","typeName":"lead","foldLine":null,"foldBefore":null,"foldAfter":null,"tekstChars":2704,"genreId":"actua","imageCount":2,"quoteCount":1},{"name":"PLA HLN artikelshapes VP.indd lead 3 (2698429.v0.8)","jpg":"PLA HLN artikelshapes VP.indd lead 3 (2698429.v0.8).jpg","tid":"1","bw":4,"bh":18,"brand":"Het Laatste Nieuws","section":"Regio Voorpagina","typeName":"lead","foldLine":null,"foldBefore":null,"foldAfter":null,"tekstChars":4977,"genreId":"actua","imageCount":1,"quoteCount":1},{"name":"PLA HLN artikelshapes VP.indd lead 4 (2698429.v0.8)","jpg":"PLA HLN artikelshapes VP.indd lead 4 (2698429.v0.8).jpg","tid":"1","bw":4,"bh":18,"brand":"Het Laatste Nieuws","section":"Regio Voorpagina","typeName":"lead","foldLine":null,"foldBefore":null,"foldAfter":null,"tekstChars":4908,"genreId":"actua","imageCount":2,"quoteCount":1},{"name":"PLA HLN artikelshapes VP.indd lead 5 (2698429.v0.8)","jpg":"PLA HLN artikelshapes VP.indd lead 5 (2698429.v0.8).jpg","tid":"1","bw":4,"bh":18,"brand":"Het Laatste Nieuws","section":"Regio Voorpagina","typeName":"lead","foldLine":null,"foldBefore":null,"foldAfter":null,"tekstChars":4696,"genreId":"actua","imageCount":1,"quoteCount":1},{"name":"PLA HLN artikelshapes VP.indd lead 6 (2698429.v0.8)","jpg":"PLA HLN artikelshapes VP.indd lead 6 (2698429.v0.8).jpg","tid":"1","bw":4,"bh":18,"brand":"Het Laatste Nieuws","section":"Regio Voorpagina","typeName":"lead","foldLine":null,"foldBefore":null,"foldAfter":null,"tekstChars":4721,"genreId":"actua","imageCount":2,"quoteCount":1},{"name":"PLA HLN artikelshapes VP.indd lead 7 (2698429.v0.8)","jpg":"PLA HLN artikelshapes VP.indd lead 7 (2698429.v0.8).jpg","tid":"1","bw":4,"bh":18,"brand":"Het Laatste Nieuws","section":"Regio Voorpagina","typeName":"lead","foldLine":null,"foldBefore":null,"foldAfter":null,"tekstChars":4927,"genreId":"actua","imageCount":2,"quoteCount":1},{"name":"PLA HLN artikelshapes VP.indd lead 8 (2698429.v0.8)","jpg":"PLA HLN artikelshapes VP.indd lead 8 (2698429.v0.8).jpg","tid":"1","bw":4,"bh":18,"brand":"Het Laatste Nieuws","section":"Regio Voorpagina","typeName":"lead","foldLine":null,"foldBefore":null,"foldAfter":null,"tekstChars":4827,"genreId":"actua","imageCount":3,"quoteCount":1},{"name":"PLA HLN artikelshapes VP.indd lead 9 (2698429.v0.8)","jpg":"PLA HLN artikelshapes VP.indd lead 9 (2698429.v0.8).jpg","tid":"1","bw":4,"bh":18,"brand":"Het Laatste Nieuws","section":"Regio Voorpagina","typeName":"lead","foldLine":null,"foldBefore":null,"foldAfter":null,"tekstChars":4058,"genreId":"actua staand","imageCount":1,"quoteCount":1},{"name":"PLA HLN artikelshapes VP.indd secondary 18 (2698429.v0.8)","jpg":"PLA HLN artikelshapes VP.indd secondary 18 (2698429.v0.8).jpg","tid":"2","bw":4,"bh":4,"brand":"Het Laatste Nieuws","section":"Regio Voorpagina","typeName":"secondary","foldLine":null,"foldBefore":null,"foldAfter":null,"tekstChars":1052,"genreId":"actua","imageCount":1,"quoteCount":0},{"name":"PLA HLN artikelshapes VP.indd secondary 19 (2698429.v0.8)","jpg":"PLA HLN artikelshapes VP.indd secondary 19 (2698429.v0.8).jpg","tid":"2","bw":4,"bh":4,"brand":"Het Laatste Nieuws","section":"Regio Voorpagina","typeName":"secondary","foldLine":null,"foldBefore":null,"foldAfter":null,"tekstChars":566,"genreId":"actua","imageCount":2,"quoteCount":0},{"name":"PLA HLN artikelshapes VP.indd secondary 20 (2698429.v0.8)","jpg":"PLA HLN artikelshapes VP.indd secondary 20 (2698429.v0.8).jpg","tid":"2","bw":4,"bh":4,"brand":"Het Laatste Nieuws","section":"Regio Voorpagina","typeName":"secondary","foldLine":null,"foldBefore":null,"foldAfter":null,"tekstChars":1052,"genreId":"actua staand","imageCount":1,"quoteCount":0},{"name":"PLA HLN artikelshapes VP.indd secondary 23 (2698429.v0.8)","jpg":"PLA HLN artikelshapes VP.indd secondary 23 (2698429.v0.8).jpg","tid":"2","bw":4,"bh":4,"brand":"Het Laatste Nieuws","section":"Regio Voorpagina","typeName":"secondary","foldLine":null,"foldBefore":null,"foldAfter":null,"tekstChars":566,"genreId":"actua","imageCount":2,"quoteCount":0},{"name":"PLA HLN artikelshapes VP.indd third 14 (2698429.v0.8)","jpg":"PLA HLN artikelshapes VP.indd third 14 (2698429.v0.8).jpg","tid":"3","bw":5,"bh":7,"brand":"Het Laatste Nieuws","section":"Regio Voorpagina","typeName":"third","foldLine":null,"foldBefore":null,"foldAfter":null,"tekstChars":566,"genreId":"actua","imageCount":1,"quoteCount":0},{"name":"PLA HLN artikelshapes VP.indd third 15 (2698429.v0.8)","jpg":"PLA HLN artikelshapes VP.indd third 15 (2698429.v0.8).jpg","tid":"3","bw":4,"bh":7,"brand":"Het Laatste Nieuws","section":"Regio Voorpagina","typeName":"third","foldLine":null,"foldBefore":null,"foldAfter":null,"tekstChars":566,"genreId":"actua","imageCount":1,"quoteCount":0}];
 
 var LINES_FOLDER = "lines";
 var WEBASSETS_FOLDER = "webassets";
@@ -360,11 +438,32 @@ function findSplit(str) {
   return null;
 }
 
+// Partitioning suffix inside a box, e.g. "|{8,2:6,2:3:3}".
+//   "|" = the box is split side by side (the numbers divide its WIDTH)
+//   "-" = the box is split stacked      (the numbers divide its HEIGHT)
+// Each comma-separated entry is one available partitioning; the numbers
+// within an entry (separated by ":") are the sizes of its mini-boxes.
+function parsePartition(raw, sep) {
+  var options = [];
+  raw.split(',').forEach(function(opt) {
+    opt = opt.trim();
+    if (!opt) return;
+    var parts = opt.split(':').map(function(n) { return +n.trim(); });
+    var valid = parts.every(function(n) { return n > 0 && Math.floor(n) === n; });
+    if (valid) options.push(parts);
+  });
+  if (!options.length) return null;
+  return {dir: sep === '-' ? 'v' : 'h', options: options};
+}
+
 function parseContents(s) {
-  // Strip any trailing |{...} / -{...} layout-hint suffix before reading flags.
+  // Split off a trailing |{...} / -{...} partitioning suffix before reading flags.
+  var partition = null;
   var braceIdx = s.indexOf('{');
   if (braceIdx !== -1) {
     var sep = braceIdx > 0 ? s[braceIdx-1] : '';
+    var closeIdx = s.indexOf('}', braceIdx);
+    partition = parsePartition(s.slice(braceIdx+1, closeIdx === -1 ? s.length : closeIdx), sep);
     s = (sep === '|' || sep === '-') ? s.slice(0, braceIdx-1) : s.slice(0, braceIdx);
   }
   var hasImage = false, hasAd = false, customImgCols = null;
@@ -379,7 +478,7 @@ function parseContents(s) {
   if (s.includes('$')) hasAd = true;
   var colM = s.match(/\u00a7\d+\/(\d+)/);
   if (colM) customImgCols = +colM[1];
-  return {tid, tids, hasImage, hasAd, customImgCols};
+  return {tid, tids, hasImage, hasAd, customImgCols, partition};
 }
 
 function getSize(node) {
@@ -407,9 +506,44 @@ function parse(str) {
   return collectBoxes(tree, 0, 0);
 }
 
+// \u2500\u2500 Fold helpers \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500
+// A blueprint only has a fold when it is two pages wide (a spread). The fold
+// is the gap between the two pages, i.e. after column width/2.
+function bpFoldCol(bp) {
+  if (bp.type !== 'spread') return null;
+  return Math.floor(bp.width / 2);
+}
+
+// How a box sits relative to the blueprint's fold. Returns
+// {before:n, after:m} when the fold runs through the box, or null when the
+// box sits entirely on one page.
+function boxFold(box, foldCol) {
+  if (foldCol === null || foldCol === undefined) return null;
+  if (box.col < foldCol && box.col + box.bw > foldCol) {
+    return {before: foldCol - box.col, after: box.col + box.bw - foldCol};
+  }
+  return null;
+}
+
+function shapeHasFold(s) {
+  return s.foldBefore !== null && s.foldBefore !== undefined;
+}
+
+// True when the shape's fold matches the box's fold: both have no fold, or
+// both have one with the same number of blocks before and after it.
+function foldMatches(s, bf) {
+  if (!bf) return !shapeHasFold(s);
+  return shapeHasFold(s) && s.foldBefore === bf.before && s.foldAfter === bf.after;
+}
+
+function foldLabel(before, after) {
+  return before + ' | ' + after;
+}
+
 // \u2500\u2500 SVG renderer \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500
-function renderSVG(bp, scale) {
+function renderSVG(bp, scale, highlight) {
   scale = scale || 1;
+  highlight = highlight || [];
   var boxes = parse(bp.definition);
   // Blocks are only square by coincidence: a block's real proportions come
   // from the page's physical column-width / module-height (BLOCK_ASPECT).
@@ -443,6 +577,17 @@ function renderSVG(bp, scale) {
     var fs = Math.min(10, Math.min(w,h)*0.28);
     svg += '<text x="'+(x+w/2)+'" y="'+(y+h/2+fs*0.35)+'" text-anchor="middle" font-family="system-ui,sans-serif" font-size="'+fs+'" font-weight="700" fill="white" opacity="0.9">'+label+'</text>';
   });
+  highlight.forEach(function(bi) {
+    var hb = boxes[bi]; if (!hb) return;
+    var hx = PAD + hb.col*(CELLW+GAP), hy = PAD + hb.row*(CELLH+GAP);
+    var hw = hb.bw*CELLW + (hb.bw-1)*GAP, hh = hb.bh*CELLH + (hb.bh-1)*GAP;
+    svg += '<rect x="'+(hx+1.5)+'" y="'+(hy+1.5)+'" width="'+(hw-3)+'" height="'+(hh-3)+'" rx="3" fill="none" stroke="#DC2626" stroke-width="3"/>';
+  });
+  var foldCol = bpFoldCol(bp);
+  if (foldCol !== null) {
+    var fx = PAD + foldCol*(CELLW+GAP) - GAP/2;
+    svg += '<line x1="'+fx+'" y1="1" x2="'+fx+'" y2="'+(svgH-1)+'" stroke="#6D28D9" stroke-width="1.5" stroke-dasharray="4 3"/>';
+  }
   svg += '</svg>';
   return svg;
 }
@@ -457,13 +602,19 @@ function openPanel(idx) {
   body.innerHTML = '';
   var diag = document.createElement('div'); diag.className='panel-diagram';
   diag.innerHTML = renderSVG(bp); body.appendChild(diag);
+  var foldCol = bpFoldCol(bp);
   boxes.forEach(function(box) {
     var tids = box.contents.tids || [];
+    var bf = boxFold(box, foldCol);
     // A box can carry more than one article type (e.g. "\u00a71\u00a72"); match shapes
     // against ANY of them, unioned, so no valid shape type gets left out.
-    var matches = SHAPES.filter(function(s) {
+    var sizeMatches = SHAPES.filter(function(s) {
       return tids.indexOf(s.tid) !== -1 && s.bw===box.bw && s.bh===box.bh;
     });
+    // Of those, only shapes whose fold lines up with the box's fold count as
+    // real matches; the rest are listed separately as fold mismatches.
+    var matches = sizeMatches.filter(function(s) { return foldMatches(s, bf); });
+    var foldMisses = sizeMatches.filter(function(s) { return !foldMatches(s, bf); });
     var sec = document.createElement('div'); sec.className='box-section';
     var hdr = document.createElement('div'); hdr.className='box-section-header';
 
@@ -476,9 +627,14 @@ function openPanel(idx) {
     if (box.contents.hasAd)   chips.push('<span class="box-type-chip" style="background:'+COLORS['$'].fill+';color:#0F172A;">$\u00a0Advert</span>');
     if (!chips.length) chips.push('<span class="box-type-chip" style="background:#64748B;">Untyped</span>');
 
+    var foldChip = bf
+      ? '<span class="fold-chip" title="Blocks before | after the fold">Fold '+foldLabel(bf.before, bf.after)+'</span>'
+      : (foldCol!==null ? '<span class="fold-chip none">No fold</span>' : '');
     hdr.innerHTML = chips.join('')
       +'<span class="box-section-title">'+box.bw+'\u00d7'+box.bh+' blocks</span>'
-      +'<span class="box-section-meta">'+matches.length+' matching shape'+(matches.length!==1?'s':'')+'</span>';
+      +foldChip
+      +'<span class="box-section-meta">'+matches.length+' matching shape'+(matches.length!==1?'s':'')
+      +(foldMisses.length?' \u2022 '+foldMisses.length+' fold mismatch'+(foldMisses.length!==1?'es':''):'')+'</span>';
     sec.appendChild(hdr);
 
     if (!tids.length) {
@@ -487,11 +643,197 @@ function openPanel(idx) {
         ? 'Special/advert blocks are not linked to shape assets \u2014 no shapes to match.'
         : 'No article type on this block \u2014 no shapes to match.';
       sec.appendChild(nm);
-    } else if (!matches.length) {
-      var nm=document.createElement('div'); nm.className='no-shapes'; nm.textContent='No shapes match this block.'; sec.appendChild(nm);
     } else {
+      if (!matches.length) {
+        var nm=document.createElement('div'); nm.className='no-shapes';
+        nm.textContent = foldMisses.length
+          ? 'No shapes match this block\u2019s fold.'
+          : 'No shapes match this block.';
+        sec.appendChild(nm);
+      } else {
+        sec.appendChild(buildPanelShapeRow(matches, tids, bf));
+      }
+      if (foldMisses.length) {
+        var det=document.createElement('details'); det.className='fold-mismatch';
+        var sum=document.createElement('summary');
+        sum.textContent = foldMisses.length+' shape'+(foldMisses.length!==1?'s':'')+' with the right size but a different fold';
+        det.appendChild(sum);
+        det.appendChild(buildPanelShapeRow(foldMisses, tids, bf));
+        sec.appendChild(det);
+      }
+    }
+    if (box.contents.partition) sec.appendChild(buildPartitionOverview(box, tids, foldCol));
+    body.appendChild(sec);
+  });
+  document.getElementById('overlay').classList.add('open');
+  document.getElementById('panel').classList.add('open');
+}
+
+// \u2500\u2500 Partitioning overview \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500
+// Turns one partitioning option (e.g. [2,3,3]) into mini-boxes with their
+// real grid position, so each can be matched on size AND fold.
+function partitionSlots(box, dir, sizes) {
+  var slots = [], offset = 0;
+  sizes.forEach(function(n) {
+    slots.push(dir === 'h'
+      ? {col: box.col + offset, row: box.row, bw: n, bh: box.bh}
+      : {col: box.col, row: box.row + offset, bw: box.bw, bh: n});
+    offset += n;
+  });
+  return slots;
+}
+
+function slotShapes(slot, tids, foldCol) {
+  var bf = boxFold(slot, foldCol);
+  var size = SHAPES.filter(function(s) {
+    return tids.indexOf(s.tid) !== -1 && s.bw === slot.bw && s.bh === slot.bh;
+  });
+  return {
+    bf: bf,
+    matches: size.filter(function(s) { return foldMatches(s, bf); }),
+    misses:  size.filter(function(s) { return !foldMatches(s, bf); })
+  };
+}
+
+// Small bar diagram of one partitioning: filled segments have fitting
+// shapes, grey hatched segments have none.
+var partMiniSeq = 0;
+function renderPartitionMini(box, dir, slots, results, foldCol) {
+  var hid = 'hatch' + (++partMiniSeq);
+  var total = dir === 'h' ? box.bw : box.bh;
+  var LONG = 150, SHORT = 22, GAP = 2;
+  var unit = (LONG - GAP*(slots.length-1)) / total;
+  var W = dir === 'h' ? LONG : SHORT, H = dir === 'h' ? SHORT : LONG;
+  var fill = (COLORS['\u00a7'+(box.contents.tid||'4')]||{fill:'#8B5CF6'}).fill;
+  var svg = '<svg width="'+W+'" height="'+H+'" viewBox="0 0 '+W+' '+H+'" xmlns="http://www.w3.org/2000/svg">'
+    + '<defs><pattern id="'+hid+'" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">'
+    + '<rect width="5" height="5" fill="#F1F5F9"/><line x1="0" y1="0" x2="0" y2="5" stroke="#CBD5E1" stroke-width="2"/></pattern></defs>';
+  var pos = 0;
+  slots.forEach(function(slot, i) {
+    var n = dir === 'h' ? slot.bw : slot.bh;
+    var len = n*unit;
+    var ok = results[i].matches.length > 0;
+    var x = dir === 'h' ? pos : 0, y = dir === 'h' ? 0 : pos;
+    var w = dir === 'h' ? len : SHORT, h = dir === 'h' ? SHORT : len;
+    svg += '<rect x="'+x+'" y="'+y+'" width="'+w+'" height="'+h+'" rx="2" fill="'+(ok?fill:'url(#'+hid+')')+'"'+(ok?' opacity="0.85"':' stroke="#CBD5E1"')+'/>';
+    svg += '<text x="'+(x+w/2)+'" y="'+(y+h/2+3.5)+'" text-anchor="middle" font-family="system-ui,sans-serif" font-size="10" font-weight="700" fill="'+(ok?'white':'#94A3B8')+'">'+n+'</text>';
+    pos += len + GAP;
+  });
+  // Fold line, only meaningful for side-by-side partitionings.
+  if (dir === 'h' && foldCol !== null && foldCol > box.col && foldCol < box.col + box.bw) {
+    var k = foldCol - box.col, acc = 0, px = 0, fx = null;
+    slots.forEach(function(slot) {
+      if (fx !== null) return;
+      if (acc + slot.bw >= k) {
+        fx = px + (k - acc)*unit + (acc + slot.bw === k ? GAP/2 : 0);
+      }
+      acc += slot.bw; px += slot.bw*unit + GAP;
+    });
+    svg += '<line x1="'+fx+'" y1="0" x2="'+fx+'" y2="'+H+'" stroke="#6D28D9" stroke-width="1.5" stroke-dasharray="3 2"/>';
+  }
+  return svg + '</svg>';
+}
+
+function buildPartitionOverview(box, tids, foldCol) {
+  var part = box.contents.partition;
+  var dir = part.dir;
+  var total = dir === 'h' ? box.bw : box.bh;
+  var wrap = document.createElement('div'); wrap.className = 'part-overview';
+
+  var head = document.createElement('div'); head.className = 'part-overview-header';
+  head.innerHTML = '<span class="part-overview-title">Partitionings</span>'
+    + '<span class="part-overview-meta">'+part.options.length+' option'+(part.options.length!==1?'s':'')
+    + ' \u2022 '+(dir === 'h' ? 'side by side, dividing the '+total+' blocks of width' : 'stacked, dividing the '+total+' blocks of height')+'</span>';
+  var toggle = document.createElement('button'); toggle.className = 'part-toggle'; toggle.textContent = 'Expand all';
+  toggle.onclick = function() {
+    var open = toggle.textContent === 'Expand all';
+    wrap.querySelectorAll('details.part-option').forEach(function(d) { d.open = open; });
+    toggle.textContent = open ? 'Collapse all' : 'Expand all';
+  };
+  head.appendChild(toggle);
+  wrap.appendChild(head);
+
+  if (tids.indexOf('4') === -1) {
+    var n1 = document.createElement('div'); n1.className = 'part-note';
+    n1.textContent = 'Only filler boxes (\u00a74) should have a partitioning. This box is not marked as filler.';
+    wrap.appendChild(n1);
+  }
+  if (!tids.length) {
+    var n2 = document.createElement('div'); n2.className = 'no-shapes';
+    n2.textContent = 'No article type on this box \u2014 no shapes to match.';
+    wrap.appendChild(n2);
+    return wrap;
+  }
+
+  part.options.forEach(function(sizes) {
+    var slots = partitionSlots(box, dir, sizes);
+    var results = slots.map(function(sl) { return slotShapes(sl, tids, foldCol); });
+    var filled = results.filter(function(r) { return r.matches.length > 0; }).length;
+    var sum = sizes.reduce(function(a, b) { return a + b; }, 0);
+
+    var det = document.createElement('details'); det.className = 'part-option';
+    var summ = document.createElement('summary');
+    var statusCls = filled === slots.length ? 'full' : (filled ? 'partial' : 'empty');
+    var statusTxt = filled === slots.length
+      ? 'All mini-boxes have shapes'
+      : filled+' of '+slots.length+' mini-boxes have shapes';
+    summ.innerHTML = '<span class="part-label">'+sizes.join(' : ')+'</span>'
+      + '<span class="part-mini">'+renderPartitionMini(box, dir, slots, results, foldCol)+'</span>'
+      + '<span class="part-status '+statusCls+'">'+statusTxt+'</span>';
+    det.appendChild(summ);
+
+    var body = document.createElement('div'); body.className = 'part-slots';
+    if (sum !== total) {
+      var warn = document.createElement('div'); warn.className = 'part-note';
+      warn.textContent = 'These sizes add up to '+sum+' blocks, but the box is '+total+' blocks '+(dir === 'h' ? 'wide' : 'high')+'.';
+      body.appendChild(warn);
+    }
+
+    // Group identical mini-boxes (same size and same fold) so e.g.
+    // 1:1:1:1:1:3 lists the 1-block shapes once instead of five times.
+    var groups = [], byKey = {};
+    slots.forEach(function(sl, i) {
+      var r = results[i];
+      var key = sl.bw+'x'+sl.bh+'|'+(r.bf ? r.bf.before+':'+r.bf.after : '-');
+      if (!byKey[key]) { byKey[key] = {slot: sl, res: r, count: 0}; groups.push(byKey[key]); }
+      byKey[key].count++;
+    });
+
+    groups.forEach(function(g) {
+      var slotEl = document.createElement('div'); slotEl.className = 'part-slot';
+      var sh = document.createElement('div'); sh.className = 'part-slot-header';
+      sh.innerHTML = '<b>'+g.slot.bw+'\u00d7'+g.slot.bh+' blocks</b>'
+        + (g.count > 1 ? '<span>\u00d7'+g.count+' in this partitioning</span>' : '')
+        + (g.res.bf ? '<span class="fold-chip">Fold '+foldLabel(g.res.bf.before, g.res.bf.after)+'</span>' : '')
+        + '<span>'+g.res.matches.length+' matching shape'+(g.res.matches.length!==1?'s':'')
+        + (g.res.misses.length ? ' \u2022 '+g.res.misses.length+' fold mismatch'+(g.res.misses.length!==1?'es':'') : '')+'</span>';
+      slotEl.appendChild(sh);
+      if (g.res.matches.length) {
+        slotEl.appendChild(buildPanelShapeRow(g.res.matches, tids, g.res.bf));
+      } else {
+        var nm = document.createElement('div'); nm.className = 'no-shapes';
+        nm.textContent = 'No shapes fit this mini-box.';
+        slotEl.appendChild(nm);
+      }
+      if (g.res.misses.length) {
+        var md = document.createElement('details'); md.className = 'fold-mismatch';
+        var ms = document.createElement('summary');
+        ms.textContent = g.res.misses.length+' shape'+(g.res.misses.length!==1?'s':'')+' with the right size but a different fold';
+        md.appendChild(ms);
+        md.appendChild(buildPanelShapeRow(g.res.misses, tids, g.res.bf));
+        slotEl.appendChild(md);
+      }
+      body.appendChild(slotEl);
+    });
+    det.appendChild(body);
+    wrap.appendChild(det);
+  });
+  return wrap;
+}
+
+function buildPanelShapeRow(list, tids, bf) {
       var row=document.createElement('div'); row.className='shapes-row';
-      matches.forEach(function(s) {
+      list.forEach(function(s) {
         var curPx = +document.getElementById('size-slider').value;
         var curThumbH = Math.round(curPx*1.307);
         var sc=document.createElement('div'); sc.className='shape-card'; sc.style.width=curPx+'px';
@@ -506,7 +848,9 @@ function openPanel(idx) {
           this.parentNode.insertBefore(ph,this);
         };
         var parts=s.name.split('_'); var shortName=parts.slice(-3).join('_');
-        var foldStr=(s.foldLine!==null&&s.foldLine!==undefined)?Math.round(s.foldLine)+' pt':'\u2014';
+        var foldStr=shapeFoldStr(s);
+        var foldOk=foldMatches(s, bf);
+        var foldMark='<span class="'+(foldOk?'fold-ok':'fold-bad')+'" title="'+(foldOk?'Fold matches the blueprint box':'Fold does not match the blueprint box')+'">'+(foldOk?' \u2713':' \u2717')+'</span>';
         var charsStr=(s.tekstChars!==null&&s.tekstChars!==undefined)?s.tekstChars+' chars':'\u2014';
         var genreStr=s.genreId||'\u2014';
         var sectionStr=s.section||'\u2014';
@@ -522,16 +866,18 @@ function openPanel(idx) {
             +'<span><span class="meta-label">Section </span><span class="meta-val">'+escHtml(sectionStr)+'</span></span>'
             +'<span><span class="meta-label">Images </span><span class="meta-val">'+imagesStr+'</span></span>'
             +'<span><span class="meta-label">Quotes </span><span class="meta-val">'+quotesStr+'</span></span>'
-            +'<span class="fold-line"><span class="meta-label">Fold </span><span class="meta-val">'+foldStr+'</span></span>'
+            +'<span class="fold-line"><span class="meta-label">Fold </span><span class="meta-val">'+foldStr+'</span>'+foldMark+'</span>'
           +'</div>';
         sc.appendChild(imgEl); sc.appendChild(info); row.appendChild(sc);
       });
-      sec.appendChild(row);
-    }
-    body.appendChild(sec);
-  });
-  document.getElementById('overlay').classList.add('open');
-  document.getElementById('panel').classList.add('open');
+      return row;
+}
+
+// "5 | 5 blk (776 pt)" for a shape with a fold, an em dash otherwise.
+function shapeFoldStr(s) {
+  if (!shapeHasFold(s)) return '\u2014';
+  var pts = (s.foldLine!==null&&s.foldLine!==undefined) ? ' ('+Math.round(s.foldLine)+' pt)' : '';
+  return foldLabel(s.foldBefore, s.foldAfter)+' blk'+pts;
 }
 
 function resizeShapes(px) {
@@ -555,12 +901,19 @@ var bpDiagramScale = 1;
 function renderCard(bp,idx) {
   var svg=renderSVG(bp, bpDiagramScale);
   var boxes=parse(bp.definition);
+  var foldCol=bpFoldCol(bp);
   var tableRows=boxes.map(function(box,i){
     var lp=[];
     (box.contents.tids||[]).forEach(function(t){ lp.push('\u00a7'+t); });
     if(box.contents.hasImage) lp.push('<span class="badge badge-img">#</span>');
     if(box.contents.hasAd)   lp.push('<span class="badge badge-ad">$</span>');
-    return '<tr><td>'+(i+1)+'</td><td>col '+(box.col+1)+', row '+(box.row+1)+'</td><td>'+box.bw+'\u00d7'+box.bh+'</td><td>'+lp.join('')+'</td></tr>';
+    if(box.contents.partition) {
+      var np=box.contents.partition.options.length;
+      lp.push('<span class="badge badge-part" title="'+np+' partitioning option'+(np!==1?'s':'')+'">'+(box.contents.partition.dir==='h'?'|':'-')+'{'+np+'}</span>');
+    }
+    var bf=boxFold(box, foldCol);
+    var foldCell = foldCol===null ? '' : '<td>'+(bf?foldLabel(bf.before, bf.after):'\u2014')+'</td>';
+    return '<tr><td>'+(i+1)+'</td><td>col '+(box.col+1)+', row '+(box.row+1)+'</td><td>'+box.bw+'\u00d7'+box.bh+'</td>'+foldCell+'<td>'+lp.join('')+'</td></tr>';
   }).join('');
   var div=document.createElement('div');
   div.className='card'+(bp.type==='spread'?' spread':'');
@@ -575,7 +928,7 @@ function renderCard(bp,idx) {
     +'<div class="notation">'+escHtml(bp.definition)+'</div>'
     +'<div class="diagram">'+svg+'</div>'
     +'<table class="box-table">'
-      +'<thead><tr><th>Box</th><th>Position</th><th>Size</th><th>Contents</th></tr></thead>'
+      +'<thead><tr><th>Box</th><th>Position</th><th>Size</th>'+(foldCol===null?'':'<th title="Blocks before | after the fold">Fold</th>')+'<th>Contents</th></tr></thead>'
       +'<tbody>'+tableRows+'</tbody>'
     +'</table>'
     +'<div class="hint">Click to browse matching shapes</div>';
@@ -705,10 +1058,13 @@ function switchPage(page) {
   var tBp=document.getElementById('tab-blueprints');
   var tSp=document.getElementById('tab-shapes');
   var tLp=document.getElementById('tab-lines');
+  var gp=document.getElementById('page-gaps');
+  var gpTop=document.getElementById('gaps-topbar');
+  var tGp=document.getElementById('tab-gaps');
 
-  bp.style.display='none'; sp.style.display='none'; lp.style.display='none';
-  bpTop.style.display='none'; spTop.style.display='none'; lpTop.style.display='none';
-  tBp.classList.remove('active'); tSp.classList.remove('active'); tLp.classList.remove('active');
+  bp.style.display='none'; sp.style.display='none'; lp.style.display='none'; gp.style.display='none';
+  bpTop.style.display='none'; spTop.style.display='none'; lpTop.style.display='none'; gpTop.style.display='none';
+  tBp.classList.remove('active'); tSp.classList.remove('active'); tLp.classList.remove('active'); tGp.classList.remove('active');
 
   if (page==='shapes') {
     sp.style.display='block'; spTop.style.display='block'; tSp.classList.add('active');
@@ -716,10 +1072,135 @@ function switchPage(page) {
   } else if (page==='lines') {
     lp.style.display='block'; lpTop.style.display='block'; tLp.classList.add('active');
     if (!linesPageBuilt) { buildLinesPage(); linesPageBuilt=true; }
+  } else if (page==='gaps') {
+    gp.style.display='block'; gpTop.style.display='block'; tGp.classList.add('active');
+    if (!gapsPageBuilt) { buildGapsPage(); gapsPageBuilt=true; }
   } else {
     bp.style.display='block'; bpTop.style.display='block'; tBp.classList.add('active');
   }
   window.scrollTo(0,0);
+}
+
+// \u2500\u2500 Unmatched boxes overview \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500
+var gapsPageBuilt = false;
+var activeGapsType = 'all';
+
+// Same matching rules as the blueprint panel: article type + size + fold.
+// Returns null when the box is fine (or has no article type to check),
+// otherwise a short description of why nothing fits.
+function boxGap(box, foldCol) {
+  var tids = box.contents.tids || [];
+  if (!tids.length) return null;
+  var bf = boxFold(box, foldCol);
+  var size = SHAPES.filter(function(s) {
+    return tids.indexOf(s.tid) !== -1 && s.bw === box.bw && s.bh === box.bh;
+  });
+  var matches = size.filter(function(s) { return foldMatches(s, bf); });
+  if (matches.length) return null;
+
+  var part = box.contents.partition;
+  var partNote = '';
+  if (part) {
+    var total = part.dir === 'h' ? box.bw : box.bh;
+    var fillable = part.options.some(function(sizes) {
+      var sum = sizes.reduce(function(a, b) { return a + b; }, 0);
+      if (sum !== total) return false;
+      return partitionSlots(box, part.dir, sizes).every(function(sl) {
+        return slotShapes(sl, tids, foldCol).matches.length > 0;
+      });
+    });
+    if (fillable) return null;
+    partNote = ' None of the '+part.options.length+' partitioning option'+(part.options.length!==1?'s':'')+' can be filled completely either.';
+  }
+
+  var reason, kind;
+  if (size.length) {
+    kind = 'fold';
+    reason = size.length+' shape'+(size.length!==1?'s':'')+' of this size, but none with a matching fold'
+      + (bf ? ' (needs '+foldLabel(bf.before, bf.after)+')' : ' (needs no fold)')+'.';
+  } else {
+    kind = 'size';
+    reason = 'No shapes of this type and size.';
+  }
+  return {kind: kind, reason: reason + partNote, bf: bf};
+}
+
+function blueprintGaps(bp) {
+  var boxes = parse(bp.definition);
+  var foldCol = bpFoldCol(bp);
+  var gaps = [];
+  boxes.forEach(function(box, i) {
+    var g = boxGap(box, foldCol);
+    if (g) gaps.push({index: i, box: box, gap: g});
+  });
+  return gaps;
+}
+
+function renderGapRow(bp, idx, gaps) {
+  var row = document.createElement('div');
+  row.className = 'gap-row'; row.dataset.type = bp.type;
+
+  var info = document.createElement('div'); info.className = 'gap-info';
+  info.innerHTML = '<div class="card-type '+bp.type+'">'+(bp.type==='spread'?'Spread '+bp.width+'\u00d7'+bp.height:'Page '+bp.width+'\u00d7'+bp.height)+'</div>'
+    + '<div class="gap-name">'+escHtml(bp.name)+'</div>'
+    + '<div class="gap-count">'+gaps.length+' unmatched box'+(gaps.length!==1?'es':'')+'</div>';
+  var btn = document.createElement('button'); btn.className = 'gap-open'; btn.textContent = 'Open blueprint';
+  btn.onclick = function() { openPanel(idx); };
+  info.appendChild(btn);
+
+  var diag = document.createElement('div'); diag.className = 'gap-diagram';
+  diag.innerHTML = renderSVG(bp, 0.8, gaps.map(function(g) { return g.index; }));
+
+  var table = document.createElement('table'); table.className = 'gap-boxes';
+  table.innerHTML = '<thead><tr><th>Box</th><th>Position</th><th>Size</th><th>Type</th><th>Why no shape fits</th></tr></thead>'
+    + '<tbody>' + gaps.map(function(g) {
+        var types = g.box.contents.tids.map(function(t) { return '\u00a7'+t+' '+(TID_NAMES[t]||''); }).join(', ');
+        return '<tr><td>'+(g.index+1)+'</td>'
+          + '<td>col '+(g.box.col+1)+', row '+(g.box.row+1)+'</td>'
+          + '<td>'+g.box.bw+'\u00d7'+g.box.bh+(g.gap.bf ? '<br><span class="fold-chip">Fold '+foldLabel(g.gap.bf.before, g.gap.bf.after)+'</span>' : '')+'</td>'
+          + '<td>'+escHtml(types)+'</td>'
+          + '<td class="gap-reason'+(g.gap.kind==='fold'?' fold':'')+'">'+escHtml(g.gap.reason)+'</td></tr>';
+      }).join('') + '</tbody>';
+
+  row.appendChild(info); row.appendChild(diag); row.appendChild(table);
+  return row;
+}
+
+function buildGapsPage() {
+  var root = document.getElementById('gaps-cards');
+  root.innerHTML = '';
+  var found = 0;
+  BLUEPRINTS.forEach(function(bp, i) {
+    try {
+      var gaps = blueprintGaps(bp);
+      if (!gaps.length) return;
+      root.appendChild(renderGapRow(bp, i, gaps));
+      found++;
+    } catch(e) { console.error('Failed to check blueprint "'+bp.name+'":', e); }
+  });
+  if (!found) {
+    var ok = document.createElement('div'); ok.className = 'gaps-empty';
+    ok.textContent = 'Every box in every blueprint has at least one matching shape.';
+    root.appendChild(ok);
+  }
+  applyGapsFilters();
+}
+
+function setGapsType(type) {
+  activeGapsType = type;
+  document.querySelectorAll('.gaps-toolbar .filter-btn').forEach(function(b) {
+    b.classList.toggle('active', b.dataset.type === type);
+  });
+  applyGapsFilters();
+}
+
+function applyGapsFilters() {
+  var rows = document.querySelectorAll('#gaps-cards .gap-row'), vis = 0;
+  rows.forEach(function(r) {
+    var show = activeGapsType === 'all' || r.dataset.type === activeGapsType;
+    r.classList.toggle('hidden', !show); if (show) vis++;
+  });
+  document.getElementById('gaps-stats').textContent = vis+' of '+BLUEPRINTS.length+' blueprints have unmatched boxes';
 }
 
 // \u2500\u2500 Lines overview \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500
@@ -829,6 +1310,50 @@ var TYPE_COLORS = {lead:'#3B82F6',secondary:'#10B981',third:'#F59E0B',filler:'#8
 var currentSort = {key:'type',asc:true};
 var activeGenre = 'all';
 var activeSpSection = 'all';
+var activeSpType = 'all';
+
+// Normalised type key for a shape: lead / secondary / third / filler.
+// Uses shapeTypeName when it's one of the known types, otherwise falls back
+// to the shapeTypeId mapping (1=Lead, 2=Secondary, 3=Third, 4=Filler).
+function shapeTypeKey(s) {
+  var t = String(s.typeName||'').trim().toLowerCase();
+  if (TYPE_ORDER[t] !== undefined) return t;
+  var n = TID_NAMES[s.tid];
+  return n ? n.toLowerCase() : (t || '\u2014');
+}
+
+function buildSpTypeBar() {
+  var bar=document.getElementById('sp-type-bar');
+  bar.innerHTML='<span class="genre-bar-label">Shape type</span>';
+  var counts={};
+  SHAPES.forEach(function(s){ var k=shapeTypeKey(s); counts[k]=(counts[k]||0)+1; });
+  var allBtn=document.createElement('button');
+  allBtn.className='genre-btn active'; allBtn.dataset.stype='all';
+  allBtn.innerHTML='All <span class="gcnt">'+SHAPES.length+'</span>';
+  allBtn.onclick=function(){setSpType('all');};
+  bar.appendChild(allBtn);
+  // Always show the four known types in their natural order (even at 0),
+  // followed by any unexpected type names found in the data.
+  var keys=['lead','secondary','third','filler'];
+  Object.keys(counts).sort().forEach(function(k){ if (keys.indexOf(k)===-1) keys.push(k); });
+  keys.forEach(function(k){
+    var btn=document.createElement('button');
+    btn.className='genre-btn'; btn.dataset.stype=k;
+    var col=TYPE_COLORS[k]||'#64748B';
+    btn.innerHTML='<span class="type-dot" style="background:'+col+'"></span>'
+      +escHtml(k.charAt(0).toUpperCase()+k.slice(1))+' <span class="gcnt">'+(counts[k]||0)+'</span>';
+    btn.onclick=function(){setSpType(k);};
+    bar.appendChild(btn);
+  });
+}
+
+function setSpType(stype) {
+  activeSpType=stype;
+  document.querySelectorAll('#sp-type-bar .genre-btn').forEach(function(b){
+    b.classList.toggle('active',b.dataset.stype===stype);
+  });
+  renderShapesGrid();
+}
 
 function getGenreCounts() {
   var counts={};
@@ -900,7 +1425,8 @@ function filteredShapes() {
   return SHAPES.filter(function(s){
     var genreOk = (activeGenre==='all') || (s.genreId||'\u2014')===activeGenre;
     var sectionOk = (activeSpSection==='all') || (s.section||'\u2014')===activeSpSection;
-    return genreOk && sectionOk;
+    var typeOk = (activeSpType==='all') || shapeTypeKey(s)===activeSpType;
+    return genreOk && sectionOk && typeOk;
   });
 }
 
@@ -936,7 +1462,7 @@ function groupShapes(shapes) {
 function spCardHtml(s,px) {
   var thumbH=Math.round(px*1.307);
   var parts=s.name.split('_'); var shortName=parts.slice(-3).join('_');
-  var foldStr=(s.foldLine!==null&&s.foldLine!==undefined)?Math.round(s.foldLine)+' pt':'\u2014';
+  var foldStr=shapeFoldStr(s);
   var charsStr=(s.tekstChars!==null&&s.tekstChars!==undefined)?s.tekstChars+' chars':'\u2014';
   var sectionStr=s.section||'\u2014';
   var imagesStr=(s.imageCount!==null&&s.imageCount!==undefined)?s.imageCount:'\u2014';
@@ -966,10 +1492,10 @@ function spCardHtml(s,px) {
 }
 
 function buildShapesPage() {
+  buildSpTypeBar();
   buildGenreBar();
   buildSpSectionBar();
   renderShapesGrid();
-  document.getElementById('shapes-stats').textContent=SHAPES.length+' shapes';
 }
 
 function renderShapesGrid() {
@@ -977,6 +1503,8 @@ function renderShapesGrid() {
   var source=filteredShapes();
   var sorted=sortShapes(source,currentSort.key,currentSort.asc);
   var groups=groupShapes(sorted);
+  document.getElementById('shapes-stats').textContent=
+    (source.length===SHAPES.length ? SHAPES.length+' shapes' : source.length+' of '+SHAPES.length+' shapes');
   var root=document.getElementById('shapes-grid-root');
   root.innerHTML='';
   groups.forEach(function(g){
